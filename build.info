@@ -1,9 +1,10 @@
-2025-02-04 01:41 (GMT+1)
+2025-02-05 18:57 (GMT+1)
 ========================
 Type: WIP
 
 App Changes:
-  - Improe zoom speed with code sandbox before ace editor replacement by @cavearr
+  - Added icon over code editor to open easily form io editor by @cavearr
+  - Improive zoom speed with code sandbox before ace editor replacement by @cavearr
   - Fine tune zoom for slow cpus by @cavearr
   - Migration of I/O pins from virtual to physical at copy paste in top level by @cavearr
   - Improve zoom speed and routing algorithm  by @cavearr
