@@ -83,7 +83,7 @@ document.addEventListener("mousemove", (event) => {
     //-- ZOOM constants
     const ZOOM_MAX = 4;
     const ZOOM_MIN = 0.1;
-    const ZOOM_SENS = 0.5;
+    const ZOOM_SENS = 0.3;
     const ZOOM_INI = 1.0; //-- Initial zoom
 
     //-----------------------------------------------------------------------
@@ -469,6 +469,20 @@ document.addEventListener("mousemove", (event) => {
 
       let targetElement = element[0];
       let zoomTimeout;
+
+function disableAceEditors() {
+  const editors = document.querySelectorAll('.ace_editor');
+  editors.forEach(editor => {
+ editor.style.display = 'none'; 
+  });
+}
+function restoreAceEditors() {
+  const editors = document.querySelectorAll('.ace_editor');
+  editors.forEach(editor => {
+   editor.style.display = 'block';
+  });
+}
+     
       this.panAndZoom = svgPanZoom(targetElement.childNodes[2], {
         fit: false,
         center: false,
@@ -480,21 +494,27 @@ document.addEventListener("mousemove", (event) => {
         maxZoom: ZOOM_MAX,
         eventsListenerElement: targetElement,
         onZoom: function (scale) {
-         graph.startBatch('batch-update'); 
           state.zoom = scale;
+          if(state.mutateZoom===false){
           state.mutateZoom = true;
+          disableAceEditors();
+         graph.startBatch('batch-update'); 
           // Close expanded combo
           if (document.activeElement.className === 'select2-search__field') {
             $('select').select2('close');
           }
-          state.mutateZoom = false;
           //-- Optimization strategy, try to launch a timeout that is deleted 
           //-- while user do the zoom, and when is finished, we is the only
           //-- moment that routes are calculated.
+          }
           clearTimeout(zoomTimeout); 
            zoomTimeout = setTimeout(() => {
-          updateCellBoxes();
+             restoreAceEditors();
+              requestAnimationFrame(() => {
+             updateCellBoxes();
           graph.stopBatch('batch-update');
+          state.mutateZoom = false;
+        });
         }, 300); 
         },
         onPan: function (newPan) {

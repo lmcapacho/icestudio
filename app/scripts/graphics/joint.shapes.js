@@ -848,7 +848,7 @@ joint.shapes.ice.GenericView = joint.shapes.ice.ModelView.extend({
     //-- correctly, until this is fixed, bypass the optimization
     //--
     let temporalBypass=true;
-    if (temporalBypass || state.mutateZoom || state.forceMutate || this.initialized===false) {
+    if (temporalBypass || this.initialized===false) {
       this.initialized=true;
       // Render ports width
       let width = WIRE_WIDTH * state.zoom;
@@ -1891,7 +1891,7 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
     this.editor.setReadOnly(this.model.get('disabled'));
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
-
+/*
   updateBox: function () {
     
     var bbox = this.model.getBBox();
@@ -1956,9 +1956,95 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
       width: bbox.width * state.zoom,
       height: bbox.height * state.zoom,
     });
-  },
+  },*/ 
+  updateBox: function () {
+  var bbox = this.model.getBBox();
+  var data = this.model.get('data');
+  var state = this.model.get('state');
+
+  var pendingTasks = [];
+  var editorUpdated = false;
+
+  if (this.editor) {
+    if (this.prevZoom !== state.zoom) {
+      this.prevZoom = state.zoom;
+      editorUpdated = true;
+
+      pendingTasks.push(
+        { e: this.editorSelector[0], property: 'top', value: 24 * state.zoom + 'px' },
+        { e: this.editorSelector[0], property: 'margin', value: 7 * state.zoom + 'px' },
+        { e: this.editorSelector[0], property: 'border-radius', value: 5 * state.zoom + 'px' },
+        { e: this.editorSelector[0], property: 'border-width', value: state.zoom + 0.5 + 'px' }
+      );
+
+      var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
+      for (var i = 0; i < textLayers.length; i++) {
+        pendingTasks.push({
+          e: textLayers[i],
+          property: 'padding',
+          value: '0px ' + Math.round(4 * state.zoom) + 'px',
+        });
+      }
+
+var gutterRule = getCSSRule('.ace_folding-enabled > .ace_gutter-cell');
+if (gutterRule) {
+  var baseGutterWidth = 30; 
+  var fontScale = Math.max(1, state.zoom);
+  gutterRule.style.width = baseGutterWidth * fontScale + 'px';
+  gutterRule.style.paddingLeft = Math.round(5 * fontScale) + 'px';
+  gutterRule.style.paddingRight = Math.round(5 * fontScale) + 'px';
+}
+
+    }
+
+    if (editorUpdated) {
+      this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+      this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
+    }
+
+    this.editor.resize();
+  }
+
+  var wireWidth = WIRE_WIDTH * state.zoom;
+  var wires = this.$el[0].getElementsByClassName('port-wire');
+  for (var j = 0; j < wires.length; j++) {
+    pendingTasks.push({ e: wires[j], property: 'stroke-width', value: wireWidth + 'px' });
+  }
+
+  var topOffset = data.name || data.local ? 0 : 24;
+  pendingTasks.push(
+    { e: this.contentSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
+    { e: this.contentSelector[0], property: 'top', value: Math.round(((bbox.height + topOffset) / 2.0) * (state.zoom - 1) + topOffset) + 'px' },
+    { e: this.contentSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
+    { e: this.contentSelector[0], property: 'height', value: Math.round(bbox.height - topOffset) + 'px' },
+    { e: this.contentSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' }
+  );
+
+  if (data.name || data.local) {
+    this.headerSelector.removeClass('hidden');
+  } else {
+    this.headerSelector.addClass('hidden');
+  }
+
+  pendingTasks.push(
+    { e: this.$box[0], property: 'left', value: bbox.x * state.zoom + state.pan.x + 'px' },
+    { e: this.$box[0], property: 'top', value: bbox.y * state.zoom + state.pan.y + 'px' },
+    { e: this.$box[0], property: 'width', value: bbox.width * state.zoom + 'px' },
+    { e: this.$box[0], property: 'height', value: bbox.height * state.zoom + 'px' }
+  );
+
+  requestAnimationFrame(() => {
+    for (let task of pendingTasks) {
+      if (task.e) {
+        task.e.style[task.property] = task.value;
+      }
+    }
+  });
+}
+
 });
 
+///////// CODE   ////////
 // Code block
 
 joint.shapes.ice.Code = joint.shapes.ice.Model.extend({
@@ -2203,6 +2289,7 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
 
+  /*
   updateBox: function () {
     
     var pendingTasks = [];
@@ -2215,8 +2302,9 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     var rightPorts = this.model.get('rightPorts');
     var modelId = this.model.id;
     var editorUpdated = false;
+
     // Set font size
-    if (this.editor) {
+    if (this.editor){
       if (this.prevZoom !== state.zoom) {
         editorUpdated = true;
         this.prevZoom = state.zoom;
@@ -2433,11 +2521,139 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
       }
       this.editor.resize();
     }
-
+  
     return pendingTasks;
-  },
+  
+  },*/ 
+
+updateBox: function () {
+    var pendingTasks = [];
+    var bbox = this.model.getBBox();
+    var data = this.model.get('data');
+    var state = this.model.get('state');
+    var rules = this.model.get('rules');
+    var leftPorts = this.model.get('leftPorts');
+    var rightPorts = this.model.get('rightPorts');
+    var modelId = this.model.id;
+    var editorUpdated = false;
+
+    if (this.editor && this.prevZoom !== state.zoom) {
+        editorUpdated = true;
+        this.prevZoom = state.zoom;
+        var editorStyles = {
+            'margin': 7 * state.zoom + 'px',
+            'border-radius': 5 * state.zoom + 'px',
+            'border-width': state.zoom + 0.5 + 'px'
+        };
+        this.applyStyles(this.nativeDom.editorSelector, editorStyles);
+
+        var annotationSize = Math.round(15 * state.zoom) + 'px';
+        var annotationTypes = ['.ace_error', '.ace_warning', '.ace_info'];
+        annotationTypes.forEach(type => {
+            this.applyStyles(this.$box[0].querySelectorAll(type), {
+                'background-size': annotationSize + ' ' + annotationSize
+            });
+        });
+
+        this.applyStyles(this.$box[0].querySelectorAll('.ace_text-layer'), {
+            'padding': '0px ' + Math.round(4 * state.zoom) + 'px'
+        });
+
+      var aceGutterBaseWidth=37;
+      var gutterLayer = this.$box.find('.ace_gutter-layer');
+if (gutterLayer.length) {
+    gutterLayer.css({
+        'transform': 'scale(' + state.zoom + ')', // Escala
+        'transform-origin': 'left top', 
+        'width': Math.round(aceGutterBaseWidth * state.zoom) + 'px'    });
+}
+    }
+
+    var wireWidth = WIRE_WIDTH * state.zoom;
+    this.applyStyles(this.$el[0].getElementsByClassName('port-wire'), {
+        'stroke-width': wireWidth + 'px'
+    });
+
+    var busWidth = wireWidth * 3;
+    var tokId = 'port-wire-' + modelId + '-';
+    [...leftPorts, ...rightPorts].forEach(port => {
+        var dome = document.getElementById(tokId + port.id);
+        if (dome) {
+            this.applyStyles([dome], { 'stroke-width': busWidth + 'px' });
+        }
+    });
+
+    if (data?.ports?.in) {
+        var portTokId = 'port-default-' + modelId + '-';
+        data.ports.in.forEach(port => {
+            var portDefault = document.getElementById(portTokId + port.name);
+            if (portDefault) {
+                this.applyStyles([portDefault], {
+                    'display': (rules && port.default?.apply) ? 'inline' : 'none'
+                });
+
+                if (port.default?.apply) {
+                    this.applyStyles(portDefault.querySelectorAll('path'), {
+                        'stroke-width': wireWidth + 'px'
+                    });
+                    this.applyStyles(portDefault.querySelectorAll('rect'), {
+                        'stroke-width': state.zoom + 'px'
+                    });
+                }
+            }
+        });
+    }
+
+    var contentTransform = {
+        'left': Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
+        'top': Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
+        'width': Math.round(bbox.width) + 'px',
+        'height': Math.round(bbox.height) + 'px',
+        'transform': 'scale(' + state.zoom + ')'
+    };
+    this.applyStyles(this.nativeDom.contentSelector, contentTransform);
+
+    var boxTransform = {
+        'left': Math.round(bbox.x * state.zoom + state.pan.x) + 'px',
+        'top': Math.round(bbox.y * state.zoom + state.pan.y) + 'px',
+        'width': Math.round(bbox.width * state.zoom) + 'px',
+        'height': Math.round(bbox.height * state.zoom) + 'px'
+    };
+    this.applyStyles([this.nativeDom.box], boxTransform);
+
+    if (this.editor && editorUpdated) {
+        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
+    }
+
+    this.editor?.resize();
+    return pendingTasks;
+},
+
+/**
+ * Método auxiliar para aplicar estilos en lotes de forma segura.
+ */
+applyStyles: function (elements, styles) {
+    if (!elements){ return;}
+    
+    // Asegurar que `elements` sea un array o NodeList
+    if (!Array.isArray(elements) && !(elements instanceof NodeList)) {
+        elements = [elements];
+    }
+
+    elements.forEach(element => {
+        if (element && element.style) { // Validar que `element` no sea null/undefined
+            Object.keys(styles).forEach(prop => {
+                element.style[prop] = styles[prop];
+            });
+        }
+    });
+}
+
 });
 
+
+///////////////////// INFO //////////////////////////////
 // Info block
 
 joint.shapes.ice.Info = joint.shapes.ice.Model.extend({
@@ -2739,7 +2955,7 @@ joint.shapes.ice.InfoView = joint.shapes.ice.ModelView.extend({
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
 
-  updateBox: function () {
+  /*updateBox: function () {
     var bbox = this.model.getBBox();
     var state = this.model.get('state');
     var data = this.model.get('data');
@@ -2791,10 +3007,69 @@ joint.shapes.ice.InfoView = joint.shapes.ice.ModelView.extend({
       width: bbox.width * state.zoom,
       height: bbox.height * state.zoom,
     });
-  },
+  },*/
+  updateBox: function () {
+  var bbox = this.model.getBBox();
+  var state = this.model.get('state');
+  var data = this.model.get('data');
+
+  let temporalBypass = true;
+  if (!temporalBypass) {return;}
+
+  var pendingTasks = [];
+
+  if (data.readonly) {
+    pendingTasks.push(
+      { e: this.renderSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
+      { e: this.renderSelector[0], property: 'top', value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px' },
+      { e: this.renderSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
+      { e: this.renderSelector[0], property: 'height', value: Math.round(bbox.height) + 'px' },
+      { e: this.renderSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' },
+      { e: this.renderSelector[0], property: 'font-size', value: aceFontSize + 'px' }
+    );
+  } else if (this.editor) {
+    pendingTasks.push(
+      { e: this.editorSelector[0], property: 'margin', value: 7 * state.zoom + 'px' },
+      { e: this.editorSelector[0], property: 'border-radius', value: 5 * state.zoom + 'px' },
+      { e: this.editorSelector[0], property: 'border-width', value: state.zoom + 0.5 + 'px' }
+    );
+
+    var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
+    for (var i = 0; i < textLayers.length; i++) {
+      pendingTasks.push({ e: textLayers[i], property: 'padding', value: '0px ' + Math.round(4 * state.zoom) + 'px' });
+    }
+
+    this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+    this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
+    this.editor.resize();
+  }
+
+  pendingTasks.push(
+    { e: this.contentSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
+    { e: this.contentSelector[0], property: 'top', value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px' },
+    { e: this.contentSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
+    { e: this.contentSelector[0], property: 'height', value: Math.round(bbox.height) + 'px' },
+    { e: this.contentSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' }
+  );
+
+  pendingTasks.push(
+    { e: this.$box[0], property: 'left', value: bbox.x * state.zoom + state.pan.x + 'px' },
+    { e: this.$box[0], property: 'top', value: bbox.y * state.zoom + state.pan.y + 'px' },
+    { e: this.$box[0], property: 'width', value: bbox.width * state.zoom + 'px' },
+    { e: this.$box[0], property: 'height', value: bbox.height * state.zoom + 'px' }
+  );
+
+  requestAnimationFrame(() => {
+    for (let task of pendingTasks) {
+      if (task.e) {
+        task.e.style[task.property] = task.value;
+      }
+    }
+  });
+},
+
 
   removeBox: function (/*event*/) {
-    // Remove delta to allow Session Value restore
     delete this.model.attributes.data.delta;
     this.$box.remove();
   },

@@ -878,6 +878,11 @@ g {
   background-size: cover !important;
 }
 
+.ace_editor{
+
+  will-change: transform; 
+  transform: translateZ(0);
+}
 .ace_gutter-cell {
   padding-left: 30px !important;
 }
