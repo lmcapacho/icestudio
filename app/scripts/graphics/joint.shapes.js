@@ -1880,7 +1880,7 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
         return (radix === 16 ? '0x' : '') + text;
       },
     };
-    this.editor.renderer.setShowGutter(false);
+   // this.editor.renderer.setShowGutter(false);
     this.editor.renderer.setShowGutter(true);
 
     this.updating = false;
@@ -1891,72 +1891,7 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
     this.editor.setReadOnly(this.model.get('disabled'));
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
-/*
-  updateBox: function () {
-    
-    var bbox = this.model.getBBox();
-    var data = this.model.get('data');
-    var state = this.model.get('state');
 
-    // Set font size
-    if (this.editor) {
-      if (this.prevZoom !== state.zoom) {
-        this.prevZoom = state.zoom;
-        // Scale editor
-        this.editorSelector.css({
-          'top': 24 * state.zoom,
-          'margin': 7 * state.zoom,
-          'border-radius': 5 * state.zoom,
-          'border-width': state.zoom + 0.5,
-        });
-        // Scale padding
-        this.$box
-          .find('.ace_text-layer')
-          .css('padding', '0px ' + Math.round(4 * state.zoom) + 'px');
-        // Scale gutters
-        var rule = getCSSRule('.ace_folding-enabled > .ace_gutter-cell');
-        if (rule) {
-          rule.style.paddingLeft = Math.round(19 * state.zoom) + 'px';
-          rule.style.paddingRight = Math.round(13 * state.zoom) + 'px';
-        }
-        // Scale font size
-        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-        // Scale cursor
-        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
-      }
-      this.editor.resize();
-    }
-
-    // Set wire width
-    var width = WIRE_WIDTH * state.zoom;
-    this.$('.port-wire').css('stroke-width', width);
-
-    // Render content
-    var topOffset = data.name || data.local ? 0 : 24;
-    this.contentSelector.css({
-      left: Math.round((bbox.width / 2.0) * (state.zoom - 1)),
-      top: Math.round(
-        ((bbox.height + topOffset) / 2.0) * (state.zoom - 1) + topOffset
-      ),
-      width: Math.round(bbox.width),
-      height: Math.round(bbox.height - topOffset),
-      transform: 'scale(' + state.zoom + ')',
-    });
-
-    if (data.name || data.local) {
-      this.headerSelector.removeClass('hidden');
-    } else {
-      this.headerSelector.addClass('hidden');
-    }
-
-    // Render block
-    this.$box.css({
-      left: bbox.x * state.zoom + state.pan.x,
-      top: bbox.y * state.zoom + state.pan.y,
-      width: bbox.width * state.zoom,
-      height: bbox.height * state.zoom,
-    });
-  },*/ 
   updateBox: function () {
   var bbox = this.model.getBBox();
   var data = this.model.get('data');
@@ -1985,16 +1920,6 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
           value: '0px ' + Math.round(4 * state.zoom) + 'px',
         });
       }
-
-var gutterRule = getCSSRule('.ace_folding-enabled > .ace_gutter-cell');
-if (gutterRule) {
-  var baseGutterWidth = 30; 
-  var fontScale = Math.max(1, state.zoom);
-  gutterRule.style.width = baseGutterWidth * fontScale + 'px';
-  gutterRule.style.paddingLeft = Math.round(5 * fontScale) + 'px';
-  gutterRule.style.paddingRight = Math.round(5 * fontScale) + 'px';
-}
-
     }
 
     if (editorUpdated) {
@@ -2106,7 +2031,6 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     this.contentSelector = this.$box.find('.code-content');
     this.nativeDom = {
       box: this.$box[0],
-      // rule: getCSSRule('.ace_folding-enabled > .ace_gutter-cell'),
       editorSelector: this.$box[0].querySelectorAll('.code-editor'),
       contentSelector: this.$box[0].querySelectorAll('.code-content'),
     };
@@ -2303,24 +2227,15 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
             'padding': '0px ' + Math.round(4 * state.zoom) + 'px'
         });
 
-      var aceGutterBaseWidth=37;
-      var gutterLayer = this.$box.find('.ace_gutter-layer');
-if (gutterLayer.length) {
-  console.log('Escalando gutter');
-    gutterLayer.css({
-        'transform': 'scale(' + state.zoom + ')', // Escala
-        'transform-origin': 'left top', 
-        'width': Math.round(aceGutterBaseWidth * state.zoom) + 'px'    });
-}
 
-     var editIcon = this.$box.find('.js-codeblock-io-edit');
+      var editIcon = this.$box.find('.js-codeblock-io-edit');
 if (editIcon.length) {
 
    editIcon.css({
-        'transform': `scale(${state.zoom})`, // Solo escala
-        'transform-origin': 'top right', // Mantiene la esquina superior derecha como punto fijo
-        'top': '0px',  // Mantener en la posición original
-        'right': '0px'  // Mantener en la posición original
+        'transform': `scale(${state.zoom})`,
+        'transform-origin': 'top right', 
+        'top': '0px', 
+        'right': '0px'
     });
 }
 
@@ -2712,59 +2627,6 @@ joint.shapes.ice.InfoView = joint.shapes.ice.ModelView.extend({
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
 
-  /*updateBox: function () {
-    var bbox = this.model.getBBox();
-    var state = this.model.get('state');
-    var data = this.model.get('data');
-
-    //if (state.mutateZoom || forceMutate) {
-     let temporalBypass=true;
-    if (temporalBypass ){   
-    if (data.readonly) {
-        // Scale render
-        this.renderSelector.css({
-          'left': Math.round((bbox.width / 2.0) * (state.zoom - 1)),
-          'top': Math.round((bbox.height / 2.0) * (state.zoom - 1)),
-          'width': Math.round(bbox.width),
-          'height': Math.round(bbox.height),
-          'transform': 'scale(' + state.zoom + ')',
-          'font-size': aceFontSize + 'px',
-        });
-      } else if (this.editor) {
-        // Scale editor
-        this.editorSelector.css({
-          'margin': 7 * state.zoom,
-          'border-radius': 5 * state.zoom,
-          'border-width': state.zoom + 0.5,
-        });
-        // Scale padding
-        this.$box
-          .find('.ace_text-layer')
-          .css('padding', '0px ' + Math.round(4 * state.zoom) + 'px');
-        // Scale font size
-        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-        // Scale cursor
-        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
-        this.editor.resize();
-      }
-
-      // Render content
-      this.contentSelector.css({
-        left: Math.round((bbox.width / 2.0) * (state.zoom - 1)),
-        top: Math.round((bbox.height / 2.0) * (state.zoom - 1)),
-        width: Math.round(bbox.width),
-        height: Math.round(bbox.height),
-        transform: 'scale(' + state.zoom + ')',
-      });
-    }
-    // Render block
-    this.$box.css({
-      left: bbox.x * state.zoom + state.pan.x,
-      top: bbox.y * state.zoom + state.pan.y,
-      width: bbox.width * state.zoom,
-      height: bbox.height * state.zoom,
-    });
-  },*/
   updateBox: function () {
   var bbox = this.model.getBBox();
   var state = this.model.get('state');
@@ -2911,8 +2773,6 @@ joint.shapes.ice.Wire = joint.dia.Link.extend({
           'stroke': '#777',
         },
       },
-  //router: { name: 'manhattan' }, // ✅ Ahora usa Manhattan
-   // connector: { name: 'normal' }, // Puedes mantener normal o cambiarlo
 
      router: { name: 'ice' },
      connector: { name: 'ice' },
@@ -3238,26 +3098,3 @@ joint.shapes.ice.WireView = joint.dia.LinkView.extend({
   },
 });
 
-function getCSSRule(ruleName) {
-  if (document.styleSheets) {
-    for (var i = 0; i < document.styleSheets.length; i++) {
-      var styleSheet = document.styleSheets[i];
-      var ii = 0;
-      var cssRule = false;
-      do {
-        if (styleSheet.cssRules) {
-          cssRule = styleSheet.cssRules[ii];
-        } else {
-          cssRule = styleSheet.rules[ii];
-        }
-        if (cssRule) {
-          if (cssRule.selectorText === ruleName) {
-            return cssRule;
-          }
-        }
-        ii++;
-      } while (cssRule);
-    }
-  }
-  return false;
-}

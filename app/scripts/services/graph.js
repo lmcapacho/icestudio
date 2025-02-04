@@ -481,6 +481,18 @@ function restoreAceEditors() {
   editors.forEach(editor => {
    editor.style.display = 'block';
   });
+const baseGutterWidth = 50;
+  const baseGutterPLeft = 19;
+  const baseGutterPRight = 13;
+      const newWidth = baseGutterWidth * state.zoom;
+      const newPLeft = baseGutterPLeft * state.zoom;
+      const newPRight = baseGutterPRight * state.zoom;
+document.documentElement.style.setProperty('--gutter-width', newWidth + 'px');
+document.documentElement.style.setProperty('--gutter-padding-left', newPLeft + 'px');
+document.documentElement.style.setProperty('--gutter-padding-right', newPRight + 'px');
+document.documentElement.style.setProperty('--editor-content-scroller-left', newWidth + 'px');
+
+
 }
      
       this.panAndZoom = svgPanZoom(targetElement.childNodes[2], {
@@ -513,9 +525,10 @@ function restoreAceEditors() {
               requestAnimationFrame(() => {
              updateCellBoxes();
           graph.stopBatch('batch-update');
+ 
           state.mutateZoom = false;
         });
-        }, 300); 
+        }, 200); 
         },
         onPan: function (newPan) {
           state.pan = newPan;

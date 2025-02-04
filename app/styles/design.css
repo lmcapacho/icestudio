@@ -1,4 +1,12 @@
 /* PAPER STYLE: Place where the circuits are drawn */
+
+:root{
+   --gutter-width: 50px; 
+   --editor-content-scroller-left: 50px; 
+   --gutter-padding-right: 13px; 
+   --gutter-padding-left: 19px; 
+}
+
 .paper {
   position: relative;
   display: inline-block;
@@ -879,19 +887,38 @@ g {
   background-size: cover !important;
 }
 
-.ace_editor{
+.ace_editor, .ace_editor *{
 
-  will-change: transform; 
-  transform: translateZ(0);
+   transform: scale(1) translateZ(0);
+    transition: none !important;
+  animation: none !important;
 }
-.ace_gutter-cell {
+
+.ace_folding-enabled > .ace_gutter-cell,
+.ace_gutter-cell{
+
+  padding-left: var(--gutter-padding-left) !important;
+  padding-right: var(--gutter-padding-right) !important;
+
+}
+
+.ace_gutter-cell-disabled {
   padding-left: 30px !important;
 }
 
-.ace_folding-enabled > .ace_gutter-cell {
+.ace_folding-enabled-disabled > .ace_gutter-cell {
   padding-right: 15px !important;
 }
-.ace_gutter-layer {
+.ace_editor .ace_gutter {
+  width: var(--gutter-width) !important;
+}
+.ace_scroller{
+  left: var(--editor-content-scroller-left) !important; 
+}
+
+
+.ace_editor .ace_gutter-layer {
+  width: var(--gutter-width) !important;
 }
 
 .marker-vertex-remove-area {
