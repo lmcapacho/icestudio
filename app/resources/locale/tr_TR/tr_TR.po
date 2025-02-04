@@ -57,7 +57,7 @@ msgstr ""
 msgid "Add"
 msgstr "Ekle"
 
-#: app/scripts/controllers/menu.js:1479
+#: app/scripts/controllers/menu.js:1478
 msgid "Add a block to start"
 msgstr "Başlamak için bir blok ekleyin"
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "All collections removed"
 msgstr "Tüm koleksiyonlar kaldırıldı"
 
-#: app/scripts/controllers/menu.js:1519
+#: app/scripts/controllers/menu.js:1518
 msgid "All stored collections will be lost. Do you want to continue?"
 msgstr "Saklanan tüm koleksiyonlar kaybolacaktır. Devam etmek istiyor musunuz?"
 
@@ -150,11 +150,11 @@ msgstr "Pano"
 msgid "Board rules"
 msgstr "Pano ölçüm aleti"
 
-#: app/scripts/controllers/menu.js:1061
+#: app/scripts/controllers/menu.js:1060
 msgid "Board rules disabled"
 msgstr "Pano ölçüm kuralları devre dışı"
 
-#: app/scripts/controllers/menu.js:1059
+#: app/scripts/controllers/menu.js:1058
 msgid "Board rules enabled"
 msgstr "Pano ölçüm kuralları aktif"
 
@@ -170,7 +170,7 @@ msgstr "Pano {{name}} kullanılamıyor"
 msgid "Board {{name}} not connected"
 msgstr "Pano {{name}} bağlı değil"
 
-#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1398
+#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1397
 msgid "Board {{name}} selected"
 msgstr "Pano {{name}} seç"
 
@@ -178,21 +178,21 @@ msgstr "Pano {{name}} seç"
 msgid "Bootloader not active"
 msgstr "Önyükleyici etkin değil"
 
-#: app/scripts/controllers/menu.js:1424 app/views/design.html:533
+#: app/scripts/controllers/menu.js:1423 app/views/design.html:533
 #: app/views/menu.html:731
 msgid "Build"
 msgstr "Yapı"
 
-#: app/scripts/controllers/menu.js:1434
+#: app/scripts/controllers/menu.js:1433
 msgid "Build done"
 msgstr "Yapı tamam"
 
 #: app/scripts/app.js:56 app/scripts/controllers/menu.js:610
-#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1465
+#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1464
 msgid "Cancel"
 msgstr "İptal"
 
-#: app/scripts/services/utils.js:1250
+#: app/scripts/services/utils.js:1249
 msgid "Cannot paste from a different project format ({{version}})"
 msgstr ""
 
@@ -209,7 +209,7 @@ msgstr "Katalanca"
 msgid "Change Color"
 msgstr ""
 
-#: app/scripts/services/utils.js:1443
+#: app/scripts/services/utils.js:1442
 msgid "Changed Preferences: Allow tri-state connections"
 msgstr ""
 
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Clear Recently Opened"
 msgstr ""
 
-#: app/scripts/services/utils.js:1437
+#: app/scripts/services/utils.js:1436
 msgid ""
 "Click \"Yes\" to allow tri-state and update Preferences:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</"
@@ -259,7 +259,7 @@ msgstr "Sürücüleri kurmak için <b>buraya tıklayın</b>"
 msgid "Click here to install it"
 msgstr "Yüklemek için buraya tıklayın"
 
-#: app/scripts/controllers/menu.js:1003
+#: app/scripts/controllers/menu.js:1002
 msgid "Click here to view"
 msgstr "Görmek için buraya tıklayın"
 
@@ -287,7 +287,7 @@ msgstr "Koleksiyon"
 msgid "Collection info"
 msgstr "Koleksiyon bilgisi"
 
-#: app/scripts/controllers/menu.js:1307
+#: app/scripts/controllers/menu.js:1306
 msgid "Collection {{collection}} info not defined"
 msgstr "Koleksiyon {{collection}} bilgisi tanımsız"
 
@@ -307,7 +307,7 @@ msgstr "Koleksiyon {{name}} kaldırıldı"
 msgid "Collection {{name}} replaced"
 msgstr "Koleksiyon {{name}} değiştirildi"
 
-#: app/scripts/controllers/menu.js:1353
+#: app/scripts/controllers/menu.js:1352
 msgid "Collection {{name}} selected"
 msgstr "Koleksiyon {{name}} seçili"
 
@@ -315,7 +315,7 @@ msgstr "Koleksiyon {{name}} seçili"
 msgid "Collections"
 msgstr "Koleksiyonlar"
 
-#: app/scripts/controllers/menu.js:1323 app/views/menu.html:550
+#: app/scripts/controllers/menu.js:1322 app/views/menu.html:550
 msgid "Command output"
 msgstr "Komut çıkışı"
 
@@ -416,11 +416,11 @@ msgstr ""
 msgid "Disable"
 msgstr "Devre dışı"
 
-#: app/scripts/controllers/menu.js:644
+#: app/scripts/controllers/menu.js:643
 msgid "Do you want to close the application?"
 msgstr "Uygulamayı kapatmak istiyor musunuz?"
 
-#: app/scripts/controllers/menu.js:1502
+#: app/scripts/controllers/menu.js:1501
 msgid "Do you want to remove the {{name}} collection?"
 msgstr "Koleksiyonu kaldırmak {{name}} istiyor musunuz?"
 
@@ -511,7 +511,7 @@ msgstr "Pip yolunu girin"
 msgid "Enter the python path"
 msgstr "Python yolunu girin"
 
-#: app/scripts/controllers/menu.js:1048
+#: app/scripts/controllers/menu.js:1047
 msgid "Enter the remote hostname user@host"
 msgstr "Uzaktan ev ana bilgisayar adını girin @anabilgisayar"
 
@@ -560,7 +560,7 @@ msgstr "İhraç alt modül"
 msgid "External collections"
 msgstr "Harici koleksiyon"
 
-#: app/scripts/controllers/menu.js:976
+#: app/scripts/controllers/menu.js:975
 msgid "External collections updated"
 msgstr "Harici koleksiyonu güncelle"
 
@@ -568,7 +568,7 @@ msgstr "Harici koleksiyonu güncelle"
 msgid "External plugins"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:847
+#: app/scripts/controllers/menu.js:846
 msgid "External plugins updated"
 msgstr ""
 
@@ -660,7 +660,7 @@ msgstr "Onaltılı"
 msgid "Icestudio is part of"
 msgstr ""
 
-#: app/scripts/services/graph.js:1835
+#: app/scripts/services/graph.js:1916
 #, fuzzy
 msgid ""
 "If you see blank IN/OUT pins, it is because equivalent pins do not exist on "
@@ -761,19 +761,19 @@ msgstr "{{version}} yükleniyor"
 msgid "Internet connection required"
 msgstr "İnternet bağlantısı gerekli"
 
-#: app/scripts/services/graph.js:350
+#: app/scripts/services/graph.js:351
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "Geçersiz <i>Yukarı çekme</i> Bağlantı:<br>blok zaten bağlı"
 
-#: app/scripts/services/graph.js:374
+#: app/scripts/services/graph.js:375
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr ""
 "Geçersiz <i>Yukarı çekin</i> Bağlantı:<br>Sadece <i>Giriş</i> bloklar izin "
 "verildi"
 
-#: app/scripts/services/graph.js:362
+#: app/scripts/services/graph.js:363
 #, fuzzy
 msgid "Invalid block connection:<br><i>Pull-up</i> already connected"
 msgstr "Geçersiz blok bağlantısı:<br><i>Yukarı çekin</i> zaten bağlı"
@@ -782,20 +782,20 @@ msgstr "Geçersiz blok bağlantısı:<br><i>Yukarı çekin</i> zaten bağlı"
 msgid "Invalid collection {{name}}"
 msgstr "Geçersiz koleksiyon {{name}}"
 
-#: app/scripts/services/graph.js:307 app/scripts/services/graph.js:314
-#: app/scripts/services/graph.js:321
+#: app/scripts/services/graph.js:308 app/scripts/services/graph.js:315
+#: app/scripts/services/graph.js:322
 msgid "Invalid connection"
 msgstr "Geçersiz koleksiyon"
 
-#: app/scripts/services/graph.js:425
+#: app/scripts/services/graph.js:426
 msgid "Invalid connection: {{a}} → {{b}}"
 msgstr "Geçersiz koleksiyon: {{a}} → {{b}}"
 
-#: app/scripts/services/graph.js:340
+#: app/scripts/services/graph.js:341
 msgid "Invalid multiple input connections"
 msgstr "Geçersiz çoklu giriş bağlantıları"
 
-#: app/scripts/controllers/menu.js:2035
+#: app/scripts/controllers/menu.js:2034
 msgid "Invalid new name!"
 msgstr ""
 
@@ -803,7 +803,7 @@ msgstr ""
 msgid "Invalid project format"
 msgstr "Geçersiz proje biçimi"
 
-#: app/scripts/controllers/menu.js:1922
+#: app/scripts/controllers/menu.js:1921
 msgid "Invalid search name!"
 msgstr ""
 
@@ -862,7 +862,7 @@ msgstr "Sürücüler aktif"
 msgid "Logging file"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:794
+#: app/scripts/controllers/menu.js:793
 msgid "Logging file updated"
 msgstr ""
 
@@ -912,12 +912,12 @@ msgstr "Ad"
 msgid "Next"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1529
+#: app/scripts/controllers/menu.js:1528
 msgid "No collections stored"
 msgstr "Koleksiyonların kaydı yok"
 
 #: app/scripts/app.js:55 app/scripts/services/project.js:221
-#: app/scripts/services/utils.js:1464
+#: app/scripts/services/utils.js:1463
 msgid "OK"
 msgstr "TAMAM"
 
@@ -976,8 +976,8 @@ msgstr ""
 msgid "Paste"
 msgstr "Yapıştır"
 
-#: app/scripts/controllers/menu.js:801 app/scripts/controllers/menu.js:855
-#: app/scripts/controllers/menu.js:921 app/scripts/controllers/menu.js:984
+#: app/scripts/controllers/menu.js:800 app/scripts/controllers/menu.js:854
+#: app/scripts/controllers/menu.js:920 app/scripts/controllers/menu.js:983
 msgid "Path {{path}} does not exist"
 msgstr "Yol {{path}} yok"
 
@@ -997,7 +997,7 @@ msgstr ""
 msgid "Project information"
 msgstr "Proje bilgileri"
 
-#: app/scripts/controllers/menu.js:1001 app/scripts/controllers/menu.js:1026
+#: app/scripts/controllers/menu.js:1000 app/scripts/controllers/menu.js:1025
 msgid "Project information updated"
 msgstr "Proje bilgileri güncellendi"
 
@@ -1013,7 +1013,7 @@ msgstr "Projeyi {{name}} kaydet"
 msgid "Python environment"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:913
+#: app/scripts/controllers/menu.js:912
 msgid "Python environment updated"
 msgstr ""
 
@@ -1136,15 +1136,15 @@ msgstr "İspanyolca"
 msgid "Spring Green"
 msgstr "BaharYeşili"
 
-#: app/scripts/controllers/menu.js:1433
+#: app/scripts/controllers/menu.js:1432
 msgid "Start build"
 msgstr "Oluşturmaya başla"
 
-#: app/scripts/controllers/menu.js:1458
+#: app/scripts/controllers/menu.js:1457
 msgid "Start upload"
 msgstr "Yüklemeyi başlat"
 
-#: app/scripts/controllers/menu.js:1412
+#: app/scripts/controllers/menu.js:1411
 msgid "Start verification"
 msgstr "Doğrulamayı başlat"
 
@@ -1186,7 +1186,7 @@ msgstr ""
 msgid "The collection {{name}} already exists."
 msgstr "Koleksiyon {{name}} zaten var."
 
-#: app/scripts/controllers/menu.js:1378
+#: app/scripts/controllers/menu.js:1377
 #, fuzzy
 msgid ""
 "The current FPGA I/O configuration will be lost. Do you want to change to "
@@ -1225,11 +1225,11 @@ msgid ""
 "          by an emerging team from"
 msgstr ""
 
-#: app/scripts/services/utils.js:1459
+#: app/scripts/services/utils.js:1458
 msgid "This time"
 msgstr ""
 
-#: app/scripts/services/graph.js:646
+#: app/scripts/services/graph.js:698
 #, fuzzy
 msgid ""
 "To enter \"edit mode\" in a deeper block, you need to finish the current "
@@ -1284,7 +1284,7 @@ msgstr "Uyumluuygulama sürümü eşleşmiyor"
 msgid "Tools"
 msgstr "Araçlar"
 
-#: app/scripts/services/utils.js:1415
+#: app/scripts/services/utils.js:1414
 msgid ""
 "Tri-state (aka high-Z, bidirectional, or inout) ports are not recommended in "
 "standard designs.<br /><br />You will be asked to update your Preferences "
@@ -1292,11 +1292,11 @@ msgid ""
 "<br /><br />Continue?"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1077
+#: app/scripts/controllers/menu.js:1076
 msgid "Tri-state connections (inout ports) disabled"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1070
+#: app/scripts/controllers/menu.js:1069
 msgid "Tri-state connections (inout ports) enabled"
 msgstr ""
 
@@ -1308,7 +1308,7 @@ msgstr ""
 msgid "Turquoise"
 msgstr "Turkuaz"
 
-#: app/scripts/controllers/menu.js:1116 app/views/menu.html:438
+#: app/scripts/controllers/menu.js:1115 app/views/menu.html:438
 msgid "UI theme"
 msgstr ""
 
@@ -1336,12 +1336,12 @@ msgstr "İsimsiz"
 msgid "Update (Latest stable)"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1448 app/views/design.html:544
+#: app/scripts/controllers/menu.js:1447 app/views/design.html:544
 #: app/views/menu.html:739
 msgid "Upload"
 msgstr "Yükle"
 
-#: app/scripts/controllers/menu.js:1459
+#: app/scripts/controllers/menu.js:1458
 msgid "Upload done"
 msgstr "Yükleme tamamlandı"
 
@@ -1349,7 +1349,7 @@ msgstr "Yükleme tamamlandı"
 msgid "Using external Apio: {{name}}"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1413
+#: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
 msgstr "Doğrulama yapıldı"
 
@@ -1377,11 +1377,11 @@ msgstr "Görüntüle"
 msgid "View license"
 msgstr "Lisansı görüntüle"
 
-#: app/scripts/services/utils.js:1452
+#: app/scripts/services/utils.js:1451
 msgid "Viewing tri-state"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1117
+#: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
 msgstr ""
 
@@ -1416,7 +1416,7 @@ msgstr "Yanlış uzak anamakineadı {{name}}"
 msgid "Yellow"
 msgstr "Sarı"
 
-#: app/scripts/services/utils.js:1458
+#: app/scripts/services/utils.js:1457
 msgid "Yes"
 msgstr ""
 
@@ -1430,11 +1430,11 @@ msgstr ""
 "kaydedersiniz (bu durumda \"farklı kaydet\", \"dışa aktarma modülü\" gibi "
 "çalışır), devam etmek ister misiniz?"
 
-#: app/scripts/services/utils.js:1411
+#: app/scripts/services/utils.js:1410
 msgid "You are importing a block that uses \"tri-state\"."
 msgstr ""
 
-#: app/scripts/services/utils.js:1408
+#: app/scripts/services/utils.js:1407
 msgid "You are loading a design that uses \"tri-state\"."
 msgstr ""
 
@@ -1451,7 +1451,7 @@ msgid "You can load it as it is or convert it to use the {{name}} board."
 msgstr ""
 "Olduğu gibi yükleyebilir veya panoya için {{name}} dönüştürebilirsiniz."
 
-#: app/scripts/controllers/menu.js:1425
+#: app/scripts/controllers/menu.js:1424
 #, fuzzy
 msgid ""
 "You can only build at the top-level design. Inside submodules, you can "
@@ -1460,7 +1460,7 @@ msgstr ""
 "Sadece üst düzey bir tasarım inşa edebilirsiniz. Alt modüllerin içinde "
 "sadece <strong>doğrulayabilirsiniz</strong>"
 
-#: app/scripts/controllers/menu.js:1449
+#: app/scripts/controllers/menu.js:1448
 #, fuzzy
 msgid ""
 "You can only upload at the top-level design. Inside submodules, you can "
@@ -1473,7 +1473,7 @@ msgstr ""
 msgid "You can read the release notes on the"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:649
+#: app/scripts/controllers/menu.js:648
 msgid "Your changes will be lost if you don’t save them"
 msgstr "Kaydemezseniz değişikler kaybolacak"
 
@@ -1485,15 +1485,15 @@ msgstr "geri"
 msgid "{{app}} is required."
 msgstr "{{app}} gerekli."
 
-#: app/scripts/controllers/menu.js:1196
+#: app/scripts/controllers/menu.js:1195
 msgid "{{board}} datasheet not defined"
 msgstr "{{board}} veri sayfası tanımlanmadı"
 
-#: app/scripts/controllers/menu.js:1182
+#: app/scripts/controllers/menu.js:1181
 msgid "{{board}} pinout not defined"
 msgstr "{{board}} kablo işlev şeması tanımlanmadı"
 
-#: app/scripts/controllers/menu.js:1219
+#: app/scripts/controllers/menu.js:1218
 msgid "{{board}} rules not defined"
 msgstr "{{board}} kurallar tanımlanmadı"
 

@@ -57,7 +57,7 @@ msgstr "Riconoscimenti"
 msgid "Add"
 msgstr "Aggiungi"
 
-#: app/scripts/controllers/menu.js:1479
+#: app/scripts/controllers/menu.js:1478
 msgid "Add a block to start"
 msgstr "Aggiungere un blocco per iniziare"
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "All collections removed"
 msgstr "Tutte le collezioni sono state rimosse"
 
-#: app/scripts/controllers/menu.js:1519
+#: app/scripts/controllers/menu.js:1518
 #, fuzzy
 msgid "All stored collections will be lost. Do you want to continue?"
 msgstr "Tutte le collezioni memorizzate saranno perse. Vuoi continuare?"
@@ -152,11 +152,11 @@ msgstr "Scheda"
 msgid "Board rules"
 msgstr "Regole della scheda"
 
-#: app/scripts/controllers/menu.js:1061
+#: app/scripts/controllers/menu.js:1060
 msgid "Board rules disabled"
 msgstr "Regola della scheda disabilitate"
 
-#: app/scripts/controllers/menu.js:1059
+#: app/scripts/controllers/menu.js:1058
 msgid "Board rules enabled"
 msgstr "Regole della scheda abilitate"
 
@@ -172,7 +172,7 @@ msgstr "Scheda {{name}} non disponibile"
 msgid "Board {{name}} not connected"
 msgstr "Scheda {{name}} non connessa"
 
-#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1398
+#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1397
 msgid "Board {{name}} selected"
 msgstr "Scheda {{name}} selezionata"
 
@@ -180,21 +180,21 @@ msgstr "Scheda {{name}} selezionata"
 msgid "Bootloader not active"
 msgstr "Bootloader non attivo"
 
-#: app/scripts/controllers/menu.js:1424 app/views/design.html:533
+#: app/scripts/controllers/menu.js:1423 app/views/design.html:533
 #: app/views/menu.html:731
 msgid "Build"
 msgstr "Compila"
 
-#: app/scripts/controllers/menu.js:1434
+#: app/scripts/controllers/menu.js:1433
 msgid "Build done"
 msgstr "Compilazione terminata"
 
 #: app/scripts/app.js:56 app/scripts/controllers/menu.js:610
-#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1465
+#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1464
 msgid "Cancel"
 msgstr "Cancella"
 
-#: app/scripts/services/utils.js:1250
+#: app/scripts/services/utils.js:1249
 msgid "Cannot paste from a different project format ({{version}})"
 msgstr ""
 
@@ -212,7 +212,7 @@ msgstr "Catalano"
 msgid "Change Color"
 msgstr "Scegli un colore"
 
-#: app/scripts/services/utils.js:1443
+#: app/scripts/services/utils.js:1442
 msgid "Changed Preferences: Allow tri-state connections"
 msgstr ""
 
@@ -241,7 +241,7 @@ msgstr ""
 msgid "Clear Recently Opened"
 msgstr ""
 
-#: app/scripts/services/utils.js:1437
+#: app/scripts/services/utils.js:1436
 msgid ""
 "Click \"Yes\" to allow tri-state and update Preferences:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</"
@@ -262,7 +262,7 @@ msgstr "Clicca qui per <b>impostare i drivers</b>"
 msgid "Click here to install it"
 msgstr "Clicca qui per installarla"
 
-#: app/scripts/controllers/menu.js:1003
+#: app/scripts/controllers/menu.js:1002
 msgid "Click here to view"
 msgstr "Clicca qui per visualizzarlo"
 
@@ -290,7 +290,7 @@ msgstr "Collezione"
 msgid "Collection info"
 msgstr "Informazioni della collezione"
 
-#: app/scripts/controllers/menu.js:1307
+#: app/scripts/controllers/menu.js:1306
 msgid "Collection {{collection}} info not defined"
 msgstr ""
 "Le informazioni della collezione {{collection}} non sono state definite"
@@ -311,7 +311,7 @@ msgstr "Collezione {{name}} rimossa"
 msgid "Collection {{name}} replaced"
 msgstr "Collezione {{name}} rimpiazzata"
 
-#: app/scripts/controllers/menu.js:1353
+#: app/scripts/controllers/menu.js:1352
 msgid "Collection {{name}} selected"
 msgstr "Scheda {{name}} selezionata"
 
@@ -319,7 +319,7 @@ msgstr "Scheda {{name}} selezionata"
 msgid "Collections"
 msgstr "Collezioni"
 
-#: app/scripts/controllers/menu.js:1323 app/views/menu.html:550
+#: app/scripts/controllers/menu.js:1322 app/views/menu.html:550
 msgid "Command output"
 msgstr "Output dei comandi"
 
@@ -419,11 +419,11 @@ msgstr ""
 msgid "Disable"
 msgstr "Disattiva"
 
-#: app/scripts/controllers/menu.js:644
+#: app/scripts/controllers/menu.js:643
 msgid "Do you want to close the application?"
 msgstr "Vuoi chiudere l'applicazione?"
 
-#: app/scripts/controllers/menu.js:1502
+#: app/scripts/controllers/menu.js:1501
 msgid "Do you want to remove the {{name}} collection?"
 msgstr "Vuoi rimuovere la collezione {{name}}?"
 
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Enter the python path"
 msgstr "Inserisci il percorso file di python con versione > 3.8"
 
-#: app/scripts/controllers/menu.js:1048
+#: app/scripts/controllers/menu.js:1047
 msgid "Enter the remote hostname user@host"
 msgstr "Inserisci il nome dell'host remoto user@host"
 
@@ -562,7 +562,7 @@ msgstr "Esporta sottomodulo"
 msgid "External collections"
 msgstr "Collezioni esterne"
 
-#: app/scripts/controllers/menu.js:976
+#: app/scripts/controllers/menu.js:975
 #, fuzzy
 msgid "External collections updated"
 msgstr "Collezioni esterne aggiornate"
@@ -571,7 +571,7 @@ msgstr "Collezioni esterne aggiornate"
 msgid "External plugins"
 msgstr "Plugin esterni"
 
-#: app/scripts/controllers/menu.js:847
+#: app/scripts/controllers/menu.js:846
 msgid "External plugins updated"
 msgstr "Plugin esterni aggiornati"
 
@@ -662,7 +662,7 @@ msgstr "Esadecimale"
 msgid "Icestudio is part of"
 msgstr ""
 
-#: app/scripts/services/graph.js:1835
+#: app/scripts/services/graph.js:1916
 #, fuzzy
 msgid ""
 "If you see blank IN/OUT pins, it is because equivalent pins do not exist on "
@@ -762,19 +762,19 @@ msgstr ""
 msgid "Internet connection required"
 msgstr "Connessione a internet necessaria"
 
-#: app/scripts/services/graph.js:350
+#: app/scripts/services/graph.js:351
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "Connessione di tipo <i>Pull up</i> invalida:<br>blocco già connesso"
 
-#: app/scripts/services/graph.js:374
+#: app/scripts/services/graph.js:375
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr ""
 "Connessione di tipo <i>Pull up</i> invalida:<br>solo i blocchi di "
 "<i>ingresso</i> sono permessi"
 
-#: app/scripts/services/graph.js:362
+#: app/scripts/services/graph.js:363
 #, fuzzy
 msgid "Invalid block connection:<br><i>Pull-up</i> already connected"
 msgstr "Connessione al blocco invalida:<br><i>Pull up</i> già connesso"
@@ -783,20 +783,20 @@ msgstr "Connessione al blocco invalida:<br><i>Pull up</i> già connesso"
 msgid "Invalid collection {{name}}"
 msgstr "Collezione invalida {{name}}"
 
-#: app/scripts/services/graph.js:307 app/scripts/services/graph.js:314
-#: app/scripts/services/graph.js:321
+#: app/scripts/services/graph.js:308 app/scripts/services/graph.js:315
+#: app/scripts/services/graph.js:322
 msgid "Invalid connection"
 msgstr "Connessione invalida"
 
-#: app/scripts/services/graph.js:425
+#: app/scripts/services/graph.js:426
 msgid "Invalid connection: {{a}} → {{b}}"
 msgstr "Connessione invalida: {{a}} → {{b}}"
 
-#: app/scripts/services/graph.js:340
+#: app/scripts/services/graph.js:341
 msgid "Invalid multiple input connections"
 msgstr "Connessioni di multipli ingressi invalidi"
 
-#: app/scripts/controllers/menu.js:2035
+#: app/scripts/controllers/menu.js:2034
 msgid "Invalid new name!"
 msgstr ""
 
@@ -804,7 +804,7 @@ msgstr ""
 msgid "Invalid project format"
 msgstr "Formato del progetto invalido"
 
-#: app/scripts/controllers/menu.js:1922
+#: app/scripts/controllers/menu.js:1921
 msgid "Invalid search name!"
 msgstr ""
 
@@ -862,7 +862,7 @@ msgstr ""
 msgid "Logging file"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:794
+#: app/scripts/controllers/menu.js:793
 msgid "Logging file updated"
 msgstr ""
 
@@ -913,13 +913,13 @@ msgstr "Nome:"
 msgid "Next"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1529
+#: app/scripts/controllers/menu.js:1528
 #, fuzzy
 msgid "No collections stored"
 msgstr "Nessuna collezioni memorizzata"
 
 #: app/scripts/app.js:55 app/scripts/services/project.js:221
-#: app/scripts/services/utils.js:1464
+#: app/scripts/services/utils.js:1463
 msgid "OK"
 msgstr "OK"
 
@@ -980,8 +980,8 @@ msgstr ""
 msgid "Paste"
 msgstr "Incolla"
 
-#: app/scripts/controllers/menu.js:801 app/scripts/controllers/menu.js:855
-#: app/scripts/controllers/menu.js:921 app/scripts/controllers/menu.js:984
+#: app/scripts/controllers/menu.js:800 app/scripts/controllers/menu.js:854
+#: app/scripts/controllers/menu.js:920 app/scripts/controllers/menu.js:983
 #, fuzzy
 msgid "Path {{path}} does not exist"
 msgstr "Il percorso {{path}}è inesistente"
@@ -1002,7 +1002,7 @@ msgstr ""
 msgid "Project information"
 msgstr "Informazioni del progetto"
 
-#: app/scripts/controllers/menu.js:1001 app/scripts/controllers/menu.js:1026
+#: app/scripts/controllers/menu.js:1000 app/scripts/controllers/menu.js:1025
 msgid "Project information updated"
 msgstr "Informazioni del progetto aggionate"
 
@@ -1018,7 +1018,7 @@ msgstr "Progetto {{name}} salvato"
 msgid "Python environment"
 msgstr "Ambiente Python"
 
-#: app/scripts/controllers/menu.js:913
+#: app/scripts/controllers/menu.js:912
 #, fuzzy
 msgid "Python environment updated"
 msgstr "Ambiente Python aggiornato"
@@ -1142,15 +1142,15 @@ msgstr "Spagnolo"
 msgid "Spring Green"
 msgstr "VerdePrimavera"
 
-#: app/scripts/controllers/menu.js:1433
+#: app/scripts/controllers/menu.js:1432
 msgid "Start build"
 msgstr "Inizia compilazione"
 
-#: app/scripts/controllers/menu.js:1458
+#: app/scripts/controllers/menu.js:1457
 msgid "Start upload"
 msgstr "Inizia caricamento"
 
-#: app/scripts/controllers/menu.js:1412
+#: app/scripts/controllers/menu.js:1411
 msgid "Start verification"
 msgstr "Inizia verifica"
 
@@ -1193,7 +1193,7 @@ msgstr ". Grazie mille"
 msgid "The collection {{name}} already exists."
 msgstr "La collezione {{name}} esiste già."
 
-#: app/scripts/controllers/menu.js:1378
+#: app/scripts/controllers/menu.js:1377
 #, fuzzy
 msgid ""
 "The current FPGA I/O configuration will be lost. Do you want to change to "
@@ -1232,11 +1232,11 @@ msgid ""
 "          by an emerging team from"
 msgstr ""
 
-#: app/scripts/services/utils.js:1459
+#: app/scripts/services/utils.js:1458
 msgid "This time"
 msgstr ""
 
-#: app/scripts/services/graph.js:646
+#: app/scripts/services/graph.js:698
 #, fuzzy
 msgid ""
 "To enter \"edit mode\" in a deeper block, you need to finish the current "
@@ -1294,7 +1294,7 @@ msgstr "La versione della Toolchain non corrisponde"
 msgid "Tools"
 msgstr "Strumenti"
 
-#: app/scripts/services/utils.js:1415
+#: app/scripts/services/utils.js:1414
 msgid ""
 "Tri-state (aka high-Z, bidirectional, or inout) ports are not recommended in "
 "standard designs.<br /><br />You will be asked to update your Preferences "
@@ -1302,11 +1302,11 @@ msgid ""
 "<br /><br />Continue?"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1077
+#: app/scripts/controllers/menu.js:1076
 msgid "Tri-state connections (inout ports) disabled"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1070
+#: app/scripts/controllers/menu.js:1069
 msgid "Tri-state connections (inout ports) enabled"
 msgstr ""
 
@@ -1318,7 +1318,7 @@ msgstr ""
 msgid "Turquoise"
 msgstr "Turchese"
 
-#: app/scripts/controllers/menu.js:1116 app/views/menu.html:438
+#: app/scripts/controllers/menu.js:1115 app/views/menu.html:438
 msgid "UI theme"
 msgstr "Tema UI"
 
@@ -1346,12 +1346,12 @@ msgstr "Senza titolo"
 msgid "Update (Latest stable)"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1448 app/views/design.html:544
+#: app/scripts/controllers/menu.js:1447 app/views/design.html:544
 #: app/views/menu.html:739
 msgid "Upload"
 msgstr "Carica"
 
-#: app/scripts/controllers/menu.js:1459
+#: app/scripts/controllers/menu.js:1458
 msgid "Upload done"
 msgstr "Caricamento completato"
 
@@ -1359,7 +1359,7 @@ msgstr "Caricamento completato"
 msgid "Using external Apio: {{name}}"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1413
+#: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
 msgstr "Verifica completata"
 
@@ -1387,11 +1387,11 @@ msgstr "Visualizza"
 msgid "View license"
 msgstr "Visualizza licenza"
 
-#: app/scripts/services/utils.js:1452
+#: app/scripts/services/utils.js:1451
 msgid "Viewing tri-state"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1117
+#: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
 msgstr ""
 
@@ -1426,7 +1426,7 @@ msgstr "Nome dell'host remoto {{name}} errato"
 msgid "Yellow"
 msgstr "Giallo"
 
-#: app/scripts/services/utils.js:1458
+#: app/scripts/services/utils.js:1457
 msgid "Yes"
 msgstr ""
 
@@ -1440,11 +1440,11 @@ msgstr ""
 "sottomodulo (in questa situazione \"salva con nome\" funziona come \"esporta "
 "modulo\"), Continuare?"
 
-#: app/scripts/services/utils.js:1411
+#: app/scripts/services/utils.js:1410
 msgid "You are importing a block that uses \"tri-state\"."
 msgstr ""
 
-#: app/scripts/services/utils.js:1408
+#: app/scripts/services/utils.js:1407
 msgid "You are loading a design that uses \"tri-state\"."
 msgstr ""
 
@@ -1460,7 +1460,7 @@ msgstr ""
 msgid "You can load it as it is or convert it to use the {{name}} board."
 msgstr "Puoi caricarlo così come è o convertirlo per la scheda {{name}}"
 
-#: app/scripts/controllers/menu.js:1425
+#: app/scripts/controllers/menu.js:1424
 #, fuzzy
 msgid ""
 "You can only build at the top-level design. Inside submodules, you can "
@@ -1469,7 +1469,7 @@ msgstr ""
 "Puoi costruire solo sul design di primo livello. All'interno dei sottomodi è "
 "solo possibile <strong>Verificare</strong>"
 
-#: app/scripts/controllers/menu.js:1449
+#: app/scripts/controllers/menu.js:1448
 #, fuzzy
 msgid ""
 "You can only upload at the top-level design. Inside submodules, you can "
@@ -1482,7 +1482,7 @@ msgstr ""
 msgid "You can read the release notes on the"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:649
+#: app/scripts/controllers/menu.js:648
 msgid "Your changes will be lost if you don’t save them"
 msgstr "I tuoi progressi saranno perduti se non li salvi"
 
@@ -1494,15 +1494,15 @@ msgstr "indietro"
 msgid "{{app}} is required."
 msgstr "{{app}} è richiesta."
 
-#: app/scripts/controllers/menu.js:1196
+#: app/scripts/controllers/menu.js:1195
 msgid "{{board}} datasheet not defined"
 msgstr "La scheda tecnica di {{board}} non è definita"
 
-#: app/scripts/controllers/menu.js:1182
+#: app/scripts/controllers/menu.js:1181
 msgid "{{board}} pinout not defined"
 msgstr "{{board}} piedinatura non definita"
 
-#: app/scripts/controllers/menu.js:1219
+#: app/scripts/controllers/menu.js:1218
 msgid "{{board}} rules not defined"
 msgstr "Regole di {{board}} non definite"
 

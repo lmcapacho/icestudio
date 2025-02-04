@@ -63,7 +63,7 @@ msgstr "謝辞"
 msgid "Add"
 msgstr "追加"
 
-#: app/scripts/controllers/menu.js:1479
+#: app/scripts/controllers/menu.js:1478
 msgid "Add a block to start"
 msgstr "ブロックを追加して始める"
 
@@ -83,7 +83,7 @@ msgstr ""
 msgid "All collections removed"
 msgstr "すべてのコレクションが削除されました"
 
-#: app/scripts/controllers/menu.js:1519
+#: app/scripts/controllers/menu.js:1518
 msgid "All stored collections will be lost. Do you want to continue?"
 msgstr "保存されているコレクションはすべて失われます。継続しますか？"
 
@@ -157,11 +157,11 @@ msgstr "ボード"
 msgid "Board rules"
 msgstr "ボードルール"
 
-#: app/scripts/controllers/menu.js:1061
+#: app/scripts/controllers/menu.js:1060
 msgid "Board rules disabled"
 msgstr "ボードルールが無効です"
 
-#: app/scripts/controllers/menu.js:1059
+#: app/scripts/controllers/menu.js:1058
 msgid "Board rules enabled"
 msgstr "ボードルールが有効です"
 
@@ -177,7 +177,7 @@ msgstr "ボード {{name}} は使えません"
 msgid "Board {{name}} not connected"
 msgstr "ボード {{name}} が接続されていません"
 
-#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1398
+#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1397
 msgid "Board {{name}} selected"
 msgstr "ボード {{name}} が選択されました"
 
@@ -185,21 +185,21 @@ msgstr "ボード {{name}} が選択されました"
 msgid "Bootloader not active"
 msgstr "ブートローダがアクティブでないです！"
 
-#: app/scripts/controllers/menu.js:1424 app/views/design.html:533
+#: app/scripts/controllers/menu.js:1423 app/views/design.html:533
 #: app/views/menu.html:731
 msgid "Build"
 msgstr "ビルド"
 
-#: app/scripts/controllers/menu.js:1434
+#: app/scripts/controllers/menu.js:1433
 msgid "Build done"
 msgstr "ビルド完了"
 
 #: app/scripts/app.js:56 app/scripts/controllers/menu.js:610
-#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1465
+#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1464
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: app/scripts/services/utils.js:1250
+#: app/scripts/services/utils.js:1249
 msgid "Cannot paste from a different project format ({{version}})"
 msgstr ""
 
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Change Color"
 msgstr "色を変更"
 
-#: app/scripts/services/utils.js:1443
+#: app/scripts/services/utils.js:1442
 msgid "Changed Preferences: Allow tri-state connections"
 msgstr ""
 
@@ -243,7 +243,7 @@ msgstr ""
 msgid "Clear Recently Opened"
 msgstr ""
 
-#: app/scripts/services/utils.js:1437
+#: app/scripts/services/utils.js:1436
 msgid ""
 "Click \"Yes\" to allow tri-state and update Preferences:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</"
@@ -264,7 +264,7 @@ msgstr "ここをクリックして<b>ドライバをセットアップ</b>"
 msgid "Click here to install it"
 msgstr "ここをクリックしてインストール"
 
-#: app/scripts/controllers/menu.js:1003
+#: app/scripts/controllers/menu.js:1002
 msgid "Click here to view"
 msgstr "ここをクリックして閲覧"
 
@@ -293,7 +293,7 @@ msgstr "コレクション"
 msgid "Collection info"
 msgstr "コレクションの詳細"
 
-#: app/scripts/controllers/menu.js:1307
+#: app/scripts/controllers/menu.js:1306
 msgid "Collection {{collection}} info not defined"
 msgstr "コレクション {{collection}} の詳細が見つかりません"
 
@@ -313,7 +313,7 @@ msgstr "コレクション {{name}} が削除されました"
 msgid "Collection {{name}} replaced"
 msgstr "コレクション {{name}} が置き換えられました"
 
-#: app/scripts/controllers/menu.js:1353
+#: app/scripts/controllers/menu.js:1352
 msgid "Collection {{name}} selected"
 msgstr "コレクション {{name}} が選択されました"
 
@@ -321,7 +321,7 @@ msgstr "コレクション {{name}} が選択されました"
 msgid "Collections"
 msgstr "コレクション"
 
-#: app/scripts/controllers/menu.js:1323 app/views/menu.html:550
+#: app/scripts/controllers/menu.js:1322 app/views/menu.html:550
 msgid "Command output"
 msgstr "コマンド出力"
 
@@ -416,11 +416,11 @@ msgstr ""
 msgid "Disable"
 msgstr "無効化"
 
-#: app/scripts/controllers/menu.js:644
+#: app/scripts/controllers/menu.js:643
 msgid "Do you want to close the application?"
 msgstr "アプリケーションを終了しますか？"
 
-#: app/scripts/controllers/menu.js:1502
+#: app/scripts/controllers/menu.js:1501
 msgid "Do you want to remove the {{name}} collection?"
 msgstr "コレクション {{name}} を削除しますか？"
 
@@ -509,7 +509,7 @@ msgstr "pipへのパスを入力"
 msgid "Enter the python path"
 msgstr "Pythonへのパスを入力"
 
-#: app/scripts/controllers/menu.js:1048
+#: app/scripts/controllers/menu.js:1047
 msgid "Enter the remote hostname user@host"
 msgstr "リモートホスト名を入力 user@host"
 
@@ -558,7 +558,7 @@ msgstr "サブモジュールをエクスポート"
 msgid "External collections"
 msgstr "外部接続"
 
-#: app/scripts/controllers/menu.js:976
+#: app/scripts/controllers/menu.js:975
 msgid "External collections updated"
 msgstr "外部接続が更新されました"
 
@@ -566,7 +566,7 @@ msgstr "外部接続が更新されました"
 msgid "External plugins"
 msgstr "外部プラグイン"
 
-#: app/scripts/controllers/menu.js:847
+#: app/scripts/controllers/menu.js:846
 msgid "External plugins updated"
 msgstr "外部プラグインが更新されました"
 
@@ -657,7 +657,7 @@ msgstr "16進数"
 msgid "Icestudio is part of"
 msgstr ""
 
-#: app/scripts/services/graph.js:1835
+#: app/scripts/services/graph.js:1916
 #, fuzzy
 msgid ""
 "If you see blank IN/OUT pins, it is because equivalent pins do not exist on "
@@ -757,17 +757,17 @@ msgstr "インストール中 {{version}}"
 msgid "Internet connection required"
 msgstr "インターネット接続が必要"
 
-#: app/scripts/services/graph.js:350
+#: app/scripts/services/graph.js:351
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "無効な <I>プルアップ</i> 接続：<br>ブロックが既に接続されています"
 
-#: app/scripts/services/graph.js:374
+#: app/scripts/services/graph.js:375
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr "無効な <I>プルアップ</i> 接続：<br><I>入力</i>ブロックのみ可能です"
 
-#: app/scripts/services/graph.js:362
+#: app/scripts/services/graph.js:363
 msgid "Invalid block connection:<br><i>Pull-up</i> already connected"
 msgstr "無効なブロック接続：<br><I>プルアップ</i> が既に接続されています"
 
@@ -775,20 +775,20 @@ msgstr "無効なブロック接続：<br><I>プルアップ</i> が既に接続
 msgid "Invalid collection {{name}}"
 msgstr ""
 
-#: app/scripts/services/graph.js:307 app/scripts/services/graph.js:314
-#: app/scripts/services/graph.js:321
+#: app/scripts/services/graph.js:308 app/scripts/services/graph.js:315
+#: app/scripts/services/graph.js:322
 msgid "Invalid connection"
 msgstr "無効な接続"
 
-#: app/scripts/services/graph.js:425
+#: app/scripts/services/graph.js:426
 msgid "Invalid connection: {{a}} → {{b}}"
 msgstr "無効な接続：{{a}} → {{b}}"
 
-#: app/scripts/services/graph.js:340
+#: app/scripts/services/graph.js:341
 msgid "Invalid multiple input connections"
 msgstr "無効な複数の入力接続"
 
-#: app/scripts/controllers/menu.js:2035
+#: app/scripts/controllers/menu.js:2034
 #, fuzzy
 msgid "Invalid new name!"
 msgstr "誤った名前！"
@@ -797,7 +797,7 @@ msgstr "誤った名前！"
 msgid "Invalid project format"
 msgstr "無効なプロジェクトフォーマット"
 
-#: app/scripts/controllers/menu.js:1922
+#: app/scripts/controllers/menu.js:1921
 #, fuzzy
 msgid "Invalid search name!"
 msgstr "誤った検索名！"
@@ -855,7 +855,7 @@ msgstr "ログ記録を有効化"
 msgid "Logging file"
 msgstr "ログファイル"
 
-#: app/scripts/controllers/menu.js:794
+#: app/scripts/controllers/menu.js:793
 msgid "Logging file updated"
 msgstr "ログファイルが更新されました"
 
@@ -905,12 +905,12 @@ msgstr "新しい名前:"
 msgid "Next"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1529
+#: app/scripts/controllers/menu.js:1528
 msgid "No collections stored"
 msgstr ""
 
 #: app/scripts/app.js:55 app/scripts/services/project.js:221
-#: app/scripts/services/utils.js:1464
+#: app/scripts/services/utils.js:1463
 msgid "OK"
 msgstr ""
 
@@ -969,8 +969,8 @@ msgstr ""
 msgid "Paste"
 msgstr "ペースト"
 
-#: app/scripts/controllers/menu.js:801 app/scripts/controllers/menu.js:855
-#: app/scripts/controllers/menu.js:921 app/scripts/controllers/menu.js:984
+#: app/scripts/controllers/menu.js:800 app/scripts/controllers/menu.js:854
+#: app/scripts/controllers/menu.js:920 app/scripts/controllers/menu.js:983
 msgid "Path {{path}} does not exist"
 msgstr "パス {{path}} が存在しません"
 
@@ -990,7 +990,7 @@ msgstr ""
 msgid "Project information"
 msgstr "プロジェクトの情報"
 
-#: app/scripts/controllers/menu.js:1001 app/scripts/controllers/menu.js:1026
+#: app/scripts/controllers/menu.js:1000 app/scripts/controllers/menu.js:1025
 msgid "Project information updated"
 msgstr "プロジェクトの情報が更新されました"
 
@@ -1006,7 +1006,7 @@ msgstr "プロジェクト {{name}} が保存されました"
 msgid "Python environment"
 msgstr "Python 環境"
 
-#: app/scripts/controllers/menu.js:913
+#: app/scripts/controllers/menu.js:912
 #, fuzzy
 msgid "Python environment updated"
 msgstr "Python 環境がアップデートされました"
@@ -1127,15 +1127,15 @@ msgstr ""
 msgid "Spring Green"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1433
+#: app/scripts/controllers/menu.js:1432
 msgid "Start build"
 msgstr "ビルド開始"
 
-#: app/scripts/controllers/menu.js:1458
+#: app/scripts/controllers/menu.js:1457
 msgid "Start upload"
 msgstr "アップロード開始"
 
-#: app/scripts/controllers/menu.js:1412
+#: app/scripts/controllers/menu.js:1411
 msgid "Start verification"
 msgstr "検証を開始"
 
@@ -1176,7 +1176,7 @@ msgstr ""
 msgid "The collection {{name}} already exists."
 msgstr "コレクション {{name}} は既に存在します。"
 
-#: app/scripts/controllers/menu.js:1378
+#: app/scripts/controllers/menu.js:1377
 msgid ""
 "The current FPGA I/O configuration will be lost. Do you want to change to "
 "the {{name}} board?"
@@ -1212,11 +1212,11 @@ msgid ""
 "          by an emerging team from"
 msgstr ""
 
-#: app/scripts/services/utils.js:1459
+#: app/scripts/services/utils.js:1458
 msgid "This time"
 msgstr ""
 
-#: app/scripts/services/graph.js:646
+#: app/scripts/services/graph.js:698
 #, fuzzy
 msgid ""
 "To enter \"edit mode\" in a deeper block, you need to finish the current "
@@ -1270,7 +1270,7 @@ msgstr "ツールチェーンのバージョンが適合しません"
 msgid "Tools"
 msgstr "ツール"
 
-#: app/scripts/services/utils.js:1415
+#: app/scripts/services/utils.js:1414
 msgid ""
 "Tri-state (aka high-Z, bidirectional, or inout) ports are not recommended in "
 "standard designs.<br /><br />You will be asked to update your Preferences "
@@ -1278,11 +1278,11 @@ msgid ""
 "<br /><br />Continue?"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1077
+#: app/scripts/controllers/menu.js:1076
 msgid "Tri-state connections (inout ports) disabled"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1070
+#: app/scripts/controllers/menu.js:1069
 msgid "Tri-state connections (inout ports) enabled"
 msgstr ""
 
@@ -1294,7 +1294,7 @@ msgstr ""
 msgid "Turquoise"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1116 app/views/menu.html:438
+#: app/scripts/controllers/menu.js:1115 app/views/menu.html:438
 msgid "UI theme"
 msgstr "UI テーマ"
 
@@ -1322,12 +1322,12 @@ msgstr "無名"
 msgid "Update (Latest stable)"
 msgstr "アップデート（最新の安定版）"
 
-#: app/scripts/controllers/menu.js:1448 app/views/design.html:544
+#: app/scripts/controllers/menu.js:1447 app/views/design.html:544
 #: app/views/menu.html:739
 msgid "Upload"
 msgstr "アップロード"
 
-#: app/scripts/controllers/menu.js:1459
+#: app/scripts/controllers/menu.js:1458
 msgid "Upload done"
 msgstr "アップロード完了"
 
@@ -1335,7 +1335,7 @@ msgstr "アップロード完了"
 msgid "Using external Apio: {{name}}"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1413
+#: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
 msgstr "検証完了"
 
@@ -1363,11 +1363,11 @@ msgstr "表示"
 msgid "View license"
 msgstr "ライセンスを確認"
 
-#: app/scripts/services/utils.js:1452
+#: app/scripts/services/utils.js:1451
 msgid "Viewing tri-state"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1117
+#: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
 msgstr ""
 
@@ -1401,7 +1401,7 @@ msgstr "誤ったリモートホスト名 {{name}}"
 msgid "Yellow"
 msgstr ""
 
-#: app/scripts/services/utils.js:1458
+#: app/scripts/services/utils.js:1457
 msgid "Yes"
 msgstr ""
 
@@ -1414,11 +1414,11 @@ msgstr ""
 "れます（「名前を付けて保存」は「モジュールのエクスポート」のように機能しま"
 "す）。保存しますか？"
 
-#: app/scripts/services/utils.js:1411
+#: app/scripts/services/utils.js:1410
 msgid "You are importing a block that uses \"tri-state\"."
 msgstr ""
 
-#: app/scripts/services/utils.js:1408
+#: app/scripts/services/utils.js:1407
 msgid "You are loading a design that uses \"tri-state\"."
 msgstr ""
 
@@ -1438,7 +1438,7 @@ msgstr ""
 msgid "You can load it as it is or convert it to use the {{name}} board."
 msgstr "そのまま読み込むか、ボード {{name}} 用に変換することができます。"
 
-#: app/scripts/controllers/menu.js:1425
+#: app/scripts/controllers/menu.js:1424
 msgid ""
 "You can only build at the top-level design. Inside submodules, you can "
 "<strong>Verify</strong>"
@@ -1446,7 +1446,7 @@ msgstr ""
 "ビルドはデザインのトップレベルでのみ可能です。サブモジュールでは<strong>検証"
 "</strong>のみ可能です"
 
-#: app/scripts/controllers/menu.js:1449
+#: app/scripts/controllers/menu.js:1448
 msgid ""
 "You can only upload at the top-level design. Inside submodules, you can "
 "<strong>Verify</strong>"
@@ -1458,7 +1458,7 @@ msgstr ""
 msgid "You can read the release notes on the"
 msgstr "リリースノートは以下で読むことができます"
 
-#: app/scripts/controllers/menu.js:649
+#: app/scripts/controllers/menu.js:648
 msgid "Your changes will be lost if you don’t save them"
 msgstr "保存しないと変更内容が失われます"
 
@@ -1470,15 +1470,15 @@ msgstr "戻る"
 msgid "{{app}} is required."
 msgstr "{{app}} が必要です。"
 
-#: app/scripts/controllers/menu.js:1196
+#: app/scripts/controllers/menu.js:1195
 msgid "{{board}} datasheet not defined"
 msgstr "{{board}} のデータシートが未定義"
 
-#: app/scripts/controllers/menu.js:1182
+#: app/scripts/controllers/menu.js:1181
 msgid "{{board}} pinout not defined"
 msgstr "{{board}} のピンアウトが未定義"
 
-#: app/scripts/controllers/menu.js:1219
+#: app/scripts/controllers/menu.js:1218
 msgid "{{board}} rules not defined"
 msgstr "{{board}} のルールが未定義"
 

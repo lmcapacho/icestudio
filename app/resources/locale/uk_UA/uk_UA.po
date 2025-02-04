@@ -62,7 +62,7 @@ msgstr "Подяка"
 msgid "Add"
 msgstr "Додати"
 
-#: app/scripts/controllers/menu.js:1479
+#: app/scripts/controllers/menu.js:1478
 msgid "Add a block to start"
 msgstr "Додайте блок для початку"
 
@@ -82,7 +82,7 @@ msgstr "Розширені функції"
 msgid "All collections removed"
 msgstr "Всі колекції видалено"
 
-#: app/scripts/controllers/menu.js:1519
+#: app/scripts/controllers/menu.js:1518
 msgid "All stored collections will be lost. Do you want to continue?"
 msgstr "Усі збережені колекції буде втрачено. Ви хочете продовжити?"
 
@@ -155,11 +155,11 @@ msgstr "Плата"
 msgid "Board rules"
 msgstr "Правила плати"
 
-#: app/scripts/controllers/menu.js:1061
+#: app/scripts/controllers/menu.js:1060
 msgid "Board rules disabled"
 msgstr "Правила плати вимкнені"
 
-#: app/scripts/controllers/menu.js:1059
+#: app/scripts/controllers/menu.js:1058
 msgid "Board rules enabled"
 msgstr "Правила плати ввімкнені"
 
@@ -175,7 +175,7 @@ msgstr "Плата {{name}} недоступна"
 msgid "Board {{name}} not connected"
 msgstr "Плата {{name}} не підключена"
 
-#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1398
+#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1397
 msgid "Board {{name}} selected"
 msgstr "Вибрана плата {{name}}"
 
@@ -183,21 +183,21 @@ msgstr "Вибрана плата {{name}}"
 msgid "Bootloader not active"
 msgstr "Завантажувач не активний"
 
-#: app/scripts/controllers/menu.js:1424 app/views/design.html:533
+#: app/scripts/controllers/menu.js:1423 app/views/design.html:533
 #: app/views/menu.html:731
 msgid "Build"
 msgstr "Збірка"
 
-#: app/scripts/controllers/menu.js:1434
+#: app/scripts/controllers/menu.js:1433
 msgid "Build done"
 msgstr "Збірка завершена"
 
 #: app/scripts/app.js:56 app/scripts/controllers/menu.js:610
-#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1465
+#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1464
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: app/scripts/services/utils.js:1250
+#: app/scripts/services/utils.js:1249
 msgid "Cannot paste from a different project format ({{version}})"
 msgstr "Не можна вставити з іншого формату проекту ({{version}})"
 
@@ -213,7 +213,7 @@ msgstr "Каталонська"
 msgid "Change Color"
 msgstr "Змінити колір"
 
-#: app/scripts/services/utils.js:1443
+#: app/scripts/services/utils.js:1442
 msgid "Changed Preferences: Allow tri-state connections"
 msgstr "Змінені налаштування: Дозволити тристабільні з'єднання"
 
@@ -241,7 +241,7 @@ msgstr ""
 msgid "Clear Recently Opened"
 msgstr ""
 
-#: app/scripts/services/utils.js:1437
+#: app/scripts/services/utils.js:1436
 msgid ""
 "Click \"Yes\" to allow tri-state and update Preferences:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</"
@@ -266,7 +266,7 @@ msgstr "Натисніть тут, щоб <b>налаштувати драйве
 msgid "Click here to install it"
 msgstr "Натисніть тут, щоб встановити"
 
-#: app/scripts/controllers/menu.js:1003
+#: app/scripts/controllers/menu.js:1002
 msgid "Click here to view"
 msgstr "Натисніть тут, щоб переглянути"
 
@@ -294,7 +294,7 @@ msgstr "Колекція"
 msgid "Collection info"
 msgstr "Інформація про колекцію"
 
-#: app/scripts/controllers/menu.js:1307
+#: app/scripts/controllers/menu.js:1306
 msgid "Collection {{collection}} info not defined"
 msgstr "Інформацію про колекцію {{collection}} не визначено"
 
@@ -314,7 +314,7 @@ msgstr "Колекцію {{name}} видалено"
 msgid "Collection {{name}} replaced"
 msgstr "Колекцію {{name}} замінено"
 
-#: app/scripts/controllers/menu.js:1353
+#: app/scripts/controllers/menu.js:1352
 msgid "Collection {{name}} selected"
 msgstr "Колекцію {{name}} вибрано"
 
@@ -322,7 +322,7 @@ msgstr "Колекцію {{name}} вибрано"
 msgid "Collections"
 msgstr "Колекції"
 
-#: app/scripts/controllers/menu.js:1323 app/views/menu.html:550
+#: app/scripts/controllers/menu.js:1322 app/views/menu.html:550
 msgid "Command output"
 msgstr "Вивід команди"
 
@@ -417,11 +417,11 @@ msgstr ""
 msgid "Disable"
 msgstr "Вимкнути"
 
-#: app/scripts/controllers/menu.js:644
+#: app/scripts/controllers/menu.js:643
 msgid "Do you want to close the application?"
 msgstr "Ви хочете закрити програму?"
 
-#: app/scripts/controllers/menu.js:1502
+#: app/scripts/controllers/menu.js:1501
 msgid "Do you want to remove the {{name}} collection?"
 msgstr "Ви хочете видалити колекцію {{name}}?"
 
@@ -508,7 +508,7 @@ msgstr "Введіть шлях до pip"
 msgid "Enter the python path"
 msgstr "Введіть шлях до python"
 
-#: app/scripts/controllers/menu.js:1048
+#: app/scripts/controllers/menu.js:1047
 msgid "Enter the remote hostname user@host"
 msgstr "Введіть віддалене ім'я хоста user@host"
 
@@ -558,7 +558,7 @@ msgstr "Експорт підмодуля"
 msgid "External collections"
 msgstr "Зовнішні колекції"
 
-#: app/scripts/controllers/menu.js:976
+#: app/scripts/controllers/menu.js:975
 msgid "External collections updated"
 msgstr "Зовнішні колекції оновлено"
 
@@ -566,7 +566,7 @@ msgstr "Зовнішні колекції оновлено"
 msgid "External plugins"
 msgstr "Зовнішні плагіни"
 
-#: app/scripts/controllers/menu.js:847
+#: app/scripts/controllers/menu.js:846
 msgid "External plugins updated"
 msgstr "Зовнішні плагіни оновлено"
 
@@ -656,7 +656,7 @@ msgstr "Шістнадцятковий"
 msgid "Icestudio is part of"
 msgstr "Icestudio є частиною"
 
-#: app/scripts/services/graph.js:1835
+#: app/scripts/services/graph.js:1916
 msgid ""
 "If you see blank IN/OUT pins, it is because equivalent pins do not exist on "
 "this board"
@@ -751,16 +751,16 @@ msgstr "Встановлення {{version}}"
 msgid "Internet connection required"
 msgstr "Потрібне підключення до Інтернету"
 
-#: app/scripts/services/graph.js:350
+#: app/scripts/services/graph.js:351
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "Неправильне підключення <i>Pull-up</i>:<br>Блок вже підключений"
 
-#: app/scripts/services/graph.js:374
+#: app/scripts/services/graph.js:375
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr ""
 "Неправильне підключення <i>Pull-up</i>:<br>Дозволені лише блоки <i>Input</i>"
 
-#: app/scripts/services/graph.js:362
+#: app/scripts/services/graph.js:363
 msgid "Invalid block connection:<br><i>Pull-up</i> already connected"
 msgstr "Неправильне підключення блоку:<br><i>Pull-up</i> вже підключений"
 
@@ -768,20 +768,20 @@ msgstr "Неправильне підключення блоку:<br><i>Pull-up<
 msgid "Invalid collection {{name}}"
 msgstr "Неправильна колекція {{name}}"
 
-#: app/scripts/services/graph.js:307 app/scripts/services/graph.js:314
-#: app/scripts/services/graph.js:321
+#: app/scripts/services/graph.js:308 app/scripts/services/graph.js:315
+#: app/scripts/services/graph.js:322
 msgid "Invalid connection"
 msgstr "Неправильне підключення"
 
-#: app/scripts/services/graph.js:425
+#: app/scripts/services/graph.js:426
 msgid "Invalid connection: {{a}} → {{b}}"
 msgstr "Неправильне підключення: {{a}} → {{b}}"
 
-#: app/scripts/services/graph.js:340
+#: app/scripts/services/graph.js:341
 msgid "Invalid multiple input connections"
 msgstr "Неправильне підключення декількох входів"
 
-#: app/scripts/controllers/menu.js:2035
+#: app/scripts/controllers/menu.js:2034
 msgid "Invalid new name!"
 msgstr "Неправильне нове ім'я!"
 
@@ -789,7 +789,7 @@ msgstr "Неправильне нове ім'я!"
 msgid "Invalid project format"
 msgstr "Неправильний формат проекту"
 
-#: app/scripts/controllers/menu.js:1922
+#: app/scripts/controllers/menu.js:1921
 msgid "Invalid search name!"
 msgstr "Неправильне ім'я для пошуку!"
 
@@ -845,7 +845,7 @@ msgstr "Журналювання увімкнено"
 msgid "Logging file"
 msgstr "Файл журналювання"
 
-#: app/scripts/controllers/menu.js:794
+#: app/scripts/controllers/menu.js:793
 msgid "Logging file updated"
 msgstr "Файл журналювання оновлено"
 
@@ -893,12 +893,12 @@ msgstr "Нове ім'я:"
 msgid "Next"
 msgstr "Далі"
 
-#: app/scripts/controllers/menu.js:1529
+#: app/scripts/controllers/menu.js:1528
 msgid "No collections stored"
 msgstr "Колекції не збережені"
 
 #: app/scripts/app.js:55 app/scripts/services/project.js:221
-#: app/scripts/services/utils.js:1464
+#: app/scripts/services/utils.js:1463
 msgid "OK"
 msgstr "ОК"
 
@@ -954,8 +954,8 @@ msgstr "Парні мітки"
 msgid "Paste"
 msgstr "Вставити"
 
-#: app/scripts/controllers/menu.js:801 app/scripts/controllers/menu.js:855
-#: app/scripts/controllers/menu.js:921 app/scripts/controllers/menu.js:984
+#: app/scripts/controllers/menu.js:800 app/scripts/controllers/menu.js:854
+#: app/scripts/controllers/menu.js:920 app/scripts/controllers/menu.js:983
 msgid "Path {{path}} does not exist"
 msgstr "Шлях {{path}} не існує"
 
@@ -975,7 +975,7 @@ msgstr "Назад"
 msgid "Project information"
 msgstr "Інформація про проект"
 
-#: app/scripts/controllers/menu.js:1001 app/scripts/controllers/menu.js:1026
+#: app/scripts/controllers/menu.js:1000 app/scripts/controllers/menu.js:1025
 msgid "Project information updated"
 msgstr "Інформацію про проект оновлено"
 
@@ -991,7 +991,7 @@ msgstr "Проект {{name}} збережено"
 msgid "Python environment"
 msgstr "Середовище Python"
 
-#: app/scripts/controllers/menu.js:913
+#: app/scripts/controllers/menu.js:912
 msgid "Python environment updated"
 msgstr "Середовище Python оновлено"
 
@@ -1112,15 +1112,15 @@ msgstr "Іспанська"
 msgid "Spring Green"
 msgstr "Яскраво-зелений"
 
-#: app/scripts/controllers/menu.js:1433
+#: app/scripts/controllers/menu.js:1432
 msgid "Start build"
 msgstr "Розпочати збірку"
 
-#: app/scripts/controllers/menu.js:1458
+#: app/scripts/controllers/menu.js:1457
 msgid "Start upload"
 msgstr "Розпочати завантаження"
 
-#: app/scripts/controllers/menu.js:1412
+#: app/scripts/controllers/menu.js:1411
 msgid "Start verification"
 msgstr "Розпочати перевірку"
 
@@ -1160,7 +1160,7 @@ msgstr "Дуже дякуємо!"
 msgid "The collection {{name}} already exists."
 msgstr "Колекція {{name}} вже існує."
 
-#: app/scripts/controllers/menu.js:1378
+#: app/scripts/controllers/menu.js:1377
 msgid ""
 "The current FPGA I/O configuration will be lost. Do you want to change to "
 "the {{name}} board?"
@@ -1198,11 +1198,11 @@ msgid ""
 "          by an emerging team from"
 msgstr "Цей випуск став можливим завдяки чудовій роботі команди, що виникає з"
 
-#: app/scripts/services/utils.js:1459
+#: app/scripts/services/utils.js:1458
 msgid "This time"
 msgstr "Цього разу"
 
-#: app/scripts/services/graph.js:646
+#: app/scripts/services/graph.js:698
 msgid ""
 "To enter \"edit mode\" in a deeper block, you need to finish the current "
 "level by locking the padlock."
@@ -1253,7 +1253,7 @@ msgstr "Версія інструменту розробки не збігаєт
 msgid "Tools"
 msgstr "Інструменти"
 
-#: app/scripts/services/utils.js:1415
+#: app/scripts/services/utils.js:1414
 msgid ""
 "Tri-state (aka high-Z, bidirectional, or inout) ports are not recommended in "
 "standard designs.<br /><br />You will be asked to update your Preferences "
@@ -1265,11 +1265,11 @@ msgstr ""
 "налаштування (Налаштування для досвідчених користувачів) або ви можете "
 "просто відкрити цей дизайн для попереднього перегляду.<br /><br />Продовжити?"
 
-#: app/scripts/controllers/menu.js:1077
+#: app/scripts/controllers/menu.js:1076
 msgid "Tri-state connections (inout ports) disabled"
 msgstr "Тристабільні з'єднання (вхід-вихідні порти) відключені"
 
-#: app/scripts/controllers/menu.js:1070
+#: app/scripts/controllers/menu.js:1069
 msgid "Tri-state connections (inout ports) enabled"
 msgstr "Тристабільні з'єднання (вхід-вихідні порти) увімкнені"
 
@@ -1281,7 +1281,7 @@ msgstr "Турецька"
 msgid "Turquoise"
 msgstr "Бірюзовий"
 
-#: app/scripts/controllers/menu.js:1116 app/views/menu.html:438
+#: app/scripts/controllers/menu.js:1115 app/views/menu.html:438
 msgid "UI theme"
 msgstr "Тема інтерфейсу"
 
@@ -1309,12 +1309,12 @@ msgstr "Без назви"
 msgid "Update (Latest stable)"
 msgstr "Оновлення (остання стабільна версія)"
 
-#: app/scripts/controllers/menu.js:1448 app/views/design.html:544
+#: app/scripts/controllers/menu.js:1447 app/views/design.html:544
 #: app/views/menu.html:739
 msgid "Upload"
 msgstr "Завантажити"
 
-#: app/scripts/controllers/menu.js:1459
+#: app/scripts/controllers/menu.js:1458
 msgid "Upload done"
 msgstr "Завантаження завершено"
 
@@ -1322,7 +1322,7 @@ msgstr "Завантаження завершено"
 msgid "Using external Apio: {{name}}"
 msgstr "Використання зовнішнього Apio: {{name}}"
 
-#: app/scripts/controllers/menu.js:1413
+#: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
 msgstr "Перевірка завершена"
 
@@ -1351,11 +1351,11 @@ msgstr "Перегляд"
 msgid "View license"
 msgstr "Переглянути ліцензію"
 
-#: app/scripts/services/utils.js:1452
+#: app/scripts/services/utils.js:1451
 msgid "Viewing tri-state"
 msgstr "Перегляд тристабільного стану"
 
-#: app/scripts/controllers/menu.js:1117
+#: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
 msgstr ""
 
@@ -1389,7 +1389,7 @@ msgstr "Неправильне віддалене ім'я хоста: {{name}}"
 msgid "Yellow"
 msgstr "Жовтий"
 
-#: app/scripts/services/utils.js:1458
+#: app/scripts/services/utils.js:1457
 msgid "Yes"
 msgstr "Так"
 
@@ -1401,11 +1401,11 @@ msgstr ""
 "Ви редагуєте субмодуль, тому збережете лише цей субмодуль (\"Зберегти як\" "
 "працює як \"Експортувати                 модуль\"). Хочете продовжити?"
 
-#: app/scripts/services/utils.js:1411
+#: app/scripts/services/utils.js:1410
 msgid "You are importing a block that uses \"tri-state\"."
 msgstr "Ви імпортуєте блок, який використовує \"тристабільний стан\"."
 
-#: app/scripts/services/utils.js:1408
+#: app/scripts/services/utils.js:1407
 msgid "You are loading a design that uses \"tri-state\"."
 msgstr "Ви завантажуєте дизайн, який використовує \"тристабільний стан\"."
 
@@ -1426,7 +1426,7 @@ msgstr ""
 "Ви можете завантажити його як є або конвертувати для використання з платою "
 "{{name}}."
 
-#: app/scripts/controllers/menu.js:1425
+#: app/scripts/controllers/menu.js:1424
 msgid ""
 "You can only build at the top-level design. Inside submodules, you can "
 "<strong>Verify</strong>"
@@ -1434,7 +1434,7 @@ msgstr ""
 "Ви можете збирати тільки на верхньому рівні дизайну. Усередині субмодулів, "
 "ви можете <strong>Перевірити</strong>"
 
-#: app/scripts/controllers/menu.js:1449
+#: app/scripts/controllers/menu.js:1448
 msgid ""
 "You can only upload at the top-level design. Inside submodules, you can "
 "<strong>Verify</strong>"
@@ -1446,7 +1446,7 @@ msgstr ""
 msgid "You can read the release notes on the"
 msgstr "Ви можете прочитати примітки до версії на"
 
-#: app/scripts/controllers/menu.js:649
+#: app/scripts/controllers/menu.js:648
 msgid "Your changes will be lost if you don’t save them"
 msgstr "Ваші зміни будуть втрачені, якщо ви їх не збережете"
 
@@ -1458,15 +1458,15 @@ msgstr "назад"
 msgid "{{app}} is required."
 msgstr "{{app}} необхідний."
 
-#: app/scripts/controllers/menu.js:1196
+#: app/scripts/controllers/menu.js:1195
 msgid "{{board}} datasheet not defined"
 msgstr "{{board}} технічний опис не визначено"
 
-#: app/scripts/controllers/menu.js:1182
+#: app/scripts/controllers/menu.js:1181
 msgid "{{board}} pinout not defined"
 msgstr "{{board}} розташування контактів не визначено"
 
-#: app/scripts/controllers/menu.js:1219
+#: app/scripts/controllers/menu.js:1218
 msgid "{{board}} rules not defined"
 msgstr "{{board}} правила не визначено"
 

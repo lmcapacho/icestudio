@@ -57,7 +57,7 @@ msgstr ""
 msgid "Add"
 msgstr "添加"
 
-#: app/scripts/controllers/menu.js:1479
+#: app/scripts/controllers/menu.js:1478
 msgid "Add a block to start"
 msgstr "添加图块并开始"
 
@@ -77,7 +77,7 @@ msgstr ""
 msgid "All collections removed"
 msgstr "所有集合已删除"
 
-#: app/scripts/controllers/menu.js:1519
+#: app/scripts/controllers/menu.js:1518
 msgid "All stored collections will be lost. Do you want to continue?"
 msgstr "所有存储的集合将会丢失。是否继续？"
 
@@ -151,11 +151,11 @@ msgstr "开发板"
 msgid "Board rules"
 msgstr "开发板规则"
 
-#: app/scripts/controllers/menu.js:1061
+#: app/scripts/controllers/menu.js:1060
 msgid "Board rules disabled"
 msgstr "开发板规则关闭"
 
-#: app/scripts/controllers/menu.js:1059
+#: app/scripts/controllers/menu.js:1058
 msgid "Board rules enabled"
 msgstr "开发板规则开启"
 
@@ -171,7 +171,7 @@ msgstr "开发板 {{name}} 不可用"
 msgid "Board {{name}} not connected"
 msgstr "开发板 {{name}} 未连接"
 
-#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1398
+#: app/scripts/app.js:187 app/scripts/controllers/menu.js:1397
 msgid "Board {{name}} selected"
 msgstr "开发板 {{name}} 已选中"
 
@@ -179,21 +179,21 @@ msgstr "开发板 {{name}} 已选中"
 msgid "Bootloader not active"
 msgstr "Bootloader 失效"
 
-#: app/scripts/controllers/menu.js:1424 app/views/design.html:533
+#: app/scripts/controllers/menu.js:1423 app/views/design.html:533
 #: app/views/menu.html:731
 msgid "Build"
 msgstr "构建"
 
-#: app/scripts/controllers/menu.js:1434
+#: app/scripts/controllers/menu.js:1433
 msgid "Build done"
 msgstr "构建成功"
 
 #: app/scripts/app.js:56 app/scripts/controllers/menu.js:610
-#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1465
+#: app/scripts/services/project.js:222 app/scripts/services/utils.js:1464
 msgid "Cancel"
 msgstr "取消"
 
-#: app/scripts/services/utils.js:1250
+#: app/scripts/services/utils.js:1249
 msgid "Cannot paste from a different project format ({{version}})"
 msgstr ""
 
@@ -211,7 +211,7 @@ msgstr "Catalan"
 msgid "Change Color"
 msgstr "选择一个颜色"
 
-#: app/scripts/services/utils.js:1443
+#: app/scripts/services/utils.js:1442
 msgid "Changed Preferences: Allow tri-state connections"
 msgstr ""
 
@@ -240,7 +240,7 @@ msgstr ""
 msgid "Clear Recently Opened"
 msgstr ""
 
-#: app/scripts/services/utils.js:1437
+#: app/scripts/services/utils.js:1436
 msgid ""
 "Click \"Yes\" to allow tri-state and update Preferences:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</"
@@ -261,7 +261,7 @@ msgstr "点击此处 <b>安装驱动程序</b>"
 msgid "Click here to install it"
 msgstr "点击此处安装"
 
-#: app/scripts/controllers/menu.js:1003
+#: app/scripts/controllers/menu.js:1002
 msgid "Click here to view"
 msgstr "点击此处浏览"
 
@@ -289,7 +289,7 @@ msgstr "集合"
 msgid "Collection info"
 msgstr "集合信息"
 
-#: app/scripts/controllers/menu.js:1307
+#: app/scripts/controllers/menu.js:1306
 msgid "Collection {{collection}} info not defined"
 msgstr "集合 {{collection}} 的信息未定义"
 
@@ -309,7 +309,7 @@ msgstr "已移除集合 {{name}}"
 msgid "Collection {{name}} replaced"
 msgstr "已替换集合 {{name}}"
 
-#: app/scripts/controllers/menu.js:1353
+#: app/scripts/controllers/menu.js:1352
 msgid "Collection {{name}} selected"
 msgstr "已选中集合 {{name}}"
 
@@ -317,7 +317,7 @@ msgstr "已选中集合 {{name}}"
 msgid "Collections"
 msgstr "集合"
 
-#: app/scripts/controllers/menu.js:1323 app/views/menu.html:550
+#: app/scripts/controllers/menu.js:1322 app/views/menu.html:550
 msgid "Command output"
 msgstr "命令输出"
 
@@ -418,11 +418,11 @@ msgstr ""
 msgid "Disable"
 msgstr "关闭"
 
-#: app/scripts/controllers/menu.js:644
+#: app/scripts/controllers/menu.js:643
 msgid "Do you want to close the application?"
 msgstr "您是否要关闭应用程序？"
 
-#: app/scripts/controllers/menu.js:1502
+#: app/scripts/controllers/menu.js:1501
 msgid "Do you want to remove the {{name}} collection?"
 msgstr "您是否要移除集合 {{name}}？"
 
@@ -511,7 +511,7 @@ msgstr ""
 msgid "Enter the python path"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1048
+#: app/scripts/controllers/menu.js:1047
 msgid "Enter the remote hostname user@host"
 msgstr "输入远程主机 用户名@主机名"
 
@@ -560,7 +560,7 @@ msgstr "导出子模块"
 msgid "External collections"
 msgstr "外部集合"
 
-#: app/scripts/controllers/menu.js:976
+#: app/scripts/controllers/menu.js:975
 msgid "External collections updated"
 msgstr "外部集合已更新"
 
@@ -569,7 +569,7 @@ msgstr "外部集合已更新"
 msgid "External plugins"
 msgstr "外部集合"
 
-#: app/scripts/controllers/menu.js:847
+#: app/scripts/controllers/menu.js:846
 #, fuzzy
 msgid "External plugins updated"
 msgstr "外部集合已更新"
@@ -661,7 +661,7 @@ msgstr "十六进制"
 msgid "Icestudio is part of"
 msgstr ""
 
-#: app/scripts/services/graph.js:1835
+#: app/scripts/services/graph.js:1916
 #, fuzzy
 msgid ""
 "If you see blank IN/OUT pins, it is because equivalent pins do not exist on "
@@ -752,17 +752,17 @@ msgstr ""
 msgid "Internet connection required"
 msgstr "需要网络连接"
 
-#: app/scripts/services/graph.js:350
+#: app/scripts/services/graph.js:351
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "无效的 <i>上拉</i> 连接：<br>图块已被连接"
 
-#: app/scripts/services/graph.js:374
+#: app/scripts/services/graph.js:375
 #, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr "无效的 <i>上拉</i> 连接：<br>只有 <i>输入</i> 图块才能被上拉"
 
-#: app/scripts/services/graph.js:362
+#: app/scripts/services/graph.js:363
 #, fuzzy
 msgid "Invalid block connection:<br><i>Pull-up</i> already connected"
 msgstr "无效的图块连接：<br><i>上拉</i> 已经使用"
@@ -771,20 +771,20 @@ msgstr "无效的图块连接：<br><i>上拉</i> 已经使用"
 msgid "Invalid collection {{name}}"
 msgstr "无效的集合 {{name}}"
 
-#: app/scripts/services/graph.js:307 app/scripts/services/graph.js:314
-#: app/scripts/services/graph.js:321
+#: app/scripts/services/graph.js:308 app/scripts/services/graph.js:315
+#: app/scripts/services/graph.js:322
 msgid "Invalid connection"
 msgstr "无效的连接"
 
-#: app/scripts/services/graph.js:425
+#: app/scripts/services/graph.js:426
 msgid "Invalid connection: {{a}} → {{b}}"
 msgstr "无效的连接 {{a}} → {{b}}"
 
-#: app/scripts/services/graph.js:340
+#: app/scripts/services/graph.js:341
 msgid "Invalid multiple input connections"
 msgstr "无效的多输入连接"
 
-#: app/scripts/controllers/menu.js:2035
+#: app/scripts/controllers/menu.js:2034
 msgid "Invalid new name!"
 msgstr ""
 
@@ -792,7 +792,7 @@ msgstr ""
 msgid "Invalid project format"
 msgstr "无效的项目格式"
 
-#: app/scripts/controllers/menu.js:1922
+#: app/scripts/controllers/menu.js:1921
 msgid "Invalid search name!"
 msgstr ""
 
@@ -850,7 +850,7 @@ msgstr ""
 msgid "Logging file"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:794
+#: app/scripts/controllers/menu.js:793
 msgid "Logging file updated"
 msgstr ""
 
@@ -900,12 +900,12 @@ msgstr "名称:"
 msgid "Next"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1529
+#: app/scripts/controllers/menu.js:1528
 msgid "No collections stored"
 msgstr "没有存储的集合"
 
 #: app/scripts/app.js:55 app/scripts/services/project.js:221
-#: app/scripts/services/utils.js:1464
+#: app/scripts/services/utils.js:1463
 msgid "OK"
 msgstr "确定"
 
@@ -965,8 +965,8 @@ msgstr ""
 msgid "Paste"
 msgstr "粘贴"
 
-#: app/scripts/controllers/menu.js:801 app/scripts/controllers/menu.js:855
-#: app/scripts/controllers/menu.js:921 app/scripts/controllers/menu.js:984
+#: app/scripts/controllers/menu.js:800 app/scripts/controllers/menu.js:854
+#: app/scripts/controllers/menu.js:920 app/scripts/controllers/menu.js:983
 msgid "Path {{path}} does not exist"
 msgstr "路径 {{path}} 不存在"
 
@@ -986,7 +986,7 @@ msgstr ""
 msgid "Project information"
 msgstr "项目信息"
 
-#: app/scripts/controllers/menu.js:1001 app/scripts/controllers/menu.js:1026
+#: app/scripts/controllers/menu.js:1000 app/scripts/controllers/menu.js:1025
 msgid "Project information updated"
 msgstr "项目信息已更新"
 
@@ -1002,7 +1002,7 @@ msgstr "项目 {{name}} 已保存"
 msgid "Python environment"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:913
+#: app/scripts/controllers/menu.js:912
 msgid "Python environment updated"
 msgstr ""
 
@@ -1125,15 +1125,15 @@ msgstr "Spanish"
 msgid "Spring Green"
 msgstr "春绿"
 
-#: app/scripts/controllers/menu.js:1433
+#: app/scripts/controllers/menu.js:1432
 msgid "Start build"
 msgstr "开始编译"
 
-#: app/scripts/controllers/menu.js:1458
+#: app/scripts/controllers/menu.js:1457
 msgid "Start upload"
 msgstr "开始上传"
 
-#: app/scripts/controllers/menu.js:1412
+#: app/scripts/controllers/menu.js:1411
 msgid "Start verification"
 msgstr "开始验证"
 
@@ -1175,7 +1175,7 @@ msgstr ""
 msgid "The collection {{name}} already exists."
 msgstr "集合 {{name}} 已存在。"
 
-#: app/scripts/controllers/menu.js:1378
+#: app/scripts/controllers/menu.js:1377
 #, fuzzy
 msgid ""
 "The current FPGA I/O configuration will be lost. Do you want to change to "
@@ -1210,11 +1210,11 @@ msgid ""
 "          by an emerging team from"
 msgstr ""
 
-#: app/scripts/services/utils.js:1459
+#: app/scripts/services/utils.js:1458
 msgid "This time"
 msgstr ""
 
-#: app/scripts/services/graph.js:646
+#: app/scripts/services/graph.js:698
 #, fuzzy
 msgid ""
 "To enter \"edit mode\" in a deeper block, you need to finish the current "
@@ -1235,8 +1235,8 @@ msgid ""
 "top-level design.<br><br>If you want to export               this submodule "
 "to a file, use the \"Save as\" command."
 msgstr ""
-"要保存您的设计，您需要锁定键锁并且切换到顶层设计<br><br>如果您想将子模块导"
-"出到文件，请点击\"另存为\"。"
+"要保存您的设计，您需要锁定键锁并且切换到顶层设计<br><br>如果您想将子模块导出"
+"到文件，请点击\"另存为\"。"
 
 #: app/views/menu.html:406
 #, fuzzy
@@ -1268,7 +1268,7 @@ msgstr "工具链版本不匹配"
 msgid "Tools"
 msgstr "工具"
 
-#: app/scripts/services/utils.js:1415
+#: app/scripts/services/utils.js:1414
 msgid ""
 "Tri-state (aka high-Z, bidirectional, or inout) ports are not recommended in "
 "standard designs.<br /><br />You will be asked to update your Preferences "
@@ -1276,11 +1276,11 @@ msgid ""
 "<br /><br />Continue?"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1077
+#: app/scripts/controllers/menu.js:1076
 msgid "Tri-state connections (inout ports) disabled"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1070
+#: app/scripts/controllers/menu.js:1069
 msgid "Tri-state connections (inout ports) enabled"
 msgstr ""
 
@@ -1292,7 +1292,7 @@ msgstr "Turkish"
 msgid "Turquoise"
 msgstr "松石绿"
 
-#: app/scripts/controllers/menu.js:1116 app/views/menu.html:438
+#: app/scripts/controllers/menu.js:1115 app/views/menu.html:438
 msgid "UI theme"
 msgstr ""
 
@@ -1320,12 +1320,12 @@ msgstr "未命名"
 msgid "Update (Latest stable)"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1448 app/views/design.html:544
+#: app/scripts/controllers/menu.js:1447 app/views/design.html:544
 #: app/views/menu.html:739
 msgid "Upload"
 msgstr "上传"
 
-#: app/scripts/controllers/menu.js:1459
+#: app/scripts/controllers/menu.js:1458
 msgid "Upload done"
 msgstr "上传成功"
 
@@ -1333,7 +1333,7 @@ msgstr "上传成功"
 msgid "Using external Apio: {{name}}"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1413
+#: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
 msgstr "验证成功"
 
@@ -1361,11 +1361,11 @@ msgstr "查看"
 msgid "View license"
 msgstr "查看许可"
 
-#: app/scripts/services/utils.js:1452
+#: app/scripts/services/utils.js:1451
 msgid "Viewing tri-state"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:1117
+#: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
 msgstr ""
 
@@ -1400,7 +1400,7 @@ msgstr "远程主机名错误 {{name}}"
 msgid "Yellow"
 msgstr "橙黄"
 
-#: app/scripts/services/utils.js:1458
+#: app/scripts/services/utils.js:1457
 msgid "Yes"
 msgstr ""
 
@@ -1413,11 +1413,11 @@ msgstr ""
 "您正在编辑一个子模块。如果您保存，您将只会保存子模块 (在此情况下 \"另存为\" "
 "和 \"导出子模块\" 效果相同)，是否继续？"
 
-#: app/scripts/services/utils.js:1411
+#: app/scripts/services/utils.js:1410
 msgid "You are importing a block that uses \"tri-state\"."
 msgstr ""
 
-#: app/scripts/services/utils.js:1408
+#: app/scripts/services/utils.js:1407
 msgid "You are loading a design that uses \"tri-state\"."
 msgstr ""
 
@@ -1433,14 +1433,14 @@ msgstr ""
 msgid "You can load it as it is or convert it to use the {{name}} board."
 msgstr "您可以载入原始项目，或转换以适应开发板 {{name}}。"
 
-#: app/scripts/controllers/menu.js:1425
+#: app/scripts/controllers/menu.js:1424
 #, fuzzy
 msgid ""
 "You can only build at the top-level design. Inside submodules, you can "
 "<strong>Verify</strong>"
 msgstr "您只能在顶层设计中编译。在子模块中您将只能 <strong>验证</strong>"
 
-#: app/scripts/controllers/menu.js:1449
+#: app/scripts/controllers/menu.js:1448
 #, fuzzy
 msgid ""
 "You can only upload at the top-level design. Inside submodules, you can "
@@ -1451,7 +1451,7 @@ msgstr "您只能在顶层设计中编译。在子模块中您将只能 <strong>
 msgid "You can read the release notes on the"
 msgstr ""
 
-#: app/scripts/controllers/menu.js:649
+#: app/scripts/controllers/menu.js:648
 msgid "Your changes will be lost if you don’t save them"
 msgstr "如果不保存，您的更改将会丢失"
 
@@ -1463,15 +1463,15 @@ msgstr "后退"
 msgid "{{app}} is required."
 msgstr "需要 {{app}} 。"
 
-#: app/scripts/controllers/menu.js:1196
+#: app/scripts/controllers/menu.js:1195
 msgid "{{board}} datasheet not defined"
 msgstr "{{board}} 数据表未定义"
 
-#: app/scripts/controllers/menu.js:1182
+#: app/scripts/controllers/menu.js:1181
 msgid "{{board}} pinout not defined"
 msgstr "{{board}} 引脚未定义"
 
-#: app/scripts/controllers/menu.js:1219
+#: app/scripts/controllers/menu.js:1218
 msgid "{{board}} rules not defined"
 msgstr "{{board}} 规则未定义"
 
