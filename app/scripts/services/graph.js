@@ -702,6 +702,30 @@ function isElementInViewport(elementBBox, viewport) {
           }
         }
       });
+
+    //-- Capture click for code editor io edit icon for currents and futures
+    document.addEventListener('click', function(event) {
+    let target = event.target;
+    while (target && target !== this) {
+        if (target.matches('.js-codeblock-io-edit')) {
+            event.stopPropagation(); 
+
+            var modelId = target.getAttribute('data-blkid'); 
+            if (!modelId) {return;}
+
+            var cell = paper.getModelById(modelId);
+            if (!cell) {return;}
+
+            var cellView = paper.findViewByModel(cell); 
+            if (!cellView) {return;}
+
+          
+            paper.trigger('cell:pointerdblclick', cellView, event, 0, 0);
+            break;
+        }
+        target = target.parentNode;
+    }
+});
       $rootScope.$on('navigateProjectEnded', function (event, args) {
         if (args.fromDoubleClick) {
           self.breadcrumbs.push({

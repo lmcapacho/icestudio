@@ -536,6 +536,7 @@ g {
   pointer-events: none;
   z-index: 0;
   transition: opacity 0.2s;
+  overflow:hidden;
 }
 
 .code-block .code-content {
@@ -901,3 +902,27 @@ g {
   fill: white;
   stroke: white;
 }
+.js-codeblock-io-edit{
+
+
+  position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 99999999;
+    color: white;
+    background-color: #404040;
+    border-radius: 0 0 0 100%;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 25px;
+    cursor:pointer;
+     pointer-events: auto;
+}
+
+.js-codeblock-io-edit:hover{
+   color: #7ccff4;
+}
+

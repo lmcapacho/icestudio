@@ -2065,7 +2065,8 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     _.bindAll(this, 'updateBox');
     joint.dia.ElementView.prototype.initialize.apply(this, arguments);
 
-    var id = sha1(this.model.get('id')).toString().substring(0, 6);
+    let modelId = this.model.get('id');
+    var id = sha1(modelId).toString().substring(0, 6);
     var editorLabel = 'editor' + id;
 
     // Select "ace-editor" theme depending on "uiTheme" profile variable
@@ -2079,45 +2080,25 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
 
     this.$box = $(
       joint.util.template(
-        '\
-      <div class="code-block">\
-        <div class="code-content"></div>\
-        <div class="code-editor" id="' +
-          editorLabel +
-          '"></div>\
-        <script>\
-          var ' +
-          editorLabel +
-          ' = ace.edit("' +
-          editorLabel +
-          '");\
-          ' +
-          editorLabel +
-          '.setTheme("ace/theme/' +
-          editorTheme +
-          '");\
-          ' +
-          editorLabel +
-          '.setHighlightActiveLine(false);\
-          ' +
-          editorLabel +
-          '.setHighlightGutterLine(false);\
-          ' +
-          editorLabel +
-          '.setAutoScrollEditorIntoView(true);\
-          ' +
-          editorLabel +
-          '.renderer.setShowGutter(true);\
-          ' +
-          editorLabel +
-          '.renderer.$cursorLayer.element.style.opacity = 0;\
-          ' +
-          editorLabel +
-          '.session.setMode("ace/mode/verilog");\
-        </script>\
-        <div class="resizer"/></div>\
-      </div>\
-      '
+        `
+      <div class="code-block">
+        <div class="js-codeblock-io-edit" data-blkId="${modelId}"><i class="fas fa-edit"></i></div>
+        <div class="code-content"></div>
+        <div class="code-editor" id="${editorLabel}"></div>
+        <script>
+          var ${editorLabel} = ace.edit("${editorLabel}");
+          
+          ${editorLabel}.setTheme("ace/theme/${editorTheme}");
+          ${editorLabel}.setHighlightActiveLine(false);
+          ${editorLabel}.setHighlightGutterLine(false);
+          ${editorLabel}.setAutoScrollEditorIntoView(true);
+          ${editorLabel}.renderer.setShowGutter(true);
+          ${editorLabel}.renderer.$cursorLayer.element.style.opacity = 0;
+         ${editorLabel}.session.setMode("ace/mode/verilog");
+        </script>
+        <div class="resizer"/></div>
+      </div>
+      `
       )()
     );
 
@@ -2289,244 +2270,7 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
 
-  /*
   updateBox: function () {
-    
-    var pendingTasks = [];
-    var i, j, port, portDefault, tokId, paths, rects, dome, anotations;
-    var bbox = this.model.getBBox();
-    var data = this.model.get('data');
-    var state = this.model.get('state');
-    var rules = this.model.get('rules');
-    var leftPorts = this.model.get('leftPorts');
-    var rightPorts = this.model.get('rightPorts');
-    var modelId = this.model.id;
-    var editorUpdated = false;
-
-    // Set font size
-    if (this.editor){
-      if (this.prevZoom !== state.zoom) {
-        editorUpdated = true;
-        this.prevZoom = state.zoom;
-        // Scale editor
-        for (i = 0; i < this.nativeDom.editorSelector.length; i++) {
-          pendingTasks.push({
-            e: this.nativeDom.editorSelector[i],
-            property: 'margin',
-            value: 7 * state.zoom + 'px',
-          });
-          pendingTasks.push({
-            e: this.nativeDom.editorSelector[i],
-            property: 'border-radius',
-            value: 5 * state.zoom + 'px',
-          });
-          pendingTasks.push({
-            e: this.nativeDom.editorSelector[i],
-            property: 'border-width',
-            value: state.zoom + 0.5,
-          });
-        }
-
-        // Scale annotations
-        var annotationSize = Math.round(15 * state.zoom) + 'px';
-
-        anotations = this.$box[0].querySelectorAll('.ace_error');
-        for (i = 0; i < anotations.length; i++) {
-          pendingTasks.push({
-            e: anotations[i],
-            property: 'background-size',
-            value: annotationSize + ' ' + annotationSize,
-          });
-        }
-        anotations = this.$box[0].querySelectorAll('.ace_warning');
-        for (i = 0; i < anotations.length; i++) {
-          pendingTasks.push({
-            e: anotations[i],
-            property: 'background-size',
-            value: annotationSize + ' ' + annotationSize,
-          });
-        }
-
-        anotations = this.$box[0].querySelectorAll('.ace_info');
-        for (i = 0; i < anotations.length; i++) {
-          pendingTasks.push({
-            e: anotations[i],
-            property: 'background-size',
-            value: annotationSize + ' ' + annotationSize,
-          });
-        }
-
-        // Scale padding
-        anotations = this.$box[0].querySelectorAll('.ace_text-layer');
-        for (i = 0; i < anotations.length; i++) {
-          pendingTasks.push({
-            e: anotations[i],
-            property: 'padding',
-            value: '0px ' + Math.round(4 * state.zoom) + 'px',
-          });
-        }
-
-        //var rule = getCSSRule('.ace_folding-enabled > .ace_gutter-cell');
-      }
-      //    this.editor.resize();
-    }
-
-    // Set ports width
-    var width = WIRE_WIDTH * state.zoom;
-
-    var pwires = this.$el[0].getElementsByClassName('port-wire');
-    for (i = 0; i < pwires.length; i++) {
-      pendingTasks.push({
-        e: pwires[i],
-        property: 'stroke-width',
-        value: width + 'px',
-      });
-    }
-    // Set buses
-    var nwidth = width * 3;
-    tokId = 'port-wire-' + modelId + '-';
-    for (i = 0; i < leftPorts.length; i++) {
-      port = leftPorts[i];
-      if (port.size > 1) {
-        dome = document.getElementById(tokId + port.id);
-
-        pendingTasks.push({
-          e: dome,
-          property: 'stroke-width',
-          value: nwidth + 'px',
-        });
-      }
-    }
-
-    for (i = 0; i < rightPorts.length; i++) {
-      port = rightPorts[i];
-      if (port.size > 1) {
-        dome = document.getElementById(tokId + port.id);
-
-        pendingTasks.push({
-          e: dome,
-          property: 'stroke-width',
-          value: nwidth + 'px',
-        });
-      }
-    }
-
-    // Render rules
-    if (data && data.ports && data.ports.in) {
-      tokId = 'port-default-' + modelId + '-';
-      for (i = 0; i < data.ports.in.length; i++) {
-        port = data.ports.in[i];
-        portDefault = document.getElementById(tokId + port.name);
-        if (
-          portDefault !== null &&
-          rules &&
-          port.default &&
-          port.default.apply
-        ) {
-          pendingTasks.push({
-            e: portDefault,
-            property: 'display',
-            value: 'inline',
-          });
-
-          paths = portDefault.querySelectorAll('path');
-          for (j = 0; j < paths.length; j++) {
-            pendingTasks.push({
-              e: paths[j],
-              property: 'stroke-width',
-              value: width + 'px',
-            });
-          }
-          rects = portDefault.querySelectorAll('rect');
-          for (j = 0; j < rects.length; j++) {
-            pendingTasks.push({
-              e: rects[j],
-              property: 'stroke-width',
-              value: state.zoom + 'px',
-            });
-          }
-        } else {
-          pendingTasks.push({
-            e: portDefault,
-            property: 'display',
-            value: 'none',
-          });
-        }
-      }
-    }
-
-    // Render content
-    for (i = 0; i < this.nativeDom.contentSelector.length; i++) {
-      pendingTasks.push({
-        e: this.nativeDom.contentSelector[i],
-        property: 'left',
-        value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
-      });
-      pendingTasks.push({
-        e: this.nativeDom.contentSelector[i],
-        property: 'top',
-        value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
-      });
-      pendingTasks.push({
-        e: this.nativeDom.contentSelector[i],
-        property: 'width',
-        value: Math.round(bbox.width) + 'px',
-      });
-      pendingTasks.push({
-        e: this.nativeDom.contentSelector[i],
-        property: 'height',
-        value: Math.round(bbox.height) + 'px',
-      });
-      pendingTasks.push({
-        e: this.nativeDom.contentSelector[i],
-        property: 'transform',
-        value: 'scale(' + state.zoom + ')',
-      });
-    }
-
-    // Render block
-    pendingTasks.push({
-      e: this.nativeDom.box,
-      property: 'left',
-      value: Math.round(bbox.x * state.zoom + state.pan.x) + 'px',
-    });
-    pendingTasks.push({
-      e: this.nativeDom.box,
-      property: 'top',
-      value: Math.round(bbox.y * state.zoom + state.pan.y) + 'px',
-    });
-    pendingTasks.push({
-      e: this.nativeDom.box,
-      property: 'width',
-      value: Math.round(bbox.width * state.zoom) + 'px',
-    });
-    pendingTasks.push({
-      e: this.nativeDom.box,
-      property: 'height',
-      value: Math.round(bbox.height * state.zoom) + 'px',
-    });
-
-    i = pendingTasks.length;
-    for (i = 0; i < pendingTasks.length; i++) {
-      if (pendingTasks[i].e !== null) {
-        pendingTasks[i].e.style[pendingTasks[i].property] =
-          pendingTasks[i].value;
-      }
-    }
-
-    if (this.editor) {
-      if (editorUpdated) {
-        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
-      }
-      this.editor.resize();
-    }
-  
-    return pendingTasks;
-  
-  },*/ 
-
-updateBox: function () {
     var pendingTasks = [];
     var bbox = this.model.getBBox();
     var data = this.model.get('data');
@@ -2562,11 +2306,24 @@ updateBox: function () {
       var aceGutterBaseWidth=37;
       var gutterLayer = this.$box.find('.ace_gutter-layer');
 if (gutterLayer.length) {
+  console.log('Escalando gutter');
     gutterLayer.css({
         'transform': 'scale(' + state.zoom + ')', // Escala
         'transform-origin': 'left top', 
         'width': Math.round(aceGutterBaseWidth * state.zoom) + 'px'    });
 }
+
+     var editIcon = this.$box.find('.js-codeblock-io-edit');
+if (editIcon.length) {
+
+   editIcon.css({
+        'transform': `scale(${state.zoom})`, // Solo escala
+        'transform-origin': 'top right', // Mantiene la esquina superior derecha como punto fijo
+        'top': '0px',  // Mantener en la posición original
+        'right': '0px'  // Mantener en la posición original
+    });
+}
+
     }
 
     var wireWidth = WIRE_WIDTH * state.zoom;
