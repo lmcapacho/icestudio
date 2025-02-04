@@ -27,10 +27,8 @@ msgstr "Puertos entrada/salida"
 #: app/views/design.html:18
 msgid ""
 "<b>Read only</b><br>\n"
-"            Unlock to edit the block!"
-msgstr ""
-"<b>Solo lectura</b><br>\n"
-"¡Desbloquea el candado para editar el bloque!"
+"        Unlock to edit the block!"
+msgstr "<b>Solo lectura</b><br>¡Desbloquea el candado para editar el bloque!"
 
 #: app/scripts/services/drivers.js:353 app/scripts/services/drivers.js:634
 #: app/scripts/services/drivers.js:646
@@ -40,18 +38,16 @@ msgstr "<b>Desconecta</b> y <b>reconecta</b> la placa"
 #: app/views/design.html:34
 msgid ""
 "<b>WARNING!</b><br>\n"
-"        The changes made here will also be applied to all the\n"
-"        [<b>{{ information.name }}</b>] blocks in the current design. If\n"
-"        you DO NOT want them to propagate, create a cloned block instead\n"
-"        using<br>\n"
+"        The changes made here will also be applied to all the [\n"
+"        <b>{{ information.name }}</b>\n"
+"        ] blocks in the current design. If you DO NOT want them\n"
+"        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
-"<b>¡AVISO!</b><br>\n"
-"Los cambios que hagas aquí también serán aplicados a todos los\n"
-"bloques [<b>{{ information.name }}</b>] en el diseño\n"
-"actual. Si NO QUIERES que se propaguen, crea entonces\n"
-"un bloque clonado usando<br>\n"
-"<b>Editar → Clonar</b>."
+"<b>¡AVISO!</b><br>Los cambios que hagas aquí también serán aplicados a todos "
+"los bloques [<b>{{ information.name }}</b>] en el diseño actual. Si NO "
+"QUIERES que se propaguen, crea entonces un bloque clonado "
+"usando<br><b>Editar → Clonar</b>."
 
 #: app/views/menu.html:917
 msgid "About Icestudio"
@@ -251,9 +247,9 @@ msgid ""
 "b><br /><br />Click \"This time\" to view tri-state for this design only."
 msgstr ""
 "Clica en \"Si\" para permitir tri-estado y actualizar las preferencias: <br /"
-">&nbsp;&nbsp;&nbsp;<b>Características avanzadas → Permitir conexiones tri-estado</"
-"b><br /><br />Clica en \"Esta vez\" para ver los tri-estado sólo para este "
-"diseño."
+">&nbsp;&nbsp;&nbsp;<b>Características avanzadas → Permitir conexiones tri-"
+"estado</b><br /><br />Clica en \"Esta vez\" para ver los tri-estado sólo "
+"para este diseño."
 
 #: app/scripts/services/project.js:228
 msgid "Click here to <b>download a newer version</b> of Icestudio"
@@ -671,7 +667,6 @@ msgid "Image"
 msgstr "Imagen"
 
 #: app/scripts/services/forms.js:1739
-#, fuzzy
 msgid "Import code"
 msgstr "Código fuente"
 
@@ -754,12 +749,10 @@ msgid "Internet connection required"
 msgstr "Es necesario conexión a Internet"
 
 #: app/scripts/services/graph.js:318
-#, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Block already connected"
 msgstr "Conexión de <i>Pull-up</i> no válida:<br>el bloque ya está conectado"
 
 #: app/scripts/services/graph.js:332
-#, fuzzy
 msgid "Invalid <i>Pull-up</i> connection:<br>Only <i>Input</i> blocks allowed"
 msgstr ""
 "Conexión de <i>Pull-up</i> no válida:<br>sólo se permiten bloques "
@@ -1198,11 +1191,11 @@ msgstr "Este proyecto está diseñado para la placa {{name}}."
 
 #: app/views/version.html:36
 msgid ""
-"This release has been possible thanks to the great work done by an emerging "
-"team from"
+"This release has been possible thanks to the great work done\n"
+"          by an emerging team from"
 msgstr ""
-"Este lanzamiento ha sido posible gracias al gran trabajo \n"
-"hecho por el grupo emergente de"
+"Este lanzamiento ha sido posible gracias al gran trabajo hecho por el grupo "
+"emergente de"
 
 #: app/scripts/services/utils.js:1366
 msgid "This time"
@@ -1223,11 +1216,11 @@ msgstr "Para navegar por el diseño, debes cerrar el \"modo de edición\"."
 #: app/scripts/controllers/menu.js:402
 msgid ""
 "To save your design you need to lock the padlock and               go to the "
-"top-level design.<br/><br/>If you want to export               this "
-"submodule to a file, use the \"Save as\" command."
+"top-level design.<br><br>If you want to export               this submodule "
+"to a file, use the \"Save as\" command."
 msgstr ""
 "Para guardar tu diseño debes bloquear el candado e ir al diseño de nivel "
-"superior.<br/><br/>Si deseas exportar este submódulo a un archivo, usa el "
+"superior.<br><br>Si deseas exportar este submódulo a un archivo, usa el "
 "comando \"Guardar como\"."
 
 #: app/views/menu.html:362

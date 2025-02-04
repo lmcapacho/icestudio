@@ -20,7 +20,7 @@ msgstr ""
 #: app/views/design.html:18
 msgid ""
 "<b>Read only</b><br>\n"
-"            Unlock to edit the block!"
+"        Unlock to edit the block!"
 msgstr ""
 
 #: app/scripts/services/drivers.js:353
@@ -32,10 +32,10 @@ msgstr ""
 #: app/views/design.html:34
 msgid ""
 "<b>WARNING!</b><br>\n"
-"        The changes made here will also be applied to all the\n"
-"        [<b>{{ information.name }}</b>] blocks in the current design. If\n"
-"        you DO NOT want them to propagate, create a cloned block instead\n"
-"        using<br>\n"
+"        The changes made here will also be applied to all the [\n"
+"        <b>{{ information.name }}</b>\n"
+"        ] blocks in the current design. If you DO NOT want them\n"
+"        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
 
@@ -1192,7 +1192,9 @@ msgid "This project is designed for the {{name}} board."
 msgstr ""
 
 #: app/views/version.html:36
-msgid "This release has been possible thanks to the great work done by an emerging team from"
+msgid ""
+"This release has been possible thanks to the great work done\n"
+"          by an emerging team from"
 msgstr ""
 
 #: app/scripts/services/utils.js:1366
@@ -1208,7 +1210,7 @@ msgid "To navigate through the design, you need to close \"edit mode\"."
 msgstr ""
 
 #: app/scripts/controllers/menu.js:402
-msgid "To save your design you need to lock the padlock and               go to the top-level design.<br/><br/>If you want to export               this submodule to a file, use the \"Save as\" command."
+msgid "To save your design you need to lock the padlock and               go to the top-level design.<br><br>If you want to export               this submodule to a file, use the \"Save as\" command."
 msgstr ""
 
 #: app/views/menu.html:362

@@ -27,10 +27,8 @@ msgstr "\"Inout\" pin"
 #: app/views/design.html:18
 msgid ""
 "<b>Read only</b><br>\n"
-"            Unlock to edit the block!"
-msgstr ""
-"<b>Read only</b><br>\n"
-"            Unlock to edit the block!"
+"        Unlock to edit the block!"
+msgstr "<b>Read only</b><br>        Unlock to edit the block!"
 
 #: app/scripts/services/drivers.js:353 app/scripts/services/drivers.js:634
 #: app/scripts/services/drivers.js:646
@@ -40,18 +38,16 @@ msgstr "<b>Unplug</b> and <b>reconnect</b> the board"
 #: app/views/design.html:34
 msgid ""
 "<b>WARNING!</b><br>\n"
-"        The changes made here will also be applied to all the\n"
-"        [<b>{{ information.name }}</b>] blocks in the current design. If\n"
-"        you DO NOT want them to propagate, create a cloned block instead\n"
-"        using<br>\n"
+"        The changes made here will also be applied to all the [\n"
+"        <b>{{ information.name }}</b>\n"
+"        ] blocks in the current design. If you DO NOT want them\n"
+"        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
-"<b>WARNING!</b><br>\n"
-"        The changes made here will also be applied to all the\n"
-"        [<b>{{ information.name }}</b>] blocks in the current design. If\n"
-"        you DO NOT want them to propagate, create a cloned block instead\n"
-"        using<br>\n"
-"        <b>Edit → Clone</b>."
+"<b>WARNING!</b><br>        The changes made here will also be applied to all "
+"the [        <b>{{ information.name }}</b>        ] blocks in the current "
+"design. If you DO NOT want them        to propagate, create a cloned block "
+"instead using<br>        <b>Edit → Clone</b>."
 
 #: app/views/menu.html:917
 msgid "About Icestudio"
@@ -1194,11 +1190,11 @@ msgstr "This project is designed for the {{name}} board."
 
 #: app/views/version.html:36
 msgid ""
-"This release has been possible thanks to the great work done by an emerging "
-"team from"
+"This release has been possible thanks to the great work done\n"
+"          by an emerging team from"
 msgstr ""
-"This release has been possible thanks to the great work done by an emerging "
-"team from"
+"This release has been possible thanks to the great work done          by an "
+"emerging team from"
 
 #: app/scripts/services/utils.js:1366
 msgid "This time"
@@ -1219,12 +1215,12 @@ msgstr "To navigate through the design, you need to close \"edit mode\"."
 #: app/scripts/controllers/menu.js:402
 msgid ""
 "To save your design you need to lock the padlock and               go to the "
-"top-level design.<br/><br/>If you want to export               this "
-"submodule to a file, use the \"Save as\" command."
+"top-level design.<br><br>If you want to export               this submodule "
+"to a file, use the \"Save as\" command."
 msgstr ""
 "To save your design you need to lock the padlock and               go to the "
-"top-level design.<br/><br/>If you want to export               this "
-"submodule to a file, use the \"Save as\" command."
+"top-level design.<br><br>If you want to export               this submodule "
+"to a file, use the \"Save as\" command."
 
 #: app/views/menu.html:362
 msgid "Toolbox"
