@@ -1,8 +1,9 @@
-2025-02-05 18:57 (GMT+1)
+2025-02-05 21:47 (GMT+1)
 ========================
 Type: WIP
 
 App Changes:
+  - Speed improvement in code editors by @cavearr
   - Added icon over code editor to open easily form io editor by @cavearr
   - Improive zoom speed with code sandbox before ace editor replacement by @cavearr
   - Fine tune zoom for slow cpus by @cavearr
