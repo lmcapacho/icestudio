@@ -99,7 +99,7 @@ msgstr ""
 
 #: app/scripts/controllers/menu.js:321
 msgid "Are you sure you want to clear the recent projects list?"
-msgstr ""
+msgstr "¿Deseas vaciar el listado de proyectos recientes?"
 
 #: app/scripts/services/tools.js:1621
 msgid "At least Python 3.7 is required"
@@ -234,11 +234,11 @@ msgstr "Selecciona un color:"
 
 #: app/scripts/controllers/menu.js:320
 msgid "Clear Recent Projects"
-msgstr ""
+msgstr "Vaciar listado de proyectos recientes"
 
 #: app/views/menu.html:171
 msgid "Clear Recently Opened"
-msgstr ""
+msgstr "Vaciar ficheros abiertos recientemente"
 
 #: app/scripts/services/utils.js:1436
 msgid ""
@@ -411,7 +411,7 @@ msgid ""
 ">&nbsp;&nbsp;&nbsp;<b>Advanced features → Allow tri-state connections</b>,"
 "<br />and reimport the block."
 msgstr ""
-"El diseño contiene E/S de tri-estados. Debe actualizar sus Preferencias:<br /"
+"El diseño contiene E/S tri-estado. Debe actualizar sus Preferencias:<br /"
 ">&nbsp;&nbsp;&nbsp;<b>Características avanzadas → Permitir conexiones tri-"
 "estado</b>,<br />y volver a importar el bloque."
 
@@ -437,7 +437,7 @@ msgstr "Documentación"
 
 #: app/scripts/controllers/menu.js:606
 msgid "Don’t Save"
-msgstr ""
+msgstr "No guardes"
 
 #: app/views/version.html:83
 msgid "Don’t display"
@@ -515,7 +515,7 @@ msgstr "Introduce el nombre del host remoto usuario@host"
 
 #: app/scripts/services/drivers.js:698
 msgid "Error enabling driver type {{type}}"
-msgstr ""
+msgstr "Error habilitando driver clase {{type}}"
 
 #: app/scripts/services/drivers.js:508
 msgid "Error installing driver:"
@@ -523,7 +523,7 @@ msgstr ""
 
 #: app/scripts/services/forms.js:1696
 msgid "Error reading the file: {{error}}"
-msgstr ""
+msgstr "Error abriendo el fichero: {{error}}"
 
 #: app/scripts/services/utils.js:924
 msgid "Error: {{error}}"
@@ -671,7 +671,7 @@ msgstr "Imagen"
 
 #: app/scripts/services/forms.js:1652
 msgid "Import code"
-msgstr "Código fuente"
+msgstr "Importar código"
 
 #: app/scripts/services/forms.js:379 app/views/design.html:113
 msgid "Indian Red"
@@ -913,7 +913,7 @@ msgstr "Abrir"
 
 #: app/views/menu.html:154
 msgid "Open Recent"
-msgstr ""
+msgstr "Abierto recientemente"
 
 #: app/scripts/services/utils.js:800
 msgid "Open SVG"
@@ -1002,7 +1002,7 @@ msgstr "Salir"
 
 #: app/scripts/controllers/menu.js:327
 msgid "Recent projects cleared"
-msgstr ""
+msgstr "Proyectos recientes vaciado"
 
 #: app/scripts/services/forms.js:382 app/views/design.html:118
 msgid "Red"
@@ -1075,6 +1075,7 @@ msgstr "Guardar submódulo"
 #: app/scripts/services/tools.js:2252
 msgid "Screen recording error. Review your permissions."
 msgstr ""
+"Error al grabar. Puede ser un error de permisos, revisa la configuración."
 
 #: app/views/menu.html:587
 msgid "Select"
@@ -1098,7 +1099,7 @@ msgstr "Azul pizarra"
 
 #: app/scripts/services/tools.js:2181
 msgid "Snapshot saved: {{name}}"
-msgstr ""
+msgstr "Imagen guardada: {{name}}"
 
 #: app/views/menu.html:1020
 msgid "Source code"
@@ -1142,11 +1143,11 @@ msgstr "Taiwanés"
 
 #: app/views/menu.html:885
 msgid "Take PNG"
-msgstr ""
+msgstr "Guardar PNG"
 
 #: app/views/menu.html:893
 msgid "Take Video"
-msgstr ""
+msgstr "Grabar Vídeo"
 
 #: app/views/menu.html:245
 msgid "Testbench"
@@ -1290,7 +1291,7 @@ msgstr "Tema de la interfaz"
 
 #: app/views/languages.html:95
 msgid "Ukrainian"
-msgstr ""
+msgstr "Ukraniano"
 
 #: app/views/menu.html:296
 msgid "Undo"
@@ -1343,7 +1344,7 @@ msgstr "Notas de la versión"
 
 #: app/scripts/services/tools.js:2234
 msgid "Video saved: {{name}}"
-msgstr ""
+msgstr "Vídeo guardado: {{name}}"
 
 #: app/views/menu.html:510
 msgid "View"
@@ -1359,7 +1360,7 @@ msgstr "Visualizando tri-estado"
 
 #: app/scripts/controllers/menu.js:1116
 msgid "Wait for <b></b> seconds"
-msgstr ""
+msgstr "Esperar durante <b></b> segundos"
 
 #: app/scripts/services/tools.js:975
 msgid "Warnings detected in the design"
