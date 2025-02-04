@@ -1251,8 +1251,8 @@ msgid ""
 "to a file, use the \"Save as\" command."
 msgstr ""
 "Tasarımınızı kaydetmek için tuş kilidini kilitlemeniz ve üst düzey tasarıma "
-"gitmeniz gerekir.<br><br>Bu alt modülü bir dosyaya vermek istiyorsanız, "
-"bunu yapmak için \"Farklı Kaydet\" komutunu çalıştırın."
+"gitmeniz gerekir.<br><br>Bu alt modülü bir dosyaya vermek istiyorsanız, bunu "
+"yapmak için \"Farklı Kaydet\" komutunu çalıştırın."
 
 #: app/views/menu.html:406
 #, fuzzy

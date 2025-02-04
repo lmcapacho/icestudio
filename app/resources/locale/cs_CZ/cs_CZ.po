@@ -29,9 +29,7 @@ msgstr ""
 msgid ""
 "<b>Read only</b><br>\n"
 "        Unlock to edit the block!"
-msgstr ""
-"<b>Pouze pro čtení</b><br>"
-"            Odemkněte k úpravě bloku!"
+msgstr "<b>Pouze pro čtení</b><br>            Odemkněte k úpravě bloku!"
 
 #: app/scripts/services/drivers.js:341 app/scripts/services/drivers.js:680
 #: app/scripts/services/drivers.js:706
@@ -48,12 +46,10 @@ msgid ""
 "        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
-"<b>VAROVÁNÍ!</b><br>"
-"        Změny zde provedné se použijí v"
-"        [<b>{{ information.name }}</b>] blocích současného návrhu. Pokud"
-"        NEchcete aby to prosáklo, vytvořte raději klon bloku"
-"        použitím<br>"
-"        <b>Upravit → Klonovat</b>."
+"<b>VAROVÁNÍ!</b><br>        Změny zde provedné se použijí v        "
+"[<b>{{ information.name }}</b>] blocích současného návrhu. Pokud        "
+"NEchcete aby to prosáklo, vytvořte raději klon bloku        "
+"použitím<br>        <b>Upravit → Klonovat</b>."
 
 #: app/views/menu.html:1044
 msgid "About Icestudio"
@@ -1213,8 +1209,7 @@ msgid ""
 "This release has been possible thanks to the great work done\n"
 "          by an emerging team from"
 msgstr ""
-"Toto vydání bylo možné díky skvělé práci"
-"              našeho týmu inženýrů z"
+"Toto vydání bylo možné díky skvělé práci              našeho týmu inženýrů z"
 
 #: app/scripts/services/utils.js:1459
 msgid "This time"

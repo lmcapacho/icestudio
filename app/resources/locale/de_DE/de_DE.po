@@ -1226,8 +1226,8 @@ msgid ""
 "This release has been possible thanks to the great work done\n"
 "          by an emerging team from"
 msgstr ""
-"Diese Veröffentlichung war möglich dank der großartigen Arbeit"
-"              von einem aufstrebenden Team von"
+"Diese Veröffentlichung war möglich dank der großartigen Arbeit              "
+"von einem aufstrebenden Team von"
 
 #: app/scripts/services/utils.js:1459
 msgid "This time"

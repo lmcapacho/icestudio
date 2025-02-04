@@ -1261,8 +1261,8 @@ msgid ""
 "to a file, use the \"Save as\" command."
 msgstr ""
 "Per salvare il tuo progetto è necessario chiudere il catenaccio e andare sul "
-"design padre.<br><br>Se si desidera esportare questo sottomodulo su un "
-"file, eseguire il comando \"Salva con nome\" per farlo."
+"design padre.<br><br>Se si desidera esportare questo sottomodulo su un file, "
+"eseguire il comando \"Salva con nome\" per farlo."
 
 #: app/views/menu.html:406
 #, fuzzy

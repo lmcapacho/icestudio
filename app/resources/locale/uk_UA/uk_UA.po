@@ -29,8 +29,7 @@ msgid ""
 "<b>Read only</b><br>\n"
 "        Unlock to edit the block!"
 msgstr ""
-"<b>Тільки для читання</b><br>"
-"            Розблокуйте для редагування блоку!"
+"<b>Тільки для читання</b><br>            Розблокуйте для редагування блоку!"
 
 #: app/scripts/services/drivers.js:341 app/scripts/services/drivers.js:680
 #: app/scripts/services/drivers.js:706
@@ -46,13 +45,10 @@ msgid ""
 "        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
-"<b>УВАГА!</b><br>"
-"        Зміни, зроблені тут, будуть також застосовані до всіх"
-"        блоків [<b>{{ information.name }}</b>] у поточному дизайні. Якщо"
-"        ви НЕ бажаєте, щоб вони розповсюджувалися, створіть клонований "
-"блок,"
-"        використовуючи<br>"
-"        <b>Редагування → Клонувати</b>."
+"<b>УВАГА!</b><br>        Зміни, зроблені тут, будуть також застосовані до "
+"всіх        блоків [<b>{{ information.name }}</b>] у поточному дизайні. "
+"Якщо        ви НЕ бажаєте, щоб вони розповсюджувалися, створіть клонований "
+"блок,        використовуючи<br>        <b>Редагування → Клонувати</b>."
 
 #: app/views/menu.html:1044
 msgid "About Icestudio"

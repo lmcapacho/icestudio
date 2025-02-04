@@ -30,8 +30,7 @@ msgid ""
 "<b>Read only</b><br>\n"
 "        Unlock to edit the block!"
 msgstr ""
-"<b>読み取り専用</b><br>"
-"            編集するにはロックを解除してください！"
+"<b>読み取り専用</b><br>            編集するにはロックを解除してください！"
 
 #: app/scripts/services/drivers.js:341 app/scripts/services/drivers.js:680
 #: app/scripts/services/drivers.js:706
@@ -48,11 +47,9 @@ msgid ""
 "        to propagate, create a cloned block instead using<br>\n"
 "        <b>Edit → Clone</b>."
 msgstr ""
-"<b>警告！</b><br>"
-"ここでの変更は、プロジェクト全体で使用されているこのブロック "
-"[<b>{{ information.name }}</b>] 個に適用されます。"
-"これらを変更したくない場合は <b>編集 → 複製</b>からブロックの複製を作成してく"
-"ださい。"
+"<b>警告！</b><br>ここでの変更は、プロジェクト全体で使用されているこのブロッ"
+"ク [<b>{{ information.name }}</b>] 個に適用されます。これらを変更したくない場"
+"合は <b>編集 → 複製</b>からブロックの複製を作成してください。"
 
 #: app/views/menu.html:1044
 msgid "About Icestudio"
@@ -728,8 +725,8 @@ msgid ""
 msgstr ""
 "<b> 安定版のツールチェーン </b> をインストールします。この操作にはインター"
 "ネット接続が必要です <br> <p> <b> 注： <b> ツールチェインのインストールを許可"
-"するために、VPNがあれば切断する必要があります </p> <p>"
-"このまま続けますか？</p>"
+"するために、VPNがあれば切断する必要があります </p> <p>このまま続けますか？</"
+"p>"
 
 #: app/scripts/services/tools.js:1391
 msgid ""
@@ -1241,8 +1238,8 @@ msgid ""
 "to a file, use the \"Save as\" command."
 msgstr ""
 "デザインを保存するには、ロックをかけてトップレベルのデザインに移動する必要が"
-"あります。<br><br>このサブモジュールをファイルに書き出したい場合は、「名前"
-"を付けて保存」を実行してください。"
+"あります。<br><br>このサブモジュールをファイルに書き出したい場合は、「名前を"
+"付けて保存」を実行してください。"
 
 #: app/views/menu.html:406
 msgid "Toolbox"

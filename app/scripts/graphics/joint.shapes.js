@@ -446,7 +446,7 @@ joint.shapes.ice.Model = joint.shapes.basic.Generic.extend({
         attrs[portWireSelector]['d'] = 'M 0 0 L 16 0';
         break;
       case 'right':
-        attrs[portSelector]['ref-dx'] =16;
+        attrs[portSelector]['ref-dx'] = 16;
         attrs[portSelector]['ref-y'] = position;
         attrs[portLabelSelector]['dx'] = 0;
         attrs[portLabelSelector]['y'] = -5 - offset;
@@ -654,10 +654,7 @@ joint.shapes.ice.ModelView = joint.dia.ElementView.extend({
     joint.dia.ElementView.prototype.update.apply(this, arguments);
   },
 
-  updateBox: function () {
-
-
-  },
+  updateBox: function () {},
 
   removeBox: function (/*event*/) {
     this.$box.remove();
@@ -826,152 +823,154 @@ joint.shapes.ice.GenericView = joint.shapes.ice.ModelView.extend({
     }
     this.updateBox();
   },
+
   place: placementCssTasks,
-  onUpdating:false,
-  initialized:false,
+  onUpdating: false,
+  initialized: false,
+
   updateBox: function () {
-  if(this.onUpdating === false){
-  this.onUpdating=true;
-    let pendingTasks = [];
-    let i, port;
-    const bbox = this.model.getBBox();
+    if (this.onUpdating === false) {
+      this.onUpdating = true;
+      let pendingTasks = [];
+      let i, port;
+      const bbox = this.model.getBBox();
 
-    let data = this.model.get('data');
-    const state = this.model.get('state');
-    const rules = this.model.get('rules');
-    const leftPorts = this.model.get('leftPorts');
-    const rightPorts = this.model.get('rightPorts');
-    const modelId = this.model.id;
+      let data = this.model.get('data');
+      const state = this.model.get('state');
+      const rules = this.model.get('rules');
+      const leftPorts = this.model.get('leftPorts');
+      const rightPorts = this.model.get('rightPorts');
+      const modelId = this.model.id;
 
-    //-- temporalBypass permit for the momment bypass the optimal filter,
-    //-- In the first render state not work properly and the render not works 
-    //-- correctly, until this is fixed, bypass the optimization
-    //--
-    let temporalBypass=true;
-    if (temporalBypass || this.initialized===false) {
-      this.initialized=true;
-      // Render ports width
-      let width = WIRE_WIDTH * state.zoom;
-      // var pwires = this.$el[0].getElementsByClassName("port-wire");
-      if (typeof this.pwires === 'undefined') {
-        this.pwires = this.$el[0].getElementsByClassName('port-wire');
-      }
+      //-- temporalBypass permit for the momment bypass the optimal filter,
+      //-- In the first render state not work properly and the render not works
+      //-- correctly, until this is fixed, bypass the optimization
+      //--
+      let temporalBypass = true;
+      if (temporalBypass || this.initialized === false) {
+        this.initialized = true;
+        // Render ports width
+        let width = WIRE_WIDTH * state.zoom;
+        // var pwires = this.$el[0].getElementsByClassName("port-wire");
+        if (typeof this.pwires === 'undefined') {
+          this.pwires = this.$el[0].getElementsByClassName('port-wire');
+        }
 
-      for (i = 0; i < this.pwires.length; i++) {
-        pendingTasks.push({
-          e: this.pwires[i],
-          property: 'stroke-width',
-          value: width + 'px',
-        });
-      }
-      const nwidth = width * 3;
-      let tokId = 'port-wire-' + modelId + '-';
-      let dome;
-      this.cacheDome = {};
-      let ckey = '--';
-      for (i = 0; i < leftPorts.length; i++) {
-        port = leftPorts[i];
-        if (port.size > 1) {
-          ckey = tokId + port.id;
-          dome =
-            typeof this.cacheDome[ckey] !== 'undefined'
-              ? this.cacheDome[ckey]
-              : document.getElementById(tokId + port.id);
-          this.cacheDome[ckey] = dome;
-
+        for (i = 0; i < this.pwires.length; i++) {
           pendingTasks.push({
-            e: dome,
+            e: this.pwires[i],
             property: 'stroke-width',
-            value: nwidth + 'px',
+            value: width + 'px',
           });
         }
-      }
+        const nwidth = width * 3;
+        let tokId = 'port-wire-' + modelId + '-';
+        let dome;
+        this.cacheDome = {};
+        let ckey = '--';
+        for (i = 0; i < leftPorts.length; i++) {
+          port = leftPorts[i];
+          if (port.size > 1) {
+            ckey = tokId + port.id;
+            dome =
+              typeof this.cacheDome[ckey] !== 'undefined'
+                ? this.cacheDome[ckey]
+                : document.getElementById(tokId + port.id);
+            this.cacheDome[ckey] = dome;
 
-      for (i = 0; i < rightPorts.length; i++) {
-        port = rightPorts[i];
-        if (port.size > 1) {
-          //dome = document.getElementById(tokId + port.id);
-          ckey = tokId + port.id;
-          dome =
-            typeof this.cacheDome[ckey] !== 'undefined'
-              ? this.cacheDome[ckey]
-              : document.getElementById(tokId + port.id);
-          this.cacheDome[ckey] = dome;
-
-          pendingTasks.push({
-            e: dome,
-            property: 'stroke-width',
-            value: nwidth + 'px',
-          });
-        }
-      }
-
-      // Render rules
-      var portDefault, paths, rects, j;
-
-      if (data && data.ports && data.ports.in) {
-        tokId = 'port-default-' + modelId + '-';
-        for (i = 0; i < data.ports.in.length; i++) {
-          port = data.ports.in[i];
-          //portDefault = document.getElementById(tokId + port.name);
-          ckey = tokId + port.name;
-          portDefault =
-            typeof this.cacheDome[ckey] !== 'undefined'
-              ? this.cacheDome[ckey]
-              : document.getElementById(tokId + port.name);
-          this.cacheDome[ckey] = dome;
-
-          if (
-            portDefault !== null &&
-            rules &&
-            port.default &&
-            port.default.apply
-          ) {
             pendingTasks.push({
-              e: portDefault,
-              property: 'display',
-              value: 'inline',
-            });
-
-            paths = domCache[tokId + port.name + 'path'];
-            if (!paths) {
-              paths = portDefault.querySelectorAll('path');
-              domCache[tokId + port.name + 'path'] = paths;
-            }
-
-            for (j = 0; j < paths.length; j++) {
-              pendingTasks.push({
-                e: paths[j],
-                property: 'stroke-width',
-                value: width + 'px',
-              });
-            }
-            rects = domCache[tokId + port.name + 'rect'];
-            if (!rects) {
-              rects = portDefault.querySelectorAll('rect');
-              domCache[tokId + port.name + 'rect'] = rects;
-            }
-
-            for (j = 0; j < rects.length; j++) {
-              pendingTasks.push({
-                e: rects[j],
-                property: 'stroke-width',
-                value: state.zoom + 'px',
-              });
-            }
-          } else {
-            pendingTasks.push({
-              e: portDefault,
-              property: 'display',
-              value: 'none',
+              e: dome,
+              property: 'stroke-width',
+              value: nwidth + 'px',
             });
           }
         }
-      }
-    }
 
-    this.onUpdating=false;
-    return this.place('.generic-content', bbox, state, pendingTasks);
+        for (i = 0; i < rightPorts.length; i++) {
+          port = rightPorts[i];
+          if (port.size > 1) {
+            //dome = document.getElementById(tokId + port.id);
+            ckey = tokId + port.id;
+            dome =
+              typeof this.cacheDome[ckey] !== 'undefined'
+                ? this.cacheDome[ckey]
+                : document.getElementById(tokId + port.id);
+            this.cacheDome[ckey] = dome;
+
+            pendingTasks.push({
+              e: dome,
+              property: 'stroke-width',
+              value: nwidth + 'px',
+            });
+          }
+        }
+
+        // Render rules
+        var portDefault, paths, rects, j;
+
+        if (data && data.ports && data.ports.in) {
+          tokId = 'port-default-' + modelId + '-';
+          for (i = 0; i < data.ports.in.length; i++) {
+            port = data.ports.in[i];
+            //portDefault = document.getElementById(tokId + port.name);
+            ckey = tokId + port.name;
+            portDefault =
+              typeof this.cacheDome[ckey] !== 'undefined'
+                ? this.cacheDome[ckey]
+                : document.getElementById(tokId + port.name);
+            this.cacheDome[ckey] = dome;
+
+            if (
+              portDefault !== null &&
+              rules &&
+              port.default &&
+              port.default.apply
+            ) {
+              pendingTasks.push({
+                e: portDefault,
+                property: 'display',
+                value: 'inline',
+              });
+
+              paths = domCache[tokId + port.name + 'path'];
+              if (!paths) {
+                paths = portDefault.querySelectorAll('path');
+                domCache[tokId + port.name + 'path'] = paths;
+              }
+
+              for (j = 0; j < paths.length; j++) {
+                pendingTasks.push({
+                  e: paths[j],
+                  property: 'stroke-width',
+                  value: width + 'px',
+                });
+              }
+              rects = domCache[tokId + port.name + 'rect'];
+              if (!rects) {
+                rects = portDefault.querySelectorAll('rect');
+                domCache[tokId + port.name + 'rect'] = rects;
+              }
+
+              for (j = 0; j < rects.length; j++) {
+                pendingTasks.push({
+                  e: rects[j],
+                  property: 'stroke-width',
+                  value: state.zoom + 'px',
+                });
+              }
+            } else {
+              pendingTasks.push({
+                e: portDefault,
+                property: 'display',
+                value: 'none',
+              });
+            }
+          }
+        }
+      }
+
+      this.onUpdating = false;
+      return this.place('.generic-content', bbox, state, pendingTasks);
     }
     return false;
   },
@@ -1611,8 +1610,7 @@ joint.shapes.ice.ConstantView = joint.shapes.ice.ModelView.extend({
 
   place: placementCssTasks,
   updateBox: function () {
-  
-  const size = this.model.get('size');
+    const size = this.model.get('size');
     this.contentSelector.width(size.width);
     this.inputSelector.width(Math.round(size.width * 0.8));
     let bbox = this.model.getBBox();
@@ -1880,7 +1878,7 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
         return (radix === 16 ? '0x' : '') + text;
       },
     };
-   // this.editor.renderer.setShowGutter(false);
+    // this.editor.renderer.setShowGutter(false);
     this.editor.renderer.setShowGutter(true);
 
     this.updating = false;
@@ -1893,80 +1891,138 @@ joint.shapes.ice.MemoryView = joint.shapes.ice.ModelView.extend({
   },
 
   updateBox: function () {
-  var bbox = this.model.getBBox();
-  var data = this.model.get('data');
-  var state = this.model.get('state');
+    var bbox = this.model.getBBox();
+    var data = this.model.get('data');
+    var state = this.model.get('state');
 
-  var pendingTasks = [];
-  var editorUpdated = false;
+    var pendingTasks = [];
+    var editorUpdated = false;
 
-  if (this.editor) {
-    if (this.prevZoom !== state.zoom) {
-      this.prevZoom = state.zoom;
-      editorUpdated = true;
+    if (this.editor) {
+      if (this.prevZoom !== state.zoom) {
+        this.prevZoom = state.zoom;
+        editorUpdated = true;
 
-      pendingTasks.push(
-        { e: this.editorSelector[0], property: 'top', value: 24 * state.zoom + 'px' },
-        { e: this.editorSelector[0], property: 'margin', value: 7 * state.zoom + 'px' },
-        { e: this.editorSelector[0], property: 'border-radius', value: 5 * state.zoom + 'px' },
-        { e: this.editorSelector[0], property: 'border-width', value: state.zoom + 0.5 + 'px' }
-      );
+        pendingTasks.push(
+          {
+            e: this.editorSelector[0],
+            property: 'top',
+            value: 24 * state.zoom + 'px',
+          },
+          {
+            e: this.editorSelector[0],
+            property: 'margin',
+            value: 7 * state.zoom + 'px',
+          },
+          {
+            e: this.editorSelector[0],
+            property: 'border-radius',
+            value: 5 * state.zoom + 'px',
+          },
+          {
+            e: this.editorSelector[0],
+            property: 'border-width',
+            value: state.zoom + 0.5 + 'px',
+          }
+        );
 
-      var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
-      for (var i = 0; i < textLayers.length; i++) {
-        pendingTasks.push({
-          e: textLayers[i],
-          property: 'padding',
-          value: '0px ' + Math.round(4 * state.zoom) + 'px',
-        });
+        var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
+        for (var i = 0; i < textLayers.length; i++) {
+          pendingTasks.push({
+            e: textLayers[i],
+            property: 'padding',
+            value: '0px ' + Math.round(4 * state.zoom) + 'px',
+          });
+        }
       }
-    }
 
-    if (editorUpdated) {
-      this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-      this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
-    }
-
-    this.editor.resize();
-  }
-
-  var wireWidth = WIRE_WIDTH * state.zoom;
-  var wires = this.$el[0].getElementsByClassName('port-wire');
-  for (var j = 0; j < wires.length; j++) {
-    pendingTasks.push({ e: wires[j], property: 'stroke-width', value: wireWidth + 'px' });
-  }
-
-  var topOffset = data.name || data.local ? 0 : 24;
-  pendingTasks.push(
-    { e: this.contentSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
-    { e: this.contentSelector[0], property: 'top', value: Math.round(((bbox.height + topOffset) / 2.0) * (state.zoom - 1) + topOffset) + 'px' },
-    { e: this.contentSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
-    { e: this.contentSelector[0], property: 'height', value: Math.round(bbox.height - topOffset) + 'px' },
-    { e: this.contentSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' }
-  );
-
-  if (data.name || data.local) {
-    this.headerSelector.removeClass('hidden');
-  } else {
-    this.headerSelector.addClass('hidden');
-  }
-
-  pendingTasks.push(
-    { e: this.$box[0], property: 'left', value: bbox.x * state.zoom + state.pan.x + 'px' },
-    { e: this.$box[0], property: 'top', value: bbox.y * state.zoom + state.pan.y + 'px' },
-    { e: this.$box[0], property: 'width', value: bbox.width * state.zoom + 'px' },
-    { e: this.$box[0], property: 'height', value: bbox.height * state.zoom + 'px' }
-  );
-
-  requestAnimationFrame(() => {
-    for (let task of pendingTasks) {
-      if (task.e) {
-        task.e.style[task.property] = task.value;
+      if (editorUpdated) {
+        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
       }
-    }
-  });
-}
 
+      this.editor.resize();
+    }
+
+    var wireWidth = WIRE_WIDTH * state.zoom;
+    var wires = this.$el[0].getElementsByClassName('port-wire');
+    for (var j = 0; j < wires.length; j++) {
+      pendingTasks.push({
+        e: wires[j],
+        property: 'stroke-width',
+        value: wireWidth + 'px',
+      });
+    }
+
+    var topOffset = data.name || data.local ? 0 : 24;
+    pendingTasks.push(
+      {
+        e: this.contentSelector[0],
+        property: 'left',
+        value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'top',
+        value:
+          Math.round(
+            ((bbox.height + topOffset) / 2.0) * (state.zoom - 1) + topOffset
+          ) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'width',
+        value: Math.round(bbox.width) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'height',
+        value: Math.round(bbox.height - topOffset) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'transform',
+        value: 'scale(' + state.zoom + ')',
+      }
+    );
+
+    if (data.name || data.local) {
+      this.headerSelector.removeClass('hidden');
+    } else {
+      this.headerSelector.addClass('hidden');
+    }
+
+    pendingTasks.push(
+      {
+        e: this.$box[0],
+        property: 'left',
+        value: bbox.x * state.zoom + state.pan.x + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'top',
+        value: bbox.y * state.zoom + state.pan.y + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'width',
+        value: bbox.width * state.zoom + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'height',
+        value: bbox.height * state.zoom + 'px',
+      }
+    );
+
+    requestAnimationFrame(() => {
+      for (let task of pendingTasks) {
+        if (task.e) {
+          task.e.style[task.property] = task.value;
+        }
+      }
+    });
+  },
 });
 
 ///////// CODE   ////////
@@ -2012,7 +2068,7 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
         <div class="code-editor" id="${editorLabel}"></div>
         <script>
           var ${editorLabel} = ace.edit("${editorLabel}");
-          
+
           ${editorLabel}.setTheme("ace/theme/${editorTheme}");
           ${editorLabel}.setHighlightActiveLine(false);
           ${editorLabel}.setHighlightGutterLine(false);
@@ -2206,124 +2262,122 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     var editorUpdated = false;
 
     if (this.editor && this.prevZoom !== state.zoom) {
-        editorUpdated = true;
-        this.prevZoom = state.zoom;
-        var editorStyles = {
-            'margin': 7 * state.zoom + 'px',
-            'border-radius': 5 * state.zoom + 'px',
-            'border-width': state.zoom + 0.5 + 'px'
-        };
-        this.applyStyles(this.nativeDom.editorSelector, editorStyles);
+      editorUpdated = true;
+      this.prevZoom = state.zoom;
+      var editorStyles = {
+        'margin': 7 * state.zoom + 'px',
+        'border-radius': 5 * state.zoom + 'px',
+        'border-width': state.zoom + 0.5 + 'px',
+      };
+      this.applyStyles(this.nativeDom.editorSelector, editorStyles);
 
-        var annotationSize = Math.round(15 * state.zoom) + 'px';
-        var annotationTypes = ['.ace_error', '.ace_warning', '.ace_info'];
-        annotationTypes.forEach(type => {
-            this.applyStyles(this.$box[0].querySelectorAll(type), {
-                'background-size': annotationSize + ' ' + annotationSize
-            });
+      var annotationSize = Math.round(15 * state.zoom) + 'px';
+      var annotationTypes = ['.ace_error', '.ace_warning', '.ace_info'];
+      annotationTypes.forEach((type) => {
+        this.applyStyles(this.$box[0].querySelectorAll(type), {
+          'background-size': annotationSize + ' ' + annotationSize,
         });
+      });
 
-        this.applyStyles(this.$box[0].querySelectorAll('.ace_text-layer'), {
-            'padding': '0px ' + Math.round(4 * state.zoom) + 'px'
-        });
-
+      this.applyStyles(this.$box[0].querySelectorAll('.ace_text-layer'), {
+        padding: '0px ' + Math.round(4 * state.zoom) + 'px',
+      });
 
       var editIcon = this.$box.find('.js-codeblock-io-edit');
-if (editIcon.length) {
-
-   editIcon.css({
-        'transform': `scale(${state.zoom})`,
-        'transform-origin': 'top right', 
-        'top': '0px', 
-        'right': '0px'
-    });
-}
-
+      if (editIcon.length) {
+        editIcon.css({
+          'transform': `scale(${state.zoom})`,
+          'transform-origin': 'top right',
+          'top': '0px',
+          'right': '0px',
+        });
+      }
     }
 
     var wireWidth = WIRE_WIDTH * state.zoom;
     this.applyStyles(this.$el[0].getElementsByClassName('port-wire'), {
-        'stroke-width': wireWidth + 'px'
+      'stroke-width': wireWidth + 'px',
     });
 
     var busWidth = wireWidth * 3;
     var tokId = 'port-wire-' + modelId + '-';
-    [...leftPorts, ...rightPorts].forEach(port => {
-        var dome = document.getElementById(tokId + port.id);
-        if (dome) {
-            this.applyStyles([dome], { 'stroke-width': busWidth + 'px' });
-        }
+    [...leftPorts, ...rightPorts].forEach((port) => {
+      var dome = document.getElementById(tokId + port.id);
+      if (dome) {
+        this.applyStyles([dome], { 'stroke-width': busWidth + 'px' });
+      }
     });
 
     if (data?.ports?.in) {
-        var portTokId = 'port-default-' + modelId + '-';
-        data.ports.in.forEach(port => {
-            var portDefault = document.getElementById(portTokId + port.name);
-            if (portDefault) {
-                this.applyStyles([portDefault], {
-                    'display': (rules && port.default?.apply) ? 'inline' : 'none'
-                });
+      var portTokId = 'port-default-' + modelId + '-';
+      data.ports.in.forEach((port) => {
+        var portDefault = document.getElementById(portTokId + port.name);
+        if (portDefault) {
+          this.applyStyles([portDefault], {
+            display: rules && port.default?.apply ? 'inline' : 'none',
+          });
 
-                if (port.default?.apply) {
-                    this.applyStyles(portDefault.querySelectorAll('path'), {
-                        'stroke-width': wireWidth + 'px'
-                    });
-                    this.applyStyles(portDefault.querySelectorAll('rect'), {
-                        'stroke-width': state.zoom + 'px'
-                    });
-                }
-            }
-        });
+          if (port.default?.apply) {
+            this.applyStyles(portDefault.querySelectorAll('path'), {
+              'stroke-width': wireWidth + 'px',
+            });
+            this.applyStyles(portDefault.querySelectorAll('rect'), {
+              'stroke-width': state.zoom + 'px',
+            });
+          }
+        }
+      });
     }
 
     var contentTransform = {
-        'left': Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
-        'top': Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
-        'width': Math.round(bbox.width) + 'px',
-        'height': Math.round(bbox.height) + 'px',
-        'transform': 'scale(' + state.zoom + ')'
+      left: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
+      top: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
+      width: Math.round(bbox.width) + 'px',
+      height: Math.round(bbox.height) + 'px',
+      transform: 'scale(' + state.zoom + ')',
     };
     this.applyStyles(this.nativeDom.contentSelector, contentTransform);
 
     var boxTransform = {
-        'left': Math.round(bbox.x * state.zoom + state.pan.x) + 'px',
-        'top': Math.round(bbox.y * state.zoom + state.pan.y) + 'px',
-        'width': Math.round(bbox.width * state.zoom) + 'px',
-        'height': Math.round(bbox.height * state.zoom) + 'px'
+      left: Math.round(bbox.x * state.zoom + state.pan.x) + 'px',
+      top: Math.round(bbox.y * state.zoom + state.pan.y) + 'px',
+      width: Math.round(bbox.width * state.zoom) + 'px',
+      height: Math.round(bbox.height * state.zoom) + 'px',
     };
     this.applyStyles([this.nativeDom.box], boxTransform);
 
     if (this.editor && editorUpdated) {
-        this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-        this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
+      this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+      this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
     }
 
     this.editor?.resize();
     return pendingTasks;
-},
+  },
 
-/**
- * Método auxiliar para aplicar estilos en lotes de forma segura.
- */
-applyStyles: function (elements, styles) {
-    if (!elements){ return;}
-    
-    // Asegurar que `elements` sea un array o NodeList
-    if (!Array.isArray(elements) && !(elements instanceof NodeList)) {
-        elements = [elements];
+  /**
+   * Método auxiliar para aplicar estilos en lotes de forma segura.
+   */
+  applyStyles: function (elements, styles) {
+    if (!elements) {
+      return;
     }
 
-    elements.forEach(element => {
-        if (element && element.style) { // Validar que `element` no sea null/undefined
-            Object.keys(styles).forEach(prop => {
-                element.style[prop] = styles[prop];
-            });
-        }
+    // Asegurar que `elements` sea un array o NodeList
+    if (!Array.isArray(elements) && !(elements instanceof NodeList)) {
+      elements = [elements];
+    }
+
+    elements.forEach((element) => {
+      if (element && element.style) {
+        // Validar que `element` no sea null/undefined
+        Object.keys(styles).forEach((prop) => {
+          element.style[prop] = styles[prop];
+        });
+      }
     });
-}
-
+  },
 });
-
 
 ///////////////////// INFO //////////////////////////////
 // Info block
@@ -2628,65 +2682,142 @@ joint.shapes.ice.InfoView = joint.shapes.ice.ModelView.extend({
   },
 
   updateBox: function () {
-  var bbox = this.model.getBBox();
-  var state = this.model.get('state');
-  var data = this.model.get('data');
+    var bbox = this.model.getBBox();
+    var state = this.model.get('state');
+    var data = this.model.get('data');
 
-  let temporalBypass = true;
-  if (!temporalBypass) {return;}
-
-  var pendingTasks = [];
-
-  if (data.readonly) {
-    pendingTasks.push(
-      { e: this.renderSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
-      { e: this.renderSelector[0], property: 'top', value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px' },
-      { e: this.renderSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
-      { e: this.renderSelector[0], property: 'height', value: Math.round(bbox.height) + 'px' },
-      { e: this.renderSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' },
-      { e: this.renderSelector[0], property: 'font-size', value: aceFontSize + 'px' }
-    );
-  } else if (this.editor) {
-    pendingTasks.push(
-      { e: this.editorSelector[0], property: 'margin', value: 7 * state.zoom + 'px' },
-      { e: this.editorSelector[0], property: 'border-radius', value: 5 * state.zoom + 'px' },
-      { e: this.editorSelector[0], property: 'border-width', value: state.zoom + 0.5 + 'px' }
-    );
-
-    var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
-    for (var i = 0; i < textLayers.length; i++) {
-      pendingTasks.push({ e: textLayers[i], property: 'padding', value: '0px ' + Math.round(4 * state.zoom) + 'px' });
+    let temporalBypass = true;
+    if (!temporalBypass) {
+      return;
     }
 
-    this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
-    this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
-    this.editor.resize();
-  }
+    var pendingTasks = [];
 
-  pendingTasks.push(
-    { e: this.contentSelector[0], property: 'left', value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px' },
-    { e: this.contentSelector[0], property: 'top', value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px' },
-    { e: this.contentSelector[0], property: 'width', value: Math.round(bbox.width) + 'px' },
-    { e: this.contentSelector[0], property: 'height', value: Math.round(bbox.height) + 'px' },
-    { e: this.contentSelector[0], property: 'transform', value: 'scale(' + state.zoom + ')' }
-  );
+    if (data.readonly) {
+      pendingTasks.push(
+        {
+          e: this.renderSelector[0],
+          property: 'left',
+          value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
+        },
+        {
+          e: this.renderSelector[0],
+          property: 'top',
+          value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
+        },
+        {
+          e: this.renderSelector[0],
+          property: 'width',
+          value: Math.round(bbox.width) + 'px',
+        },
+        {
+          e: this.renderSelector[0],
+          property: 'height',
+          value: Math.round(bbox.height) + 'px',
+        },
+        {
+          e: this.renderSelector[0],
+          property: 'transform',
+          value: 'scale(' + state.zoom + ')',
+        },
+        {
+          e: this.renderSelector[0],
+          property: 'font-size',
+          value: aceFontSize + 'px',
+        }
+      );
+    } else if (this.editor) {
+      pendingTasks.push(
+        {
+          e: this.editorSelector[0],
+          property: 'margin',
+          value: 7 * state.zoom + 'px',
+        },
+        {
+          e: this.editorSelector[0],
+          property: 'border-radius',
+          value: 5 * state.zoom + 'px',
+        },
+        {
+          e: this.editorSelector[0],
+          property: 'border-width',
+          value: state.zoom + 0.5 + 'px',
+        }
+      );
 
-  pendingTasks.push(
-    { e: this.$box[0], property: 'left', value: bbox.x * state.zoom + state.pan.x + 'px' },
-    { e: this.$box[0], property: 'top', value: bbox.y * state.zoom + state.pan.y + 'px' },
-    { e: this.$box[0], property: 'width', value: bbox.width * state.zoom + 'px' },
-    { e: this.$box[0], property: 'height', value: bbox.height * state.zoom + 'px' }
-  );
-
-  requestAnimationFrame(() => {
-    for (let task of pendingTasks) {
-      if (task.e) {
-        task.e.style[task.property] = task.value;
+      var textLayers = this.$box[0].querySelectorAll('.ace_text-layer');
+      for (var i = 0; i < textLayers.length; i++) {
+        pendingTasks.push({
+          e: textLayers[i],
+          property: 'padding',
+          value: '0px ' + Math.round(4 * state.zoom) + 'px',
+        });
       }
-    }
-  });
-},
 
+      this.editor.setFontSize(Math.round(aceFontSize * state.zoom));
+      this.editor.renderer.$cursorLayer.$padding = Math.round(4 * state.zoom);
+      this.editor.resize();
+    }
+
+    pendingTasks.push(
+      {
+        e: this.contentSelector[0],
+        property: 'left',
+        value: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'top',
+        value: Math.round((bbox.height / 2.0) * (state.zoom - 1)) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'width',
+        value: Math.round(bbox.width) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'height',
+        value: Math.round(bbox.height) + 'px',
+      },
+      {
+        e: this.contentSelector[0],
+        property: 'transform',
+        value: 'scale(' + state.zoom + ')',
+      }
+    );
+
+    pendingTasks.push(
+      {
+        e: this.$box[0],
+        property: 'left',
+        value: bbox.x * state.zoom + state.pan.x + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'top',
+        value: bbox.y * state.zoom + state.pan.y + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'width',
+        value: bbox.width * state.zoom + 'px',
+      },
+      {
+        e: this.$box[0],
+        property: 'height',
+        value: bbox.height * state.zoom + 'px',
+      }
+    );
+
+    requestAnimationFrame(() => {
+      for (let task of pendingTasks) {
+        if (task.e) {
+          task.e.style[task.property] = task.value;
+        }
+      }
+    });
+  },
 
   removeBox: function (/*event*/) {
     delete this.model.attributes.data.delta;
@@ -2774,8 +2905,8 @@ joint.shapes.ice.Wire = joint.dia.Link.extend({
         },
       },
 
-     router: { name: 'ice' },
-     connector: { name: 'ice' },
+      router: { name: 'ice' },
+      connector: { name: 'ice' },
     },
     joint.dia.Link.prototype.defaults
   ),
@@ -3097,4 +3228,3 @@ joint.shapes.ice.WireView = joint.dia.LinkView.extend({
     return this;
   },
 });
-

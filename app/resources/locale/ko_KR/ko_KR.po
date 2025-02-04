@@ -1249,9 +1249,9 @@ msgid ""
 "top-level design.<br><br>If you want to export               this submodule "
 "to a file, use the \"Save as\" command."
 msgstr ""
-"설계를 저장하려면 키록을 잠그고 최상위 설계로 이동하십시오.<br><br>이 하위 "
-"모듈을 파일로 내보내려면 \"다른 이름으로 저장\" 명령을 실행하여 파일을 내보내"
-"십시오."
+"설계를 저장하려면 키록을 잠그고 최상위 설계로 이동하십시오.<br><br>이 하위 모"
+"듈을 파일로 내보내려면 \"다른 이름으로 저장\" 명령을 실행하여 파일을 내보내십"
+"시오."
 
 #: app/views/menu.html:406
 #, fuzzy

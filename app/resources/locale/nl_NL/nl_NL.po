@@ -1094,8 +1094,7 @@ msgstr "Kies uw bord"
 
 #: app/scripts/services/forms.js:1015
 msgid "Show clock"
-msgstr ""
-"Laat de klok zien"
+msgstr "Laat de klok zien"
 
 #: app/scripts/services/forms.js:406 app/views/design.html:191
 msgid "Slate Blue"
