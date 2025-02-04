@@ -436,7 +436,7 @@ msgstr "Документація"
 #: app/scripts/controllers/menu.js:606
 #, fuzzy
 msgid "Don’t Save"
-msgstr "Не відображати"
+msgstr "Не економити"
 
 #: app/views/version.html:83
 msgid "Don’t display"
@@ -515,7 +515,7 @@ msgstr "Введіть віддалене ім'я хоста user@host"
 #: app/scripts/services/drivers.js:698
 #, fuzzy
 msgid "Error enabling driver type {{type}}"
-msgstr "Помилка встановлення драйвера:"
+msgstr "Помилка включенні типу драйвера {{type}}"
 
 #: app/scripts/services/drivers.js:508
 msgid "Error installing driver:"
@@ -524,7 +524,7 @@ msgstr "Помилка встановлення драйвера:"
 #: app/scripts/services/forms.js:1696
 #, fuzzy
 msgid "Error reading the file: {{error}}"
-msgstr "Помилка: {{error}}"
+msgstr "Помилка читання файлу: {{error}}"
 
 #: app/scripts/services/utils.js:924
 msgid "Error: {{error}}"
@@ -671,7 +671,7 @@ msgstr "Зображення"
 #: app/scripts/services/forms.js:1652
 #, fuzzy
 msgid "Import code"
-msgstr "Вихідний код"
+msgstr "Код імпорту"
 
 #: app/scripts/services/forms.js:379 app/views/design.html:113
 msgid "Indian Red"
@@ -1098,7 +1098,7 @@ msgstr "Сланцево-синій"
 #: app/scripts/services/tools.js:2181
 #, fuzzy
 msgid "Snapshot saved: {{name}}"
-msgstr "Повторювана назва порту: {{name}}"
+msgstr "Знімок збережено: {{name}}"
 
 #: app/views/menu.html:1020
 msgid "Source code"
@@ -1141,12 +1141,14 @@ msgid "Taiwanese"
 msgstr "Тайванська"
 
 #: app/views/menu.html:885
+#, fuzzy
 msgid "Take PNG"
-msgstr ""
+msgstr "Знімайте PNG"
 
 #: app/views/menu.html:893
+#, fuzzy
 msgid "Take Video"
-msgstr ""
+msgstr "Знімати відео"
 
 #: app/views/menu.html:245
 msgid "Testbench"
@@ -1286,8 +1288,9 @@ msgid "UI theme"
 msgstr "Тема інтерфейсу"
 
 #: app/views/languages.html:95
+#, fuzzy
 msgid "Ukrainian"
-msgstr ""
+msgstr "Українська"
 
 #: app/views/menu.html:296
 msgid "Undo"
@@ -1341,7 +1344,7 @@ msgstr "Примітки до версії"
 #: app/scripts/services/tools.js:2234
 #, fuzzy
 msgid "Video saved: {{name}}"
-msgstr "Встановити {{name}} за допомогою Apio"
+msgstr "Відео збережено: {{name}}"
 
 #: app/views/menu.html:510
 msgid "View"
