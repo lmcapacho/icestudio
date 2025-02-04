@@ -740,9 +740,6 @@ angular
           'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
         content.push('<div>');
         for (i in messages) {
-          if (i > 0) {
-            //content.push('<br>');
-          }
           content.push('  <p>' + messages[i] + '</p>');
           content.push(
             '  <input class="ajs-input" id="input' +

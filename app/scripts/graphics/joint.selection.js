@@ -49,10 +49,9 @@ joint.ui.SelectionView = Backbone.View.extend({
 
   click: function (evt) {
     if (evt.which === 1) {
-        // Mouse left button
-    
-        this.trigger('selection-box:pointerclick', evt);
+      // Mouse left button
 
+      this.trigger('selection-box:pointerclick', evt);
     }
   },
 
@@ -197,7 +196,6 @@ joint.ui.SelectionView = Backbone.View.extend({
 
       case 'adding':
       case 'translating':
-
         var snappedClientCoords = this.options.paper.snapToGrid(
           g.point(evt.clientX, evt.clientY)
         );

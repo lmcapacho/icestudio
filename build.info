@@ -3,48 +3,47 @@
 Type: WIP
 
 App Changes:
-  - Speed improvement in code editors by @cavearr
-  - Added icon over code editor to open easily form io editor by @cavearr
-  - Improive zoom speed with code sandbox before ace editor replacement by @cavearr
-  - Fine tune zoom for slow cpus by @cavearr
-  - Migration of I/O pins from virtual to physical at copy paste in top level by @cavearr
-  - Improve zoom speed and routing algorithm  by @cavearr
-  - Improve copy/paste blocks at top level with IO migration by @cavearr
-  - Node.js upgrade to 23.3.0 version by @cavearr
-  - NWJS upgrade to 0.95.0 version (latest stable) by @cavearr
-  - Improvement Speed of UI (>300% of speed) by @cavearr
-  - Prettier integration for automatic code formating on commits by @TimRudy
-  - Improve windows nwjs launcher integration in Windows OS by @TimRudy
-  - Cosmetic improvements (translations, language orders,etc) by @TimRudy
-  - Better translatios for verilog importer by @TimRudy
-  - Support for dynamic width on labels and IO Pins improving readability by @lmcapacho
-  - Support for parametric IO pins by @cavearr
-  - Support for parametric buses by @cavearr
+  - Finish translation so it is stable with Prettier by @TimRudy
+  - Improve speed of code editors by @cavearr
+  - Add icon over code editor to open easily by @cavearr
+  - Improve zoom speed with code sandbox before ace editor replacement by @cavearr
+  - Fine tune zoom for slow CPUs by @cavearr
+  - Migrate I/O pins from virtual to physical at copy paste in top level by @cavearr
+  - Improve zoom speed and routing algorithm by @cavearr
+  - Improve copy/paste blocks at top level with I/O migration by @cavearr
+  - Upgrade Node.js to 23.3.0 version by @cavearr
+  - Upgrade NWJS to 0.95.0 version (latest stable) by @cavearr
+  - Improve speed of UI (>300% of speed) by @cavearr
+  - Integrate Prettier for automatic code formatting on commits by @TimRudy
+  - Improve NWJS launcher integration in Windows OS by @TimRudy
+  - Improve translation language order in menu by @TimRudy
+  - Improve translation text for Verilog importer by @TimRudy
+  - Support dynamic width on labels and I/O pins for readability by @lmcapacho
+  - Support parametric I/O pins by @cavearr
+  - Support parametric buses by @cavearr
   - Remove obsolete emoji-node package with unavailable third party resources by @cavearr
-  - Support for comments in IO definitions in verilog importer by @cavearr
-  - Safe save at -save & quit- dialog on window close by @cavearr
-  - Improve exit iceStudio dialog by @lmcapacho
-  - Fixed locale loading error at collection installer by @cavearr
-  - Fixed recent files blank loading at startup by @lmcapacho
+  - Support comments in I/O definitions in Verilog importer by @cavearr
+  - Fix safe save at -save & quit- dialog on window close by @cavearr
+  - Improve exit Icestudio dialog by @lmcapacho
+  - Fix locale loading error in collection installer by @cavearr
+  - Fix Recent files blank loading at startup by @lmcapacho
   - Refactor modules and update versions of node modules by @cavearr
-  - Enhance modal window for verilog module import selector by @lmcapacho
-  - Verilog importer supports ANSI and 1995 Verilog coding style by @cavearr
-  - Header comments and multiple module per file support for verilog importer by @cavearr
-  - Add inouts and parameters automatic loading verilog code and improve code by @cavearr
-  - Automatic code block from verilog file by @lmcapacho
-  - Video Screen recording capatabilities by @cavearr
-  - Verilator rules linter support by @cavearr
-  - Snapshotter to PNG to take screenshots easily by @cavearr
+  - Enhance modal window for Verilog module import selector by @lmcapacho
+  - Add support for ANSI and 1995 Verilog style to Verilog importer by @cavearr
+  - Add support for header comments and multiple modules per file to Verilog importer by @cavearr
+  - Add inouts and parameters auto-load to Verilog importer and improve code by @cavearr
+  - Add Verilog importer for code block from Verilog file by @lmcapacho
+  - Add Video Screen recording capability by @cavearr
+  - Change to Verilator rules linter by @cavearr
+  - Add PNG Snapshotter to take screenshots easily by @cavearr
   - Fix some display clock and I/O block errors by @cavearr
-  - Allow selecting Icestudio version number for copying (#717) by @lmcapacho
+  - Allow select and copy Icestudio version number (#717) by @lmcapacho
   - Fix non visible clk in wire remove or attach action by @cavearr
   - Fix non visible clk in block insertion by @cavearr
-  - Fix not showing wires bifurcations marks by @cavearr
-  - Add .ice files opened with double click from file manager to  recent files option by @lmcapacho
-  - Accuracy selection and click on items (now is pixel-perfect click and selections) by @cavearr
+  - Fix not showing wires bifurcation marks by @cavearr
+  - Add .ice files opened with double click from file manager to recent files by @lmcapacho
+  - Fix accuracy of select and click on items (now is pixel-perfect click and selections) by @cavearr
   - Speed up UI/load-flow by @cavearr
-  - Best Mime file support for Linux Desktops by @lmcapacho
-  - Improved load design time and consistency by @cavearr
-  - Recent open files option in Archive menu  by @lmcapacho
-
-
+  - Add Icestudio Mime type support for Linux Desktops by @lmcapacho
+  - Improve design load-time and consistency by @cavearr
+  - Add Recent open files to menu by @lmcapacho

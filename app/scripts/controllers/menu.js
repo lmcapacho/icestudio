@@ -370,7 +370,7 @@ angular.module('icestudio').controller(
           gettextCatalog.getString('Save submodule'),
           gettextCatalog.getString(
             'To save your design you need to lock the padlock and \
-              go to the top-level design.<br/><br/>If you want to export \
+              go to the top-level design.<br><br>If you want to export \
               this submodule to a file, use the \"Save as\" command.'
           ),
           function () {}

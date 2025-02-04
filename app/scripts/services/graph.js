@@ -31,8 +31,8 @@ angular.module('icestudio').service(
     let isRouting = false;
 
     let mousePosition = { x: 0, y: 0 };
- 
-        /*-- This event flood the task queue,and throttle techniches not work accurate as needed,for this 
+
+    /*-- This event flood the task queue,and throttle techniches not work accurate as needed,for this
          *  i replace this capture method for on demand capture function based on non blocking promise
          *
          *  $('body').mousemove(function (event) {
@@ -43,21 +43,19 @@ angular.module('icestudio').service(
       });
 --*/
 
+    let needsUpdate = true;
 
-let needsUpdate = true;
-
-document.addEventListener("mousemove", (event) => {
-  if (needsUpdate) {
-    needsUpdate = false;
-    requestAnimationFrame(() => {
-      mousePosition.x = event.pageX;
-      mousePosition.y = event.pageY;
-      needsUpdate = true; // Permitimos la siguiente actualización
+    document.addEventListener('mousemove', (event) => {
+      if (needsUpdate) {
+        needsUpdate = false;
+        requestAnimationFrame(() => {
+          mousePosition.x = event.pageX;
+          mousePosition.y = event.pageY;
+          needsUpdate = true; // Permitimos la siguiente actualización
+        });
+      }
     });
-  }
-});
 
-     
     this.route = function () {
       if (!isRouting) {
         isRouting = true;
@@ -105,7 +103,7 @@ document.addEventListener("mousemove", (event) => {
         y: 0,
       },
       zoom: ZOOM_INI,
-      forceMutate:false
+      forceMutate: false,
     };
 
     //-- Current view state: Position and Zoom
@@ -273,7 +271,7 @@ document.addEventListener("mousemove", (event) => {
         height: 5000,
         model: graph,
         gridSize: gridsize,
-        interactive:true,
+        interactive: true,
         clickThreshold: 6,
         snapLinks: { radius: 16 },
         linkPinning: false,
@@ -470,31 +468,41 @@ document.addEventListener("mousemove", (event) => {
       let targetElement = element[0];
       let zoomTimeout;
 
-function disableAceEditors() {
-  const editors = document.querySelectorAll('.ace_editor');
-  editors.forEach(editor => {
- editor.style.display = 'none'; 
-  });
-}
-function restoreAceEditors() {
-  const editors = document.querySelectorAll('.ace_editor');
-  editors.forEach(editor => {
-   editor.style.display = 'block';
-  });
-const baseGutterWidth = 50;
-  const baseGutterPLeft = 19;
-  const baseGutterPRight = 13;
-      const newWidth = baseGutterWidth * state.zoom;
-      const newPLeft = baseGutterPLeft * state.zoom;
-      const newPRight = baseGutterPRight * state.zoom;
-document.documentElement.style.setProperty('--gutter-width', newWidth + 'px');
-document.documentElement.style.setProperty('--gutter-padding-left', newPLeft + 'px');
-document.documentElement.style.setProperty('--gutter-padding-right', newPRight + 'px');
-document.documentElement.style.setProperty('--editor-content-scroller-left', newWidth + 'px');
+      function disableAceEditors() {
+        const editors = document.querySelectorAll('.ace_editor');
+        editors.forEach((editor) => {
+          editor.style.display = 'none';
+        });
+      }
+      function restoreAceEditors() {
+        const editors = document.querySelectorAll('.ace_editor');
+        editors.forEach((editor) => {
+          editor.style.display = 'block';
+        });
+        const baseGutterWidth = 50;
+        const baseGutterPLeft = 19;
+        const baseGutterPRight = 13;
+        const newWidth = baseGutterWidth * state.zoom;
+        const newPLeft = baseGutterPLeft * state.zoom;
+        const newPRight = baseGutterPRight * state.zoom;
+        document.documentElement.style.setProperty(
+          '--gutter-width',
+          newWidth + 'px'
+        );
+        document.documentElement.style.setProperty(
+          '--gutter-padding-left',
+          newPLeft + 'px'
+        );
+        document.documentElement.style.setProperty(
+          '--gutter-padding-right',
+          newPRight + 'px'
+        );
+        document.documentElement.style.setProperty(
+          '--editor-content-scroller-left',
+          newWidth + 'px'
+        );
+      }
 
-
-}
-     
       this.panAndZoom = svgPanZoom(targetElement.childNodes[2], {
         fit: false,
         center: false,
@@ -507,28 +515,28 @@ document.documentElement.style.setProperty('--editor-content-scroller-left', new
         eventsListenerElement: targetElement,
         onZoom: function (scale) {
           state.zoom = scale;
-          if(state.mutateZoom===false){
-          state.mutateZoom = true;
-          disableAceEditors();
-         graph.startBatch('batch-update'); 
-          // Close expanded combo
-          if (document.activeElement.className === 'select2-search__field') {
-            $('select').select2('close');
+          if (state.mutateZoom === false) {
+            state.mutateZoom = true;
+            disableAceEditors();
+            graph.startBatch('batch-update');
+            // Close expanded combo
+            if (document.activeElement.className === 'select2-search__field') {
+              $('select').select2('close');
+            }
+            //-- Optimization strategy, try to launch a timeout that is deleted
+            //-- while user do the zoom, and when is finished, we is the only
+            //-- moment that routes are calculated.
           }
-          //-- Optimization strategy, try to launch a timeout that is deleted 
-          //-- while user do the zoom, and when is finished, we is the only
-          //-- moment that routes are calculated.
-          }
-          clearTimeout(zoomTimeout); 
-           zoomTimeout = setTimeout(() => {
-             restoreAceEditors();
-              requestAnimationFrame(() => {
-             updateCellBoxes();
-          graph.stopBatch('batch-update');
- 
-          state.mutateZoom = false;
-        });
-        }, 200); 
+          clearTimeout(zoomTimeout);
+          zoomTimeout = setTimeout(() => {
+            restoreAceEditors();
+            requestAnimationFrame(() => {
+              updateCellBoxes();
+              graph.stopBatch('batch-update');
+
+              state.mutateZoom = false;
+            });
+          }, 200);
         },
         onPan: function (newPan) {
           state.pan = newPan;
@@ -595,8 +603,7 @@ function isElementInViewport(elementBBox, viewport) {
         }
       });
 
-      
-           selectionView.on('selection-box:pointerdown', function (/*evt*/) {
+      selectionView.on('selection-box:pointerdown', function (/*evt*/) {
         // Move selection to top view
         if (hasSelection()) {
           selection.each(function (cell) {
@@ -617,7 +624,7 @@ function isElementInViewport(elementBBox, viewport) {
             self.addingDraggableBlock = false;
             processReplaceBlock(selection.at(0));
             disableSelected();
-            
+
             updateWiresOnObstacles().then(() => {
               graph.trigger('batch:stop');
             });
@@ -633,7 +640,6 @@ function isElementInViewport(elementBBox, viewport) {
       });
 
       paper.on('cell:pointerclick', function (cellView, evt, x, y) {
-        
         if (!checkInsideViewBox(cellView, x, y)) {
           // Out of the view box
           return;
@@ -716,29 +722,34 @@ function isElementInViewport(elementBBox, viewport) {
         }
       });
 
-    //-- Capture click for code editor io edit icon for currents and futures
-    document.addEventListener('click', function(event) {
-    let target = event.target;
-    while (target && target !== this) {
-        if (target.matches('.js-codeblock-io-edit')) {
-            event.stopPropagation(); 
+      //-- Capture click for code editor io edit icon for currents and futures
+      document.addEventListener('click', function (event) {
+        let target = event.target;
+        while (target && target !== this) {
+          if (target.matches('.js-codeblock-io-edit')) {
+            event.stopPropagation();
 
-            var modelId = target.getAttribute('data-blkid'); 
-            if (!modelId) {return;}
+            var modelId = target.getAttribute('data-blkid');
+            if (!modelId) {
+              return;
+            }
 
             var cell = paper.getModelById(modelId);
-            if (!cell) {return;}
+            if (!cell) {
+              return;
+            }
 
-            var cellView = paper.findViewByModel(cell); 
-            if (!cellView) {return;}
+            var cellView = paper.findViewByModel(cell);
+            if (!cellView) {
+              return;
+            }
 
-          
             paper.trigger('cell:pointerdblclick', cellView, event, 0, 0);
             break;
+          }
+          target = target.parentNode;
         }
-        target = target.parentNode;
-    }
-});
+      });
       $rootScope.$on('navigateProjectEnded', function (event, args) {
         if (args.fromDoubleClick) {
           self.breadcrumbs.push({
@@ -817,10 +828,9 @@ function isElementInViewport(elementBBox, viewport) {
         }, 200);
       });
 
-    paper.on('cell:pointermove', function (cellView ) {
+      paper.on('cell:pointermove', function (cellView) {
         debounceDisableReplacedBlock(cellView.model);
       });
-
 
       selectionView.on('selection-box:pointermove', function () {
         if (self.addingDraggableBlock && hasSelection()) {
@@ -1035,8 +1045,7 @@ function isElementInViewport(elementBBox, viewport) {
         disableReplacedBlock(lowerBlock);
       }, 100);
 
-
-           graph.on('add change:source change:target', function (cell) {
+      graph.on('add change:source change:target', function (cell) {
         if (cell.isLink() && cell.get('source').id) {
           // Link connected
           let target = cell.get('target');
@@ -1051,7 +1060,6 @@ function isElementInViewport(elementBBox, viewport) {
           }
         }
       });
-  
 
       graph.on('remove', function (cell) {
         if (cell.isLink()) {
@@ -1063,7 +1071,6 @@ function isElementInViewport(elementBBox, viewport) {
           updatePortDefault(target, true);
         }
       });
-
 
       function updatePortDefault(target, value) {
         if (target) {
@@ -1278,7 +1285,6 @@ function isElementInViewport(elementBBox, viewport) {
       this.addingDraggableBlock = true;
       let menuHeight = $('#menu').height();
 
-
       cell.set('position', {
         x:
           Math.round(
@@ -1303,18 +1309,12 @@ function isElementInViewport(elementBBox, viewport) {
         clientX: mousePosition.x,
         clientY: mousePosition.y,
       });
-
-
-     
     };
 
     this.addDraggableCells = function (cells) {
       this.addingDraggableBlock = true;
       let menuHeight = $('#menu').height();
       if (cells.length > 0) {
-
-
-
         let firstCell = cells[0];
         let offset = {
           x:
@@ -1353,8 +1353,6 @@ function isElementInViewport(elementBBox, viewport) {
           clientX: mousePosition.x,
           clientY: mousePosition.y,
         });
-
-
       }
     };
 
@@ -1948,31 +1946,36 @@ function isElementInViewport(elementBBox, viewport) {
       return cells;
     }
 
-this.isTopLevel=function(){
+    this.isTopLevel = function () {
+      return this.breadcrumbs.length < 2;
+    };
 
-  return (this.breadcrumbs.length<2);
-};
+    this.convertIOtoTop = function (design) {
+      if (this.isTopLevel()) {
+        design.graph.blocks = design.graph.blocks.filter((block) => {
+          if (block.type === 'basic.input' || block.type === 'basic.output') {
+            if (
+              typeof block.data.clock !== 'undefined' &&
+              block.data.clock === true
+            ) {
+              return false;
+            }
+            block.data.virtual = false;
+            block.data.pins =
+              block.data.pins ??
+              Array.from({ length: block.data.size ?? 1 }, (_, p) => ({
+                index: `${p}`,
+                name: 'NULL',
+                value: 'NULL',
+              }));
+          }
+          return true;
+        });
+      }
+      design.board = common.selectedBoard.name;
+      return design;
+    };
 
-this.convertIOtoTop = function (design) {
-  if (this.isTopLevel()) {
-    design.graph.blocks = design.graph.blocks
-      .filter((block) => {
-        if (block.type === "basic.input" || block.type === "basic.output") {
-          if (typeof block.data.clock !== 'undefined' && block.data.clock === true) { return false;}
-          block.data.virtual = false;
-          block.data.pins = block.data.pins ?? 
-            Array.from({ length: block.data.size ?? 1 }, (_, p) => ({
-              index: `${p}`,
-              name: "NULL",
-              value: "NULL",
-            }));
-        }        
-        return true;
-      });
-  }
-  design.board=common.selectedBoard.name;
-  return design;
-};
     this.appendDesign = function (design, dependencies) {
       if (
         design &&
@@ -1981,7 +1984,6 @@ this.convertIOtoTop = function (design) {
         design.graph.blocks &&
         design.graph.wires
       ) {
-
         selectionView.cancelSelection();
         // Merge dependencies
         for (let type in dependencies) {
@@ -1989,8 +1991,8 @@ this.convertIOtoTop = function (design) {
             common.allDependencies[type] = dependencies[type];
           }
         }
-      
-        design=this.convertIOtoTop(design);
+
+        design = this.convertIOtoTop(design);
 
         // Append graph cells: blocks and wires
         // - assign new UUIDs to the cells
@@ -2030,8 +2032,7 @@ this.convertIOtoTop = function (design) {
             cellView.updateBox(true);
           }
         });
-
-     }
+      }
     };
 
     function graphOrigin(graph) {
