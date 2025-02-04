@@ -32,8 +32,10 @@ jobs:
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
 
-      - name: Confirm code format
-        run: npm prettier
+      - name: Enforce code formatting
+        run: |
+           npm run prettier
+           npm run jshint
 
       - name: Commit changes
         run: |
