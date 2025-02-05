@@ -3,6 +3,7 @@
 Type: WIP
 
 App Changes:
+  - Embeding SDK version of nwjs in WIPs by @cavearr
   - Improving loading times by @cavearr
   - Refactoring graphics engine by @cavearr
   - Better info/warning/error tooltip positioning in code editor by @cavearr
