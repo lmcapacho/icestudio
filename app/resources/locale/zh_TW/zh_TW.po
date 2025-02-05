@@ -587,7 +587,7 @@ msgid "FPGA resources"
 msgstr "FPGA 資源"
 
 #: app/views/version.html:61
-msgid "FPGAwars community"
+msgid "FPGAwars GitHub project"
 msgstr ""
 
 #: app/views/version.html:48
@@ -1170,8 +1170,8 @@ msgstr "測試平台"
 
 #: app/views/version.html:50
 #, fuzzy
-msgid "Thank you very much!"
-msgstr ". 非常感謝"
+msgid "Thank you very much all!"
+msgstr "非常感謝"
 
 #: app/scripts/services/tools.js:1858
 msgid "The collection {{name}} already exists."
@@ -1209,7 +1209,7 @@ msgstr "此專案為開發板 {{name}} 所設計."
 #: app/views/version.html:40
 msgid ""
 "This release has been possible thanks to the great work done\n"
-"          by an emerging team from"
+"          by an active, growing, enthusiastic team, the"
 msgstr ""
 
 #: app/scripts/services/utils.js:1458

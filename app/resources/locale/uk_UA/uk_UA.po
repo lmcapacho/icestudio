@@ -583,8 +583,8 @@ msgid "FPGA resources"
 msgstr "Ресурси FPGA"
 
 #: app/views/version.html:61
-msgid "FPGAwars community"
-msgstr "Спільнота FPGAwars"
+msgid "FPGAwars GitHub project"
+msgstr ""
 
 #: app/views/version.html:48
 msgid "FPGAwars community."
@@ -1155,8 +1155,9 @@ msgid "Testbench"
 msgstr "Тестовий стенд"
 
 #: app/views/version.html:50
-msgid "Thank you very much!"
-msgstr "Дуже дякуємо!"
+#, fuzzy
+msgid "Thank you very much all!"
+msgstr "Спасибі всім велике!"
 
 #: app/scripts/services/tools.js:1858
 msgid "The collection {{name}} already exists."
@@ -1195,9 +1196,10 @@ msgid "This project is designed for the {{name}} board."
 msgstr "Цей проект призначений для плати {{name}}."
 
 #: app/views/version.html:40
+#, fuzzy
 msgid ""
 "This release has been possible thanks to the great work done\n"
-"          by an emerging team from"
+"          by an active, growing, enthusiastic team, the"
 msgstr "Цей випуск став можливим завдяки чудовій роботі команди, що виникає з"
 
 #: app/scripts/services/utils.js:1458

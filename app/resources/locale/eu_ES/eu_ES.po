@@ -586,7 +586,7 @@ msgid "FPGA resources"
 msgstr "FPGA baliabideak"
 
 #: app/views/version.html:61
-msgid "FPGAwars community"
+msgid "FPGAwars GitHub project"
 msgstr ""
 
 #: app/views/version.html:48
@@ -1177,7 +1177,7 @@ msgid "Testbench"
 msgstr "Testbench "
 
 #: app/views/version.html:50
-msgid "Thank you very much!"
+msgid "Thank you very much all!"
 msgstr ""
 
 #: app/scripts/services/tools.js:1858
@@ -1219,7 +1219,7 @@ msgstr "Proiektua {{name}} plakarentzat diseinatu da."
 #: app/views/version.html:40
 msgid ""
 "This release has been possible thanks to the great work done\n"
-"          by an emerging team from"
+"          by an active, growing, enthusiastic team, the"
 msgstr ""
 
 #: app/scripts/services/utils.js:1458
