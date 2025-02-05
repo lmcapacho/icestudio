@@ -2071,7 +2071,7 @@ angular
                       gettextCatalog.getString(
                         'There is a new stable version available'
                       ) +
-                      '<br/><a class="action-open-url-external-browser" href="https://icestudio.io" target="_blank">' +
+                      '<br><a class="action-open-url-external-browser" href="https://icestudio.io" target="_blank">' +
                       gettextCatalog.getString('Click here to install it') +
                       '</a></div></div>';
                   } else {
@@ -2081,7 +2081,7 @@ angular
                       gettextCatalog.getString(
                         'There is a new nightly version available'
                       ) +
-                      '<br/><a class="action-open-url-external-browser" href="https://icestudio.io" target="_blank">' +
+                      '<br><a class="action-open-url-external-browser" href="https://icestudio.io" target="_blank">' +
                       gettextCatalog.getString('Click here to install it') +
                       '</a></div></div>';
                   }

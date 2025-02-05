@@ -1,10 +1,10 @@
 /* PAPER STYLE: Place where the circuits are drawn */
 
-:root{
-   --gutter-width: 50px; 
-   --editor-content-scroller-left: 50px; 
-   --gutter-padding-right: 13px; 
-   --gutter-padding-left: 19px; 
+:root {
+  --gutter-width: 50px;
+  --editor-content-scroller-left: 50px;
+  --gutter-padding-right: 13px;
+  --gutter-padding-left: 19px;
 }
 
 .paper {
@@ -413,9 +413,6 @@ g {
   border: 1px solid #aaa;
 }
 
-.select2-dropdown {
-}
-
 .select2-dropdown .select2-search__field {
   outline: none;
   border-radius: 3px;
@@ -544,7 +541,7 @@ g {
   pointer-events: none;
   z-index: 0;
   transition: opacity 0.2s;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .code-block .code-content {
@@ -887,19 +884,17 @@ g {
   background-size: cover !important;
 }
 
-.ace_editor, .ace_editor *{
-
-   transform: scale(1) translateZ(0);
-    transition: none !important;
+.ace_editor,
+.ace_editor * {
+  transform: scale(1) translateZ(0);
+  transition: none !important;
   animation: none !important;
 }
 
 .ace_folding-enabled > .ace_gutter-cell,
-.ace_gutter-cell{
-
+.ace_gutter-cell {
   padding-left: var(--gutter-padding-left) !important;
   padding-right: var(--gutter-padding-right) !important;
-
 }
 
 .ace_gutter-cell-disabled {
@@ -909,13 +904,14 @@ g {
 .ace_folding-enabled-disabled > .ace_gutter-cell {
   padding-right: 15px !important;
 }
+
 .ace_editor .ace_gutter {
   width: var(--gutter-width) !important;
 }
-.ace_scroller{
-  left: var(--editor-content-scroller-left) !important; 
-}
 
+.ace_scroller {
+  left: var(--editor-content-scroller-left) !important;
+}
 
 .ace_editor .ace_gutter-layer {
   width: var(--gutter-width) !important;
@@ -929,27 +925,24 @@ g {
   fill: white;
   stroke: white;
 }
-.js-codeblock-io-edit{
-
-
+.js-codeblock-io-edit {
   position: absolute;
-    top: 0px;
-    right: 0px;
-    z-index: 99999999;
-    color: white;
-    background-color: #404040;
-    border-radius: 0 0 0 100%;
-    font-size: 18px;
-    width: 36px;
-    height: 36px;
-    text-align: right;
-    vertical-align: middle;
-    line-height: 25px;
-    cursor:pointer;
-     pointer-events: auto;
+  top: 0px;
+  right: 0px;
+  z-index: 99999999;
+  color: white;
+  background-color: #404040;
+  border-radius: 0 0 0 100%;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  text-align: right;
+  vertical-align: middle;
+  line-height: 25px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
-.js-codeblock-io-edit:hover{
-   color: #7ccff4;
+.js-codeblock-io-edit:hover {
+  color: #7ccff4;
 }
-
