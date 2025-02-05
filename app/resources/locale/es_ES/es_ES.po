@@ -582,8 +582,8 @@ msgid "FPGA resources"
 msgstr "Recursos de la FPGA"
 
 #: app/views/version.html:61
-msgid "FPGAwars community"
-msgstr "Comunidad FPGAwars"
+msgid "FPGAwars GitHub project"
+msgstr ""
 
 #: app/views/version.html:48
 msgid "FPGAwars community."
@@ -1154,8 +1154,8 @@ msgid "Testbench"
 msgstr "Testbench"
 
 #: app/views/version.html:50
-msgid "Thank you very much!"
-msgstr "¡Muchas gracias!"
+msgid "Thank you very much all!"
+msgstr "¡Muchas gracias a todos!"
 
 #: app/scripts/services/tools.js:1858
 msgid "The collection {{name}} already exists."
@@ -1194,9 +1194,10 @@ msgid "This project is designed for the {{name}} board."
 msgstr "Este proyecto está diseñado para la placa {{name}}."
 
 #: app/views/version.html:40
+#, fuzzy
 msgid ""
 "This release has been possible thanks to the great work done\n"
-"          by an emerging team from"
+"          by an active, growing, enthusiastic team, the"
 msgstr ""
 "Este lanzamiento ha sido posible gracias al gran trabajo hecho por el grupo "
 "emergente de"

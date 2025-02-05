@@ -39,15 +39,15 @@
         <!-- prettier-ignore -->
         <span translate>
           This release has been possible thanks to the great work done
-          by an emerging team from
+          by an active, growing, enthusiastic team, the
         </span>
         <a
+          ng-click="openUrl('https://groups.google.com/g/fpga-wars-explorando-el-lado-libre', $event)"
           href="https://groups.google.com/g/fpga-wars-explorando-el-lado-libre"
-          target="_blank"
         >
           {{ 'FPGAwars community.' | translate }}
         </a>
-        {{ 'Thank you very much!' | translate }}
+        {{ 'Thank you very much all!' | translate }}
       </p>
 
       <br />
@@ -55,10 +55,10 @@
       <p>
         {{ 'Icestudio is part of' | translate }}
         <a
-          ng-click="openUrl('https://fpgawars.github.io')"
+          ng-click="openUrl('https://fpgawars.github.io', $event)"
           href="https://fpgawars.github.io"
         >
-          {{ 'FPGAwars community' | translate }}
+          {{ 'FPGAwars GitHub project' | translate }}
         </a>
       </p>
 
