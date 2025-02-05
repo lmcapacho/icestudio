@@ -13,14 +13,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checkout the develop branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: develop
+
+      - name: 🔍 Replace  NW SDK version for normal before install npm packages
+        run: sed -i 's/\("nw": "[^"]*\)-sdk"/\1"/' package.json
 
       - name: Setup Nodejs version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.7.0'
+          node-version: '23.3.0'
 
       - name: Install npm dependencies
         run: npm install --legacy-peer-deps

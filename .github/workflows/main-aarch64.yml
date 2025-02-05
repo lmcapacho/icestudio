@@ -21,7 +21,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checkout the develop branch
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Check commit message for keyword RUN_BUILD
       - name: Check commit message for RUN_BUILD
@@ -33,6 +33,9 @@ jobs:
             echo "Commit message does not contain RUN_BUILD, skipping build."
             echo "skip_build=true" >> $GITHUB_ENV
           fi
+
+      - name: 🔍 Replace  NW SDK version for normal before install npm packages
+        run: sed -i 's/\("nw": "[^"]*\)-sdk"/\1"/' package.json
 
       - name: Setup por arm64
         if: env.skip_build != 'true'
