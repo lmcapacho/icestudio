@@ -1,8 +1,9 @@
-2025-02-05 21:47 (GMT+1)
+2025-02-05 17:54 (GMT+1)
 ========================
 Type: WIP
 
 App Changes:
+  - Better info/warning/error tooltip positioning in code editor by @cavearr
   - Finish translation so it is stable with Prettier by @TimRudy
   - Improve speed of code editors by @cavearr
   - Add icon over code editor to open easily by @cavearr
