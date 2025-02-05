@@ -1,5 +1,6 @@
-//-- jshint rules                             
-/* global sha1, WIRE_WIDTH, aceFontSize */
+// jshint ignore:start 
+
+/* --global sha1, WIRE_WIDTH, aceFontSize */
 
 'use strict';
 
@@ -272,7 +273,7 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
     }
 
     var wireWidth = WIRE_WIDTH * state.zoom;
-    this.applyStyles(this.$el[0].getElementsByClassName('port-wire'), {
+/*    this.applyStyles(this.$el[0].getElementsByClassName('port-wire'), {
       'stroke-width': wireWidth + 'px',
     });
 
@@ -304,7 +305,7 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
           }
         }
       });
-    }
+    }*/
 
     var contentTransform = {
       left: Math.round((bbox.width / 2.0) * (state.zoom - 1)) + 'px',
@@ -356,4 +357,4 @@ joint.shapes.ice.CodeView = joint.shapes.ice.ModelView.extend({
   },
 });
 
-
+// jshint ignore:end 

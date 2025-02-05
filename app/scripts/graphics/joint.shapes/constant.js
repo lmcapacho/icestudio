@@ -1,5 +1,6 @@
-//-- jshint rules                             
-/* global placementCssTasks, WIRE_WIDTH */
+//-- jshint rules
+/* jshint ignore: start */
+/* --global placementCssTasks, WIRE_WIDTH */
 
 'use strict';
 
@@ -128,7 +129,7 @@ joint.shapes.ice.ConstantView = joint.shapes.ice.ModelView.extend({
     // Set wire width
     let width = WIRE_WIDTH * state.zoom;
     //var pwires = this.$el[0].getElementsByClassName("port-wire");
-    if (typeof this.pwires === 'undefined') {
+    /*if (typeof this.pwires === 'undefined') {
       this.pwires = this.$el[0].getElementsByClassName('port-wire');
     }
     let i;
@@ -138,9 +139,9 @@ joint.shapes.ice.ConstantView = joint.shapes.ice.ModelView.extend({
         property: 'stroke-width',
         value: width + 'px',
       });
-    }
+    }*/
     return this.place('.constant-content', bbox, state, pendingTasks);
   },
 });
 
-
+/* jshint ignore: end */

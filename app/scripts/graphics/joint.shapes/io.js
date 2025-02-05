@@ -1,6 +1,6 @@
 //-- jshint rules                             
-/* global sha1, placementCssIOTasks, WIRE_WIDTH */
-
+/* --global sha1, placementCssIOTasks, WIRE_WIDTH */
+/* jshint ignore: start */
 'use strict';
 
 
@@ -397,7 +397,7 @@ joint.shapes.ice.IOView = joint.shapes.ice.ModelView.extend({
     var paths, rects;
     var width = WIRE_WIDTH * state.zoom;
 
-    var pwires = this.$el[0].getElementsByClassName('port-wire');
+/*var pwires = this.$el[0].getElementsByClassName('port-wire');
     for (i = 0; i < pwires.length; i++) {
       pendingTasks.push({
         e: pwires[i],
@@ -405,6 +405,7 @@ joint.shapes.ice.IOView = joint.shapes.ice.ModelView.extend({
         value: width + 'px',
       });
     }
+    
     // Set buses
     var nwidth = width * 3;
     tokId = 'port-wire-' + modelId + '-';
@@ -497,7 +498,7 @@ joint.shapes.ice.IOView = joint.shapes.ice.ModelView.extend({
           });
         }
       }
-    }
+    }*/
     //
     return this.place(data, bbox, state, pendingTasks);
   },
@@ -525,4 +526,4 @@ joint.shapes.ice.IOView = joint.shapes.ice.ModelView.extend({
 joint.shapes.ice.InputView = joint.shapes.ice.IOView;
 joint.shapes.ice.OutputView = joint.shapes.ice.IOView;
 
-
+/* jshint ignore: end */
