@@ -1,8 +1,10 @@
-2025-02-05 17:54 (GMT+1)
+2025-02-05 22:13 (GMT+1)
 ========================
 Type: WIP
 
 App Changes:
+  - Improving loading times by @cavearr
+  - Refactoring graphics engine by @cavearr
   - Better info/warning/error tooltip positioning in code editor by @cavearr
   - Finish translation so it is stable with Prettier by @TimRudy
   - Improve speed of code editors by @cavearr
