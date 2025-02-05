@@ -91,11 +91,11 @@ msgstr "Permitir conexiones tri-estado"
 
 #: app/scripts/services/tools.js:1703
 msgid "Apio install drivers"
-msgstr ""
+msgstr "Apio instalar drivers"
 
 #: app/scripts/services/tools.js:1688
 msgid "Apio install {{name}}"
-msgstr ""
+msgstr "Apio instalando {{name}}"
 
 #: app/scripts/controllers/menu.js:321
 msgid "Are you sure you want to clear the recent projects list?"
@@ -202,7 +202,7 @@ msgstr "No se puede pegar desde un formato de proyecto diferente ({{version}})"
 
 #: app/views/design.html:56
 msgid "Case sensitive"
-msgstr ""
+msgstr "Sensible a mayúsculas"
 
 #: app/views/languages.html:131
 msgid "Catalonian"
@@ -238,7 +238,7 @@ msgstr "Vaciar listado de proyectos recientes"
 
 #: app/views/menu.html:171
 msgid "Clear Recently Opened"
-msgstr "Vaciar ficheros abiertos recientemente"
+msgstr "Vaciar abiertos recientemente"
 
 #: app/scripts/services/utils.js:1436
 msgid ""
@@ -519,11 +519,11 @@ msgstr "Error habilitando driver clase {{type}}"
 
 #: app/scripts/services/drivers.js:508
 msgid "Error installing driver:"
-msgstr ""
+msgstr "Error instalando driver:"
 
 #: app/scripts/services/forms.js:1696
 msgid "Error reading the file: {{error}}"
-msgstr "Error abriendo el fichero: {{error}}"
+msgstr "Error al leer el archivo: {{error}}"
 
 #: app/scripts/services/utils.js:924
 msgid "Error: {{error}}"
@@ -535,7 +535,7 @@ msgstr "Errores detectados en el diseño"
 
 #: app/views/design.html:62
 msgid "Exact match"
-msgstr ""
+msgstr "Búsqueda exacta"
 
 #: app/views/menu.html:189
 msgid "Examples"
@@ -913,7 +913,7 @@ msgstr "Abrir"
 
 #: app/views/menu.html:154
 msgid "Open Recent"
-msgstr "Abierto recientemente"
+msgstr "Abrir reciente"
 
 #: app/scripts/services/utils.js:800
 msgid "Open SVG"
@@ -1131,7 +1131,7 @@ msgstr "Azul acero"
 
 #: app/scripts/services/tools.js:581
 msgid "Synchronize remote files ..."
-msgstr "Sincronizando ficheros remotos ..."
+msgstr "Sincronizando archivos remotos ..."
 
 #: app/views/menu.html:557
 msgid "System info"
@@ -1324,7 +1324,7 @@ msgstr "Carga realizada"
 
 #: app/scripts/services/utils.js:497
 msgid "Using external Apio: {{name}}"
-msgstr ""
+msgstr "Usar Apio externo: {{name}}"
 
 #: app/scripts/controllers/menu.js:1412
 msgid "Verification done"
