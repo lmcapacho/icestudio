@@ -278,6 +278,7 @@ document.addEventListener("mousemove", (event) => {
         snapLinks: { radius: 16 },
         linkPinning: false,
         embeddingMode: false,
+        //async:true,
         //markAvailable: true,
         getState: this.getState,
         defaultLink: new joint.shapes.ice.Wire(),
@@ -1725,12 +1726,21 @@ function isElementInViewport(elementBBox, viewport) {
         commandManager.stopListening();
 
         self.clearAll();
+
+        iprof.start('graphToCells2');
         let cells = graphToCells(design.graph, opt);
 
+        iprof.end('graphToCells2');
         //self.fitContent();
 
         graph.trigger('batch:start');
+        iprof.start('addCells');
         graph.addCells(cells);
+        graph.startBatch('add_cells', function() {
+    graph.addCells(cells);
+});
+        //addCells(cells);
+        iprof.end('addCells');
 
         graph.trigger('batch:stop');
         self.setState(design.state);
@@ -1741,7 +1751,9 @@ function isElementInViewport(elementBBox, viewport) {
         self.fitContent();
         //-- maintain autorouting disabled for the moment because there is overlapped routings
         self.enableAutoRouting();
+        iprof.start('route');
         self.route();
+        iprof.end('route');
         if (callback) {
           callback();
         }
@@ -2068,11 +2080,18 @@ this.convertIOtoTop = function (design) {
     }
 
     function addCells(cells) {
+    console.log('ADDCELLS');
+      iprof.start('updateCellAttributes');
       _.each(cells, function (cell) {
         updateCellAttributes(cell);
       });
+      iprof.end('updateCellAttributes');
+      iprof.start('graph.addCells');
+      console.log('CELLS',cells);
       graph.addCells(cells);
+      iprof.end('graph.addCells');
       let cellView = false;
+      iprof.start('paper find');
       _.each(cells, function (cell) {
         if (!cell.isLink()) {
           cellView = paper.findViewByModel(cell);
@@ -2081,6 +2100,8 @@ this.convertIOtoTop = function (design) {
           }
         }
       });
+      iprof.end('paper find');
+      iprof.print();
     }
 
     this.resetCodeErrors = function () {
