@@ -751,6 +751,26 @@ function isElementInViewport(elementBBox, viewport) {
           target = target.parentNode;
         }
       });
+
+//-- tooltip error - warning - info position calculation for ace editor
+//-- capture when user are over the error/warning/info mark and calculate
+//-- the tooltip position under the line of the mark
+document.body.addEventListener('mouseenter', function(event) {
+    if (
+      event.target.classList.contains('ace_gutter-cell') && 
+      (event.target.classList.contains('ace_error') || 
+       event.target.classList.contains('ace_info') || 
+       event.target.classList.contains('warning'))
+    ) {
+      //-- Important to use parseFloat to remove px suffix from css
+      const tgutter = parseFloat(document.defaultView.getComputedStyle(event.target).getPropertyValue('top'));
+      const hgutter = parseFloat(document.defaultView.getComputedStyle(event.target).getPropertyValue('height'));
+      const offset = parseFloat(hgutter/2);
+      const tooltipTopValue = tgutter + hgutter + offset;
+      document.documentElement.style.setProperty('--ace_tooltip-top', `${tooltipTopValue}px`);
+    }
+  }, true); // 'true' needed for future elements
+
       $rootScope.$on('navigateProjectEnded', function (event, args) {
         if (args.fromDoubleClick) {
           self.breadcrumbs.push({
@@ -1734,10 +1754,7 @@ function isElementInViewport(elementBBox, viewport) {
         graph.trigger('batch:start');
         iprof.start('addCells');
         graph.addCells(cells);
-        graph.startBatch('add_cells', function() {
-    graph.addCells(cells);
-});
-        //addCells(cells);
+        //addCells(cells);   --> This is an overlapping function with more functionality but heaviest
         iprof.end('addCells');
 
         graph.trigger('batch:stop');

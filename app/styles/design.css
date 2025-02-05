@@ -5,6 +5,7 @@
   --editor-content-scroller-left: 50px;
   --gutter-padding-right: 13px;
   --gutter-padding-left: 19px;
+  --ace_tooltip-top:0px;
 }
 
 .paper {
@@ -915,6 +916,12 @@ g {
 
 .ace_editor .ace_gutter-layer {
   width: var(--gutter-width) !important;
+}
+.ace_editor .ace_tooltip{
+
+  left: calc(var(--gutter-width) + var(--gutter-width) / 4) !important;
+  top: var(--ace_tooltip-top) !important;
+
 }
 
 .marker-vertex-remove-area {
