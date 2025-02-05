@@ -582,8 +582,8 @@ msgid "FPGA resources"
 msgstr "FPGA prostředky"
 
 #: app/views/version.html:61
-msgid "FPGAwars community"
-msgstr "Komunity FPGAwars"
+msgid "FPGAwars GitHub project"
+msgstr ""
 
 #: app/views/version.html:48
 msgid "FPGAwars community."
@@ -1164,7 +1164,8 @@ msgid "Testbench"
 msgstr "Testbench"
 
 #: app/views/version.html:50
-msgid "Thank you very much!"
+#, fuzzy
+msgid "Thank you very much all!"
 msgstr "Děkuji mnohokrát!"
 
 #: app/scripts/services/tools.js:1858
@@ -1207,7 +1208,7 @@ msgstr "Tento projekt je navržen pro desku {{name}}."
 #, fuzzy
 msgid ""
 "This release has been possible thanks to the great work done\n"
-"          by an emerging team from"
+"          by an active, growing, enthusiastic team, the"
 msgstr ""
 "Toto vydání bylo možné díky skvělé práci              našeho týmu inženýrů z"
 
