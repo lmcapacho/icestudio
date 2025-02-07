@@ -932,24 +932,23 @@ g {
   fill: white;
   stroke: white;
 }
+
 .js-codeblock-io-edit {
   position: absolute;
   top: 0px;
   right: 0px;
   z-index: 99999999;
-  color: white;
-  background-color: #404040;
   border-radius: 0 0 0 100%;
   font-size: 18px;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   text-align: center;
   vertical-align: middle;
   line-height: 25px;
   cursor: pointer;
   pointer-events: auto;
 }
-
-.js-codeblock-io-edit:hover {
-  color: #7ccff4;
+.js-codeblock-io-edit .fa-edit:before {
+  padding-left: 8px;
+  font-size: small;
 }
