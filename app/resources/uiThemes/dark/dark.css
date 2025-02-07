@@ -948,3 +948,11 @@
 .modal-content ul li:hover {
   background-color: #555;
 }
+
+.js-codeblock-io-edit {
+  color: white;
+  background-color: #404040;
+}
+.js-codeblock-io-edit:hover {
+  color: #7ccff4;
+}
